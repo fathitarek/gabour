@@ -1,0 +1,57 @@
+/*
+* js ver1.0
+* Written by Variety Article Factory 2015.08 
+******************************************vaf*/
+
+$(function(){
+	// Gloval menu
+	$("a.menu_all").click(function(){
+		var $self = $(this).parent().eq(0);
+		$('ul.submenu').not($self).animate({width:'hide'}, 'fast');
+
+		// すべてのメニューリンクから .selected を解除
+		$(".menu_all").removeClass("selected");
+
+		if ($("ul.submenu",$self).css("display") == 'none') {
+			$("ul.submenu",$self).animate({width:'show'}, 'fast');
+			// 当該メニューリンクへ .selected を追加
+			$self.addClass("selected");
+		} else {
+			$("ul.submenu",$self).animate({width:'hide'}, 'fast');
+		}
+		
+		if($(this).attr("href") == '#') {
+			return false;
+		}
+		
+	});
+});
+
+$(function(){
+	// SP::DropDown for index-only
+    if(window.location.pathname == '/content/fuso/jp/index.html' || window.location.pathname == '/content/fuso/en/index.html') {
+        $("#MB_TITLE").click(function(){
+            $("#DROP_LIST").toggle();
+            if($("#DROP_LIST").css('display')=='block'){	
+                $("#MB_TITLE").addClass('select');
+            }
+            else {
+                $("#MB_TITLE").removeClass('select');
+            }
+        });
+
+    }
+	
+	
+	$('#MOBILE_MENU_TRIGGER a').click(function(){
+		$('#MENU_FIELD').addClass('menu-show-on-mobile');
+		
+		return false;
+	});
+	$('#MOBILE_MENU_CLOSE a').click(function(){
+		$('#MENU_FIELD').removeClass('menu-show-on-mobile');
+		
+		return false;
+	});
+});
+

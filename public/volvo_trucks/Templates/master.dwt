@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="../images/favicon.ico" type="image/x-icon">
+    <!-- TemplateBeginEditable name="doctitle" -->
+    <title>Volvo | Home</title>
+    <!-- TemplateEndEditable -->
+    <!-- Bootstrap -->
+	<link href="../css/bootstrap.css" rel="stylesheet">
+	<link href="../css/yamm.css" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link href="../css/style.css" rel="stylesheet" type="text/css">
+
+	<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+	<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+	<!--[if lt IE 9]>
+		  <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+		  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+		<![endif]-->
+  <!-- TemplateBeginEditable name="head" -->
+  <!-- TemplateEndEditable -->
+  </head>
+  <body>
+  
+  <div class="container-fluid" id="pageX">
+    <div class="headerX">
+      <div class="row" id="nav1">
+        <div class="col-md-offset-1 col-md-10"> <a href="../buses.html">Buses</a> <a href="../buses.html">Trucks</a> <a href="../buses.html">Construction Equipment</a> <span> <a href="../indexAr.html">Ar </a> / <a href="../indexAr.html"> En</a> </span> </div>
+      </div>
+      <div class="row" id="logo">
+        <div class="col-md-10 col-md-offset-1"><a href="index.html"><img src="../images/logo.png" alt=""/></a><img src="../images/volvo-logo-iron-mark.png" alt="" class="volvoLogo"/>
+          <form class="navbar-form" id="searchNav" role="search">
+            <div class="input-group add-on">
+              <input class="form-control" placeholder="Search" name="srch-term" id="srch-term" type="text">
+              <div class="input-group-btn">
+                <button class="btn btn-default" type="submit"><i class="glyphicon glyphicon-search"></i></button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+      <div class="row" id="mainNav">
+        <div class="col-md-10 col-md-offset-1">
+          <nav class="navbar navbar-default yamm">
+            <div class="container-fluid">
+              <!-- Brand and toggle get grouped for better mobile display -->
+              <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#defaultNavbar2" aria-expanded="false"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button>
+              </div>
+              <!-- Collect the nav links, forms, and other content for toggling -->
+              <div class="collapse navbar-collapse" id="defaultNavbar2">
+                <ul class="nav navbar-nav">
+                  <li class="dropdown yamm-fw"><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Products</a>
+                    <ul class="dropdown-menu">
+                      
+                      <li>
+                      	<div class="row noPaddingX">
+                        <div class="col-md-9 rightBorderX">
+                         <h4>A Complete Product Range</h4>
+                          <p>Volvo Construction Equipment designs and manufactures an entire product portfolio of machines. Each and every machine comes with the quality, performance and safety you expect from the Volvo name.</p>
+                          <div class="row">
+                            <div class="col-md-4">
+                             <a href="#">
+                              <div><img src="../images/menu1.jpg" alt="Placeholder image">
+                                <span>Excavators </span><span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></div>
+                              </a>
+                              <a href="#">
+                              <div><img src="../images/menu2.jpg" alt="Placeholder image"> <span>Skid Steer Loaders </span><span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></div>
+								</a>
+                             <a href="#">
+                              <div><img src="../images/menu3.jpg" alt="Placeholder image"> <span>Compactors </span><span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></div>
+								</a>
+                            </div>
+                            <div class="col-md-4">
+                             <a href="#">
+                              <div><img src="../images/menu4.jpg" alt="Placeholder image"> <span>Wheel Loaders </span><span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></div>
+                             </a>
+                             <a href="#">
+                              <div><img src="../images/menu5.jpg" alt="Placeholder image"> <span>Compact Track Loaders </span><span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></div>
+                              </a>
+                             <a href="#">
+                              <div><img src="../images/menu6.jpg" alt="Placeholder image"> <span>Pipelayers </span><span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></div>
+                              </a>
+                             
+                            </div>
+                            <div class="col-md-4">
+                             <a href="#">
+                              <div><img src="../images/menu7.jpg" alt="Placeholder image"> <span>Articulated Haulers </span><span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></div>
+							 </a>
+                             <a href="#">
+                              <div><img src="../images/menu8.jpg" alt="Placeholder image"> <span>Asphalt Pavers </span><span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></div>
+                              </a>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-md-3">
+                          <h4>Other offerings</h4>
+                          <p>From tailor-made Special Application Solutions to rental and used equipment, find out more about what we offer.</p>
+						  <a href="#">Used Equipment<span class="glyphicon glyphicon-menu-right
+						"></span></a><br>
+						<a href="#">National Rental Accounts <span class="glyphicon glyphicon-menu-right"></span></a><br>
+						<a href="#">Special Application Solutions <span class="glyphicon glyphicon-menu-right"></span></a>						<br>
+						<a href="#">Other Products <span class="glyphicon glyphicon-menu-right
+						"></span></a><br>
+						<a href="#">Merchandise <span class="glyphicon glyphicon-menu-right
+						"></span></a> </div>
+                      </div>
+                      </li>
+                    </ul>
+                  </li>
+                  <li class="dropdown yamm-fw"><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">attachments</a>
+                    <ul class="dropdown-menu">
+                      <li>
+                        <div class="row noPaddingX">
+                          <div class="col-md-9 rightBorderX">
+                            <h4>Keep your Volvo a Volvo!</h4>
+                            <p>Only with Volvo attachments will you get what you wanted when you bought your Volvo machine – maximum productivity and uptime.</p>
+                            <div class="row">
+                              <div class="col-md-4"> <a href="#">
+                                <div><img src="../images/menu10.jpg" alt="Placeholder image"> <span>Compact Excavators </span><span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></div>
+                                </a> <a href="#">
+                                  <div><img src="../images/menu14.jpg" alt="Placeholder image"> <span>Compact Wheel Loaders </span><span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></div>
+                                  </a> <a href="#">
+                                    <div><img src="../images/menu17.jpg" alt="Placeholder image"> <span>ABG Tracked Pavers </span><span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></div>
+                                  </a> </div>
+                              <div class="col-md-4"> <a href="#">
+                                <div><img src="../images/menu11.jpg" alt="Placeholder image"> <span>Wheeled Excavators </span><span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></div>
+                                </a> <a href="#">
+                                  <div><img src="../images/menu15.jpg" alt="Placeholder image"> <span>Large Wheel Loaders </span><span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></div>
+                                  </a> <a href="#">
+                                    <div><img src="../images/menu17.jpg" alt="Placeholder image"> <span>ABG Wheeled Pavers </span><span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></div>
+                                  </a> </div>
+                              <div class="col-md-4"> <a href="#">
+                                <div><img src="../images/menu12.jpg" alt="Placeholder image"> <span>Crawler Excavators </span><span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></div>
+                                </a> <a href="#">
+                                  <div><img src="../images/menu16.jpg" alt="Placeholder image"> <span>Skid Steer Loaders </span><span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></div>
+                                </a> </div>
+                            </div>
+                          </div>
+                          <div class="col-md-3">
+                            <h4>Hydraulic breakers</h4>
+                            <p>Consistent impact frequency and power ensure productivity on any job site.</p>
+                            <a href="#">Volvo hydraulic breakers <span class="glyphicon glyphicon-menu-right
+						"></span></a><br>
+                            </div>
+                        </div>
+                      </li>
+                    </ul>
+</li>
+                  <li class="dropdown yamm-fw"><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">parts</a>
+                    <ul class="dropdown-menu">
+                      <li>
+                        <div class="row noPaddingX">
+                          <div class="rightBorderX col-md-3">       
+                            <img src="../images/menu21.jpg" alt="volvo" class="img-responsive">
+                            <a href="#">
+                              <h4>Maintenance Parts <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></h4>
+                            </a>
+                            <p>Follow your machine’s maintenance program with maintenance parts to ensure productivity and uptime.</p>
+                          </div>
+                          <div class="rightBorderX col-md-3"> <img src="../images/menu22.jpg" alt="volvo" class="img-responsive"> <a href="#">
+                            <h4>Repair Parts <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></h4>
+                            </a>
+                            <p>Volvo repair parts are a cost effective solution of giving a new lease of life to a hard working machine.</p>
+                          </div>
+                          <div class="rightBorderX col-md-3"> <img src="../images/menu23.jpg" alt="volvo" class="img-responsive"> <a href="#">
+                            <h4>Wear Parts <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></h4>
+                            </a>
+                            <p>Volvo offers a wide range of wear parts that have been developed and tested for a large number of applications.</p>
+                          </div>
+                          <div class="rightBorderX col-md-3"> <img src="../images/menu24.jpg" alt="volvo" class="img-responsive"> <a href="#" class="volvoGray margin-top">
+                            <p><strong>Give your machine more bite</strong> </p>
+                            </a>
+                            <p>The self-sharpening Volvo Tooth System withstands high stress levels and is a result of our commitment to innovation.</p>
+                          </div>
+                        </div>
+                      </li>
+                    </ul>
+                  </li>
+                  <li class="dropdown yamm-fw"><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">services</a>
+                    <ul class="dropdown-menu">
+                      <li>
+                        <div class="row noPaddingX">
+                          <div class="col-md-9 rightBorderX">
+                            
+                            <div class="row">
+                              <div class="col-md-4"><a href="#">
+                              <h4>Product Services <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></h4>
+                              </a>
+                                <p>This is where you find our latest news stories and press releases.</p>
+                               </div>
+                              <div class="col-md-4"><a href="#">
+                                <h4>Customer Support Agreements <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></h4>
+                                </a>
+                                <p>With four agreements to choose from, you can pick the best package to suit your needs.</p>
+                              </div>
+                              <div class="col-md-4"><a href="#">
+                                <h4>Mobile Van <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></h4>
+                                </a>
+                                <p>With four agreements to choose from, you can pick the best package to suit your needs.</p>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-md-3"><img src="../images/volvo103.jpg" alt="volvo" class="img-responsive"><a href="#" class="volvoGray margin-top">
+                          <p><strong>Give your machine more bite</strong></p>
+                          </a>
+                            <p>The self-sharpening Volvo Tooth System withstands high stress levels and is a result of our commitment to innovation.</p>
+                            <a href="#">Volvo hydraulic breakers <span class="glyphicon glyphicon-menu-right"></span></a><br>
+                          </div>
+                        </div>
+                      </li>
+                    </ul>
+                  </li>
+                  <li class="dropdown yamm-fw"><a href="aboutUs.html" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">about us</a>
+                    <ul class="dropdown-menu">
+                      <li>
+                        <div class="row noPaddingX">
+                          <div class="col-md-9 rightBorderX">
+                            <div class="row">
+                              <div class="col-md-4"><a href="#">
+                                <h4>News <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></h4>
+                                </a>
+                                <p>This is where you find our latest news stories and press releases.</p>
+                                <br>
+                                
+                                <a href="../aboutUs.html">
+                                <h4>About Volvo CE <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></h4>
+                                </a>
+                                <p>Our products and services are offered in more than 125 countries.</p>
+                                </div>
+                              <div class="col-md-4"><a href="#">
+                                <h4>Events and initiatives <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></h4>
+                                </a>
+                                <p>We bring our customers, dealers and employees together and help drive our industry forward.</p>
+                                
+                              </div>
+                              <div class="col-md-4"><a href="#">
+                                <h4>Career opportunities <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></h4>
+                                </a>
+                                <p>From engineering and design to marketing and sales, we have a job for you.</p>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-md-3"><img src="../images/menu26.jpg" alt="volvo" class="img-responsive"><a href="#" class="volvoGray margin-top">
+                            <p><strong>Spirit Magazine</strong></p>
+                            </a>
+                            <p>We find the best in technological advances to develop cutting-edge parts and equipment.</p>
+                            <a href="#">Learn more <span class="glyphicon glyphicon-menu-right
+						"></span></a><br>
+                          </div>
+                        </div>
+                      </li>
+                    </ul>
+                  </li>
+                  <li class="dropdown yamm-fw"><a id="locations" href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Locations</a>                  </li>
+                  <li class="dropdown yamm-fw"><a href="contactUs.html" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Contact us</a>                  </li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                  <li><a href="#" id="productSelector">Product Selector</a></li>
+                </ul>
+              </div>
+              <!-- /.navbar-collapse -->
+            </div>
+            <!-- /.container-fluid -->
+          </nav>
+        </div>
+      </div>
+    </div>
+    <!-- TemplateBeginEditable name="ContentX" -->
+    <div class="contentX">
+      <div class="row heroX">
+        <div class="col-md-10 col-md-offset-1">
+          <div id="carousel1" class="carousel slide" data-ride="carousel">
+            <ol class="carousel-indicators">
+              <li data-target="#carousel1" data-slide-to="0" class="active"></li>
+              <li data-target="#carousel1" data-slide-to="1"></li>
+              <li data-target="#carousel1" data-slide-to="2"></li>
+            </ol>
+            <div class="carousel-inner" role="listbox">
+              <div class="item active"><img src="../images/hero4.jpg" alt="First slide image" class="center-block">
+                <div class="carousel-caption">
+                  <p>SUSTAINABILITY</p>
+                  <h3>BUILDING TOMORROW</h3>
+                  <a href="#">
+                    <p class="btnX">Find out more <span class="glyphicon glyphicon-chevron-right"></span></p>
+                  </a> </div>
+              </div>
+              <div class="item"><img src="../images/hero2.jpg" alt="Second slide image" class="center-block">
+                <div class="carousel-caption">
+                  <p>Second slide Caption</p>
+                  <h3>Second slide Heading</h3>
+                  <a href="#">
+                    <p class="btnX">Find out more <span class="glyphicon glyphicon-chevron-right"></span></p>
+                  </a> </div>
+              </div>
+              <div class="item"><img src="../images/hero3.jpg" alt="Third slide image" class="center-block">
+                <div class="carousel-caption">
+                  <p>Third slide Caption</p>
+                  <h3>Third slide Heading</h3>
+                  <a href="#">
+                    <p class="btnX">Find out more <span class="glyphicon glyphicon-chevron-right"></span></p>
+                  </a> </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row headTitleX">
+        <div class="col-md-10 col-md-offset-1">
+          <h4>VOLVO CONSTRUCTION EQUIPMENT PRODUCT RANGE</h4>
+          <p>Browse through Volvo Construction Equipment’s extensive range of high-quality products. </p>
+        </div>
+      </div>
+      <div class="row" id="carouselProduct">
+        <div class="col-md-10 col-md-offset-1">
+          <div class="carousel slide text-center" id="myCarousel" data-type="multi" data-ride="carousel" data-interval="3000">
+            <div class="carousel-inner">
+              <div class="item active">
+                <div class="col-md-2 col-sm-6 col-xs-12"><a href="#"><img src="../images/product2.jpg" class="img-responsive" alt="volvo"> <span>Excavators</span></a></div>
+              </div>
+              <div class="item">
+                <div class="col-md-2 col-sm-6 col-xs-12"><a href="#"><img src="../images/product3.jpg" class="img-responsive" alt="volvo"> <span>Wheel Loaders</span></a></div>
+              </div>
+              <div class="item">
+                <div class="col-md-2 col-sm-6 col-xs-12"><a href="#"><img src="../images/product4.jpg" class="img-responsive" alt="volvo"> <span>Excavators</span></a></div>
+              </div>
+              <div class="item">
+                <div class="col-md-2 col-sm-6 col-xs-12"><a href="#"><img src="../images/product5.jpg" class="img-responsive" alt="volvo"> <span>Excavators</span></a></div>
+              </div>
+              <div class="item">
+                <div class="col-md-2 col-sm-6 col-xs-12"><a href="#"><img src="../images/product6.jpg" class="img-responsive" alt="volvo"> <span>Excavators</span></a></div>
+              </div>
+              <div class="item">
+                <div class="col-md-2 col-sm-6 col-xs-12"><a href="#"><img src="../images/product7.jpg" class="img-responsive" alt="volvo"> <span>Excavators</span></a></div>
+              </div>
+              <div class="item">
+                <div class="col-md-2 col-sm-6 col-xs-12"><a href="#"><img src="../images/product8.jpg" class="img-responsive" alt="volvo"> <span>Excavators</span></a></div>
+              </div>
+              <div class="item">
+                <div class="col-md-2 col-sm-6 col-xs-12"><a href="#"><img src="../images/product1.jpg" class="img-responsive" alt="volvo"> <span>Excavators</span></a> </div>
+              </div>
+            </div>
+            <a class="left carousel-control" href="#myCarousel" data-slide="prev"><em class="glyphicon glyphicon-chevron-left"></em></a> <a class="right carousel-control" href="#myCarousel" data-slide="next"><em class="glyphicon glyphicon-chevron-right"></em></a></div>
+        </div>
+      </div>
+      <div class="row imageText" id="volvo1">
+        <div class="col-md-10 col-md-offset-1">
+          <p>THE VOLVO CONSTRUCTION EQUIPMENT DEALER NETWORK</p>
+          <h3>Egypt</h3>
+          <a href="#">
+            <p class="btnX">Find your local dealer <span class="glyphicon glyphicon-chevron-right"></span></p>
+          </a> </div>
+      </div>
+      <div class="row imageText" id="volvo2">
+        <div class="col-md-10 col-md-offset-1">
+          <h4>USED EQUIPMENT</h4>
+          <h3>FIND A GOOD DEAL </h3>
+          <p>Browse construction equipment for sale in our online portal. Take me there </p>
+          <a href="#">
+            <p class="btnX">Take me there <span class="glyphicon glyphicon-chevron-right"></span></p>
+          </a> </div>
+      </div>
+      <div class="row headTitleX">
+        <div class="col-md-10 col-md-offset-1">
+          <h4>GET MORE OUT OF YOUR VOLVO </h4>
+        </div>
+      </div>
+      <div class="row volvo3setions">
+        <div class="col-md-10 col-md-offset-1">
+          <div class="row">
+            <div class="col-md-4"><img src="../images/volvo101.jpg" class="img-responsive" alt="Placeholder image">
+              <h5>MAXIMIZE YOUR PROFIT AND UPTIME TODAY </h5>
+              <p>We understand that the needs of your business vary. That’s why there are four different Customer Support Agreements helping you stay profitable.</p>
+              <a href="#">All agreements<span class="glyphicon glyphicon-menu-right
+"></span></a> </div>
+            <div class="col-md-4"><img src="../images/volvo102.jpg" class="img-responsive" alt="Placeholder image">
+              <h5>THE GENUINE WAY TO MINIMIZE DOWNTIME </h5>
+              <p>Guarantee performance by keeping your machine a Volvo. We know that every part is vital and help you maximize uptime in the long run through Genuine Volvo Parts.</p>
+              <a href="#">Genuine Volvo Parts<span class="glyphicon glyphicon-menu-right
+"></span></a></div>
+            <div class="col-md-4"><img src="../images/volvo103.jpg" class="img-responsive" alt="Placeholder image">
+              <h5>REMOTE CONTROL OF YOUR FLEET </h5>
+              <p>Time to save time and money. CareTrack is our telematics system that gives you access to a wide range of machine monitoring information. Wherever you are.</p>
+              <a href="#">Care Track<span class="glyphicon glyphicon-menu-right
+"></span></a></div>
+          </div>
+        </div>
+      </div>
+      <div class="row imageText" id="volvo3">
+        <div class="col-md-10 col-md-offset-1">
+          <h4>PRODUCT SELECTOR </h4>
+          <h3>WHICH MACHINE IS RIGHT FOR YOU? </h3>
+          <p>Compare specifications and find the right machine for you.</p>
+          <a href="#">
+            <p class="btnX">Start <span class="glyphicon glyphicon-chevron-right"></span></p>
+          </a> </div>
+      </div>
+      <div class="row headTitleX">
+        <div class="col-md-10 col-md-offset-1">
+          <p>VOLVO CONSTRUCTION EQUIPMENT </p>
+          <h4>LATEST NEWS</h4>
+        </div>
+      </div>
+      <div class="row news">
+        <div class="col-md-10 col-md-offset-1">
+          <div class="row newsRow">
+            <div class="col-md-3" id="newsImg1"></div>
+            <div class="col-md-9"> <span> <span class="category-color"></span> News </span> <br>
+              <span>17/05/2017</span>
+              <h5>Volvo CE unveils 100% electric compact excavator </h5>
+              <p>Volvo Construction Equipment demonstrated the EX2 – a fully electric compact excavator that delivers zero emissions, 10 times higher efficiency, 10 times lower noise levels and reduced total...</p>
+            </div>
+          </div>
+          <div class="row newsRow">
+            <div class="col-md-3" id="newsImg2"></div>
+            <div class="col-md-9"><span> <span class="category-color-blue"></span> Press release </span> <br>
+              <span>26/04/2017</span>
+              <h5>Volvo CE sales increase 30 percent in first </h5>
+              <p>Volvo Construction Equipment demonstrated the EX2 – a fully electric compact excavator that delivers zero emissions, 10 times higher efficiency, 10 times lower noise levels and reduced total...</p>
+            </div>
+          </div>
+          <div class="row newsRow">
+            <div class="col-md-3" id="newsImg3"></div>
+            <div class="col-md-9"><span> <span class="category-color"></span> News </span> <br>
+              <span>20/04/2017</span>
+              <h5>Indonesian mine strikes gold with the Volvo excavator </h5>
+              <p>Volvo Construction Equipment demonstrated the EX2 – a fully electric compact excavator that delivers zero emissions, 10 times higher efficiency, 10 times lower noise levels and reduced total...</p>
+            </div>
+          </div>
+          <div class="row newsRow">
+            <div class="col-md-3" id="newsImg4"></div>
+            <div class="col-md-9"><span> <span class="category-color-blue"></span> Press release </span> <br>
+              <span>20/04/2017</span>
+              <h5>Volvo EC140D boosts profitability on the </h5>
+              <p>Volvo Construction Equipment demonstrated the EX2 – a fully electric compact excavator that delivers zero emissions, 10 times higher efficiency, 10 times lower noise levels and reduced total...</p>
+            </div>
+          </div>
+          <div class="text-center"> <a href="#">
+            <p class="btnX btnBorder">View all news <span class="glyphicon glyphicon-chevron-right"></span></p>
+          </a> </div>
+        </div>
+      </div>
+      <div class="row imageText" id="volvo4">
+        <div class="col-md-10 col-md-offset-1">
+          <h3>WANT TO KNOW MORE?</h3>
+          <p>Send us a message and we will be happy to help you.</p>
+          <a href="#">
+            <p class="btnXBlue"> Contact us <span class="glyphicon glyphicon-chevron-right"></span></p>
+          </a></div>
+      </div>
+    </div>
+    <!-- TemplateEndEditable -->
+    <div class="row footer">
+      <div class="col-md-10 col-md-offset-1">
+        <div class="row footerMega">
+          <div class="col-md-3">
+          	<h5>About volvo ce</h5>
+          	<a href="#">Our history <span class="glyphicon glyphicon-menu-right"></span></a>
+          	<a href="#">Career <span class="glyphicon glyphicon-menu-right"></span></a>
+          	<a href="#">Quality <span class="glyphicon glyphicon-menu-right"></span></a>
+          	<a href="#">Safety <span class="glyphicon glyphicon-menu-right"></span></a>
+          	<a href="#">Environmental Care <span class="glyphicon glyphicon-menu-right"></span></a>
+          	<a href="#">Construction Climate Challenge <span class="glyphicon glyphicon-menu-right"></span></a>
+          	
+          </div>
+          <div class="col-md-3">
+            <h5>How can we help?</h5>
+          <a href="#">Contact Us <span class="glyphicon glyphicon-menu-right"></span></a> <a href="#">Make an enquiry<span class="glyphicon glyphicon-menu-right"></span></a> <a href="#">Find a dealer <span class="glyphicon glyphicon-menu-right"></span></a> <a href="#">Product selector <span class="glyphicon glyphicon-menu-right"></span></a> <a href="#">Used equipment <span class="glyphicon glyphicon-menu-right"></span></a> <a href="#">Customer Support Agreements <span class="glyphicon glyphicon-menu-right"></span></a> </div>
+          <div class="col-md-3">
+            <h5>FOLLOW VOLVO CE </h5>
+          <a href="#"><i class="fa  fa-facebook-square"></i> Facebook <span class="glyphicon glyphicon-menu-right"></span></a> <a href="#"><i class="fa fa-twitter"></i> Twitter <span class="glyphicon glyphicon-menu-right"></span></a> <a href="#"><i class="fa fa-google-plus"></i> Google+ <span class="glyphicon glyphicon-menu-right"></span></a> <a href="#"><i class="fa fa-youtube-play"></i> YouTube <span class="glyphicon glyphicon-menu-right"></span></a> <a href="#"><i class="fa fa-linkedin"></i> LinkedIn <span class="glyphicon glyphicon-menu-right"></span></a> </div>
+          <div class="col-md-3">
+            <h5>NEWSROOM</h5>
+          <a href="#">News <span class="glyphicon glyphicon-menu-right"></span></a> <a href="#">Spirit Magazine <span class="glyphicon glyphicon-menu-right"></span></a> <a href="#">Events & initiatives <span class="glyphicon glyphicon-menu-right"></span></a></div>
+        </div>
+      </div>
+      <div class="col-md-10 col-md-offset-1 footerBlack">
+      	<a href="#">www.volvogroup.com </a>
+      	|
+      	<a href="#"> Contact Us</a>
+      </div>
+      <div class="col-md-10 col-md-offset-1 text-center volvoCopyright">
+      	<img src="../images/logoVolvo.png" alt="volvo">   Copyright AB Volvo 2017
+      </div>
+    </div>
+  </div>
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) --> 
+	<script src="../js/jquery-1.11.3.min.js"></script>
+
+	<!-- Include all compiled plugins (below), or include individual files as needed --> 
+	<script src="../js/bootstrap.js"></script>
+	<script>
+		$('#myCarousel').carousel({
+		  interval: 1000 * 10
+		});  
+		
+//		$("#locations").onclick = function () {
+//			location.href = "locations.html";
+//		};
+		
+	</script>
+  	<script>
+		$('#myCarousel.carousel[data-type="multi"] .item').each(function(){
+		  var next = $(this).next();
+		  if (!next.length) {
+			next = $(this).siblings(':first');
+		  }
+		  next.children(':first-child').clone().appendTo($(this));
+
+		  for (var i=0;i<4;i++) {
+			next=next.next();
+			if (!next.length) {
+				next = $(this).siblings(':first');
+			}
+
+			next.children(':first-child').clone().appendTo($(this));
+		  }
+		}); 
+	</script>
+  </body>
+</html>

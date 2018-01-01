@@ -1,0 +1,855 @@
+@charset "utf-8";
+@import url("../webfonts/VolvoBroad/stylesheet.css");
+@import url("../webfonts/fontawesome/stylesheet.css");
+
+
+* {
+  border-radius: 0 !important;
+}
+
+.dropdown-menu {
+	border: none;
+}
+
+body {
+	font-family: Gotham, "Helvetica Neue", Helvetica, Arial, "sans-serif";
+}
+
+.text-left {
+    text-align: left !important;
+}
+
+.white {
+    background-color: rgb(255, 255, 254);
+}
+
+.darkBrown {
+    background-color: rgb(165, 146, 131);
+}
+
+.lightOrange {
+    background-color: rgb(226, 177, 136);
+}
+
+.lightGray {
+    background-color: rgb(208, 211, 206);
+}
+/*font awesome volvo X-Team*/
+.fa-bucket-capacity:before{
+	content:""
+}
+.fa-operating-weight:before{
+    content:""
+}
+.fa-engine-gross-power:before{
+    content:""
+}
+
+.fa {
+	font-family: fontawesome;
+	font-size: 24px;
+}
+/*end font awesome volvo X-Team*/
+
+.img-responsive {
+    width: 100%;
+    max-width: none;
+}
+
+.noPaddingX {
+	margin-left: 0px;
+	margin-right: 0px;
+}
+.form-control {
+    border: 0;
+	background-color: #eee;	
+	-webkit-box-shadow: none;
+	-moz-box-shadow: none;
+	box-shadow: none;
+}
+.dropdown.yamm-fw .dropdown-toggle {
+	text-transform: uppercase;
+}
+
+.yamm-fw ul {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.yamm-fw img {
+    margin-right: 5px;
+}
+
+.yamm-fw span {
+    display: inline-block;
+    color: #4D4E53;
+}
+
+.yamm-fw span:hover {
+	color: #1251B5;    
+}
+
+.rightBorderX {
+	border-right: thin solid #D8D7D5;
+}
+
+#nav1 {
+	background-color: #000000;
+}
+
+#nav1::after {
+	content: "";
+	display: block;
+	clear: both;
+}
+
+#nav1 a {
+	display: inline-block;
+	color: #fff;
+	padding: 5px;
+	margin: 0 5px;
+}
+
+#nav1 a:hover {
+	text-decoration: none;
+	opacity: .75;
+
+}
+
+#nav1 span {
+	float: right;
+	color: #fff;
+}
+
+#logo {
+	padding: 15px 0;
+}
+
+#mainNav .container-fluid {
+	padding-left: 0;
+	padding-right: 0;
+}
+
+#searchNav {
+	display: inline;
+	float: right;
+	padding-right: 0;
+}
+
+#searchNav .btn-default {
+	background-color: #eee;
+	border-color: #eee;
+}
+
+#searchNav .btn-default:hover {
+	opacity: .5;
+}
+
+.navbar-collapse {
+	padding-left: 0;
+	padding-right: 0;
+}
+
+.navbar-right {
+	margin-right: 0;
+}
+
+#productSelector {
+	color: #1389C7;
+}
+
+.navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus {
+    background-color: #fff;
+}
+
+.navbar-default .navbar-nav > .open > a, .navbar-default .navbar-nav > .open > a:hover, .navbar-default .navbar-nav > .open > a:focus {
+    background-color: #fff;
+}
+
+.navbar-default {
+     border-color: transparent; 
+}
+
+/*hero X-Team*/
+.carousel-inner>.item>img, .carousel-inner>.item>a>img {
+width: 100%; // Add this
+}
+
+.carousel-indicators {
+    bottom: 0px;
+	background-color: rgba(0,0,0,0.50);
+    left: 50%;
+    width: 100%;
+    margin-left: -50%;
+    text-align: center;
+}
+
+.carousel-indicators ul,ol {
+	padding: 10px 0;
+	margin-bottom: 0;
+}
+
+.carousel-caption {
+    position: absolute;
+    right: 0;
+    top: 20px;
+    left: 5%;
+    z-index: 10;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    color: #fff;
+    text-align: left;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, .6);
+}
+
+.carousel-indicators li {
+	border-radius: 50% !important;
+}
+h3  {
+	font-family: VolvoBroad;
+	font-size: 4em;
+	margin-top: 0px;
+}
+
+h5 {
+	font-family: VolvoBroad;
+	font-size: 2em;
+	margin-top: 0px;
+}
+.heroX p {
+	margin-bottom: 0px;
+}
+.btnX {
+	background-color: rgba(255,255,255,1.00);
+	padding-top: 10px;
+	padding-bottom: 10px;
+	color: #4D4E53;
+	text-align: center;
+	border-width: 188px;
+	display: inline-block;
+	padding-left: 20px;
+	padding-right: 20px;
+	text-shadow: none;
+}
+
+.btnX:hover {
+	opacity: .75;
+}
+
+.btnBorder {
+	border: medium solid #4D4E53;
+	margin: 0 auto;
+}
+
+.btnXBlue {
+	background-color: #1251B5 ;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	color: #fff;
+	text-align: center;
+	border-width: 188px;
+	display: inline-block;
+	padding-left: 20px;
+	padding-right: 20px;
+	text-shadow: none;
+}
+.btnXBlue:hover {
+	opacity: .75;
+}
+.headTitleX  {
+	text-align: center;
+	color: #919296;
+	margin-bottom: 20px;
+	text-transform: uppercase;
+}
+
+.headTitleX {
+    color: #4d4e53;
+}
+
+.headTitleX p {
+	text-align: center;
+	color: #919296;
+	margin-bottom: 20px;
+	text-transform: none;
+}
+.heroX {
+	margin-bottom: 20px;
+}
+/*end hero X
+-Team*/
+
+
+
+/*carouselProduct X-Team*/
+
+#myCarousel a {
+  color: #ddd;
+  text-transform: capitalize;
+  font-size: 20px;
+}
+  #myCarousel a:hover {
+    color: #ccc;
+    text-decoration:none;
+  }
+
+#myCarousel .carousel-inner { margin: auto; width: 90%; }
+#myCarousel .carousel-control 			 { width:  4%; }
+#myCarousel .carousel-control.left,
+#myCarousel .carousel-control.right {
+  background-image:none;
+}
+ 
+#myCarousel .glyphicon-chevron-left,#myCarousel .carousel-control .glyphicon-chevron-right {
+  margin-top:-10px;
+  margin-left: -10px;
+  color: #444;
+}
+
+#myCarousel .carousel-inner a {
+    display:table-cell;
+    height: 180px;
+    width: 200px;
+    vertical-align: middle;
+  }
+ #myCarousel .carousel-inner img {
+    max-height: 150px;
+    margin: auto auto;
+    max-width: 100%;
+  }
+
+/*
+@media (max-width: 767px) {
+.carousel-inner > .item.next,
+.carousel-inner > .item.active.right {
+      left: 0;
+      -webkit-transform: translate3d(100%, 0, 0);
+      transform: translate3d(100%, 0, 0);
+  }
+ .carousel-inner > .item.prev,
+ .carousel-inner > .item.active.left {
+      left: 0;
+      -webkit-transform: translate3d(-100%, 0, 0);
+      transform: translate3d(-100%, 0, 0);
+  }
+
+}
+@media (min-width: 767px) and (max-width: 992px ) {
+  .carousel-inner > .item.next,
+  .carousel-inner > .item.active.right {
+      left: 0;
+      -webkit-transform: translate3d(50%, 0, 0);
+      transform: translate3d(50%, 0, 0);
+  }
+  .carousel-inner > .item.prev,
+  .carousel-inner > .item.active.left {
+      left: 0;
+      -webkit-transform: translate3d(-50%, 0, 0);
+      transform: translate3d(-50%, 0, 0);
+  }
+}
+@media (min-width: 992px ) {
+  
+.carousel-inner > .item.next,
+.carousel-inner > .item.active.right {
+      left: 0;
+      -webkit-transform: translate3d(16.7%, 0, 0);
+      transform: translate3d(16.7%, 0, 0);
+  }
+  .carousel-inner > .item.prev,
+  .carousel-inner > .item.active.left {
+      left: 0;
+      -webkit-transform: translate3d(-16.7%, 0, 0);
+      transform: translate3d(-16.7%, 0, 0);
+  }
+  
+}
+*/
+
+
+/*carouselProduct X-Team*/
+
+/*imageText X-Team*/
+
+.imageText {
+	margin-top: 45px;
+	margin-bottom: 45px;
+	text-align: center;
+	color: #fff;
+	text-shadow: 2px 2px 15px #000000;
+}
+
+.imageText > div {
+	background-size: cover;
+	background-position: center;
+	padding-top: 50px;
+	padding-bottom: 50px;
+	padding-bottom: 50px;
+}
+#volvo1 > div {
+	background-image: url("../images/volvo1.jpg");
+}
+
+#volvo2 > div {
+	background-image: url("../images/volvo2.jpg");
+}
+#volvo3 > div {
+	background-image: url("../images/volvo3.jpg");
+}
+#volvo4 > div {
+	background-image: url("../images/volvo4.jpg");
+}
+#volvo5 > div {
+	background-image: url("../images/volvo5.jpg");
+}
+
+#volvo6 > div {
+	background-image: url("../images/volvo6.jpg");
+}
+
+#volvo7 > div {
+	background-image: url("../images/volvo7.jpg");
+}
+#volvo8 > div {
+	background-image: url("../images/volvo8.jpg");
+}
+
+#volvo9 > div {
+	background-image: url("../images/volvo9.jpg");
+}
+
+#volvo10 > div {
+	background-image: url("../images/volvo10.jpg");
+}
+
+#volvo11 > div {
+	background-image: url("../images/volvo11.jpg");
+}
+
+#volvo12 > div {
+	background-image: url("../images/volvo12.jpg");
+}
+
+#volvo13 > div {
+	background-image: url("../images/interior2.jpg");
+}
+
+#volvo14 > div {
+	background-image: url("../images/interior3.jpg");
+}
+
+#volvo15 > div {
+	background-image: url("../images/interior5.jpg");
+}
+
+/*end imageText X-Team*/
+.volvoGray {
+    color: #4D4E53;
+}
+
+.margin-top {
+    display: inline-block;
+    margin-top: 5px;
+}
+
+.margin-bottom {
+    display: inline-block;
+    margin-bottom: 5px;
+}
+
+.margin-bottom0 {
+    margin-bottom: 0;
+}
+
+.headTitleX h4 {
+	color: #4D4E53;
+}
+
+a > h4 {
+    color: #4D4E53;
+}
+.glyphicon {
+	vertical-align: text-top;
+}
+
+.category-color {
+	width: 9px;
+	height: 9px;
+	margin-right: 8px;
+	display: inline-block;
+	background-color: #000000;
+}
+
+.category-color-blue {
+	width: 9px;
+	height: 9px;
+	margin-right: 8px;
+	display: inline-block;
+	background-color: #1251B5;
+}
+
+
+.news .col-md-3 {
+	min-height: 130px;
+	background-image: url("../images/news1.jpg");
+	background-size: cover;
+	background-position: center;
+}
+.newsRow {
+	margin-bottom: 20px;
+}
+
+#newsImg1 {
+	background-image: url("../images/news1.jpg");
+}
+
+#newsImg2 {
+		background-image: url("../images/news2.jpg");
+}
+#newsImg3 {
+		background-image: url("../images/news3.jpg");
+}
+#newsImg4 {
+		background-image: url("../images/news4.jpg");
+}
+
+.footer a {
+	display: block;
+	margin-bottom: 10px;
+	color: #4D4E53;
+}.footerMega {
+	padding: 20px;
+	background-color: #d8d7d5;
+}
+.footerBlack {
+	background-color: #000;
+	text-align: center;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	color: #fff;
+}
+.footerBlack a {
+	margin-right: 10px;
+	margin-left: 10px;
+	display: inline;
+	color: #fff;
+}
+
+.footerBlack a:hover {
+	opacity: .75;
+	text-decoration: none;
+}
+
+.volvoCopyright {
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+
+.heroImgX {
+    position: relative;
+    margin-bottom: 50px;
+}
+
+.heroImgX h3 {
+	position: absolute;
+	color: #fff;
+	text-shadow: 2px 2px 15px #000000;
+	padding-left: 30px;
+	padding-top: 30px;
+}
+
+.heroImgX2 {
+    position: relative;
+    margin-bottom: 50px;
+}
+
+.heroImgX2 h4 {
+	position: absolute;
+	color: #fff;
+	text-shadow: 2px 2px 15px #000000;
+	padding-left: 30px;
+	padding-top: 30px;
+}
+
+.heroImgX2 h3 {
+    width: 50%;
+	position: absolute;
+	color: #fff;
+	text-shadow: 2px 2px 15px #000000;
+	padding-left: 30px;
+	padding-top: 60px;
+}
+
+.heroImgX3 h3 {
+    width: 50%;
+	position: absolute;
+	color: #4D4E53;;
+/*	text-shadow: 2px 2px 15px #000000;*/
+	padding-left: 30px;
+	padding-top: 20px;
+}
+
+.heroImgX3 p {
+    width: 50%;
+	position: absolute;
+	color: #4D4E53;
+/*	text-shadow: 2px 2px 15px #000000;*/
+	padding-left: 30px;
+	padding-top: 90px;
+}
+
+.volvo3setions {
+    margin-bottom: 50px;
+}
+
+.linkCenter {
+    text-align: center;
+}
+
+.linkCenter a {
+	font-weight: bold; 
+	display: inline-block;
+	margin-bottom: 5px;
+}
+
+.volvo1setion2 {
+    margin-bottom: 50px;
+}
+.test {
+}
+.linkLeftDark {
+	color: #333333;
+	text-align: left;
+}
+.linkLeftDark span {
+	font-size: 22px;
+	vertical-align: baseline;
+}
+.specsX {
+	vertical-align: middle;
+}
+.fa-download {
+	font-size: medium;
+	vertical-align: middle;
+}
+.downloadX {
+	background-color: #F1F0EF;
+	color: #4D4E53;
+	text-shadow: none;
+}
+.downloadX .btnX {
+	border-width: thin;
+	border-style: solid;
+	margin-top: 15px;
+}
+.formX .btn-group, .formX .btn-group > .btn:first-child {
+    width: 100%;
+}
+
+.formX .btn {
+	background-color: #337AB7;
+	color: #FFFFFF;
+}
+
+.formX .btn:hover {
+    opacity: .75;
+}
+.formX .btn span {
+	background-color: #337AB7;
+	color: #FFFFFF;
+	margin-left: 10px;
+}
+.wideBtn {
+	padding-right: 15px;
+	padding-left: 15px;
+	padding-top: 2px;
+	padding-bottom: 2px;
+    margin-bottom: 10px;
+}
+
+.open > .dropdown-menu {
+    width: 100%;
+}
+
+input {
+	margin-left: 10px;
+}
+.message {
+	height: 100px;
+}
+
+.searchResults {
+	border-bottom: thin solid #9EB3BC;	
+}
+
+.searchResults p {
+    text-align: left;
+
+}
+
+.volvoLogo {
+    width: auto;
+    max-height: 54px;
+    margin-left: 20px;
+}
+
+.tabX .nav-tabs > li {
+    float:none;
+    display:inline-block;
+    zoom:1;
+    width: 24%;
+}
+
+.tabX .nav-tabs > li.active a {
+    background-color: #4D4E53;
+    color: #fff;
+}
+
+.tab2sectionsX .nav-tabs {
+    text-align:center;
+}
+
+.tab2sectionsX ul {
+    width: 50%;
+}
+
+.tab2sectionsX li {
+    width: 33.3%;
+}
+
+.tab2sectionsX .nav-tabs > li.active a {
+    background-color: #4D4E53;
+    color: #fff;
+}
+
+.tabColorModelX ul {
+    width: 100%;
+}
+
+.tabColorModelX .nav-tabs > li a {
+    background-color: rgb(165, 146, 131);
+    width: 32px;
+    height: 32px;
+}
+
+
+.lazyloaded {
+    width: 100%;
+}
+
+.tabX .nav-tabs {
+    text-align:center;
+}
+
+.tab2sectionsX {
+    position: relative;
+}
+
+.tab2sectionsX ul {
+    position: absolute;
+}
+
+.tab2secContent {
+    margin-top: 50px;
+}
+
+blockquote {
+    border-left: none;
+}
+
+.colorModel span {
+	display: inline-block;
+	width: 32px;
+	height: 32px;
+	margin-right: 2px;
+	-webkit-box-shadow: 1px 1px 10px;
+	box-shadow: 1px 1px 10px;
+}
+#Colorizer {
+	width: 100%;
+	max-width: 1200px;
+	height: 550px;
+	padding-right: 0px;
+}
+.truckMenu {
+	background-color: #4D4E53;
+	padding-left: 0px;
+	padding-right: 0px;
+}
+.truckMenu .logoX {
+    display: inline-block;
+	background-color: #000000;
+    text-align: center;
+    width: 120px;
+}
+
+.truckMenu a {
+    color: #fff;
+    display: inline-block;
+    padding: 17px;
+}
+
+.truckMenu a:hover {
+    background-color: #343539;
+    text-decoration: none;
+}
+
+.slideShowX img {
+    width: 50% !important;
+    float: right !important;
+}
+
+.slideShowX .carousel-caption {
+    width: 45% !important;
+}
+
+.slideShowX + .carousel-control.left {
+    background-image: linear-gradient(to left, rgba(0, 0, 0, .0001) 0%, rgba(0, 0, 0, .05) 100%) !important;
+}
+
+.slideShowX + .carousel-control + .carousel-control.right {
+    background-image: linear-gradient(to right, rgba(0, 0, 0, .0001) 0%, rgba(0, 0, 0, .05) 100%) !important;
+}
+
+.modal.in .modal-dialog {
+    z-index: 2000;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: VolvoBroad !important;
+}
+
+.heroImgX2 h3 {
+  font-family: VolvoBroad;
+  font-size: 4em;
+}
+
+.heroImgX2 h4 {
+  position: absolute;
+  color: #fff;
+  text-shadow: 2px 2px 15px #000000;
+  padding-left: 30px;
+  padding-top: 30px;
+}
+
+h4 {
+    font-family: Gotham, "Helvetica Neue", Helvetica, Arial, "sans-serif";
+}
+
+h5 {
+    font-size: 2em !important;
+    margin-bottom: 10px !important;
+}
+
+.imageText h3 {
+  font-family: VolvoBroad;
+  font-size: 4em;
+  margin-bottom: 10px;
+    color: #fff;
+    line-height: 1.1;
+
+}
+
+p {
+  margin: 0 0 10px;
+}

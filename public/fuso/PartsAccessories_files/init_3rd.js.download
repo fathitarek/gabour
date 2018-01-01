@@ -1,0 +1,30 @@
+/*
+* js ver1.0
+* Written by Variety Article Factory 2015.08
+******************************************vaf*/
+
+/* 初期設定 */
+document.write('<meta name="viewport" content="width=device-width,initial-scale=0.7,minimum-scale=0.7,maximum-scale=0.7, user-scalable=no">');
+document.write('<meta name="format-detection" content="telephone=no">');
+document.write('<script src="/public/fuso/assets/jquery.min.js"></script>');
+document.write('<script src="/public/fuso/assets/jquery.bxslider.js"></script>');
+document.write('<script src="/public/fuso/assets/common.js"></script>');
+document.write('<script src="/public/fuso/assets/analytics.js"></script>');
+document.write('<script src="/public/fuso/assets/usonar.js"></script>');
+
+document.write('<script src="/etc/designs/fuso/core/js/navigation.js"></script>');
+
+document.write('<script src="/etc/designs/fuso/core/js/jquery.colorbox.js"></script>');
+
+
+
+if(location.href.match("/jp/")){
+//-- jp
+	document.write('<script src="/etc/designs/fuso/core/js/dealersearch.js"></script>');
+}else if(location.href.match("/cn/")){
+//-- cn
+	document.write('<script src="/etc/designs/fuso/core/js/distributors.js"></script>');
+}else{
+//-- en
+	document.write('<script src="/etc/designs/fuso/core/js/distributors.js"></script>');
+}

@@ -1,0 +1,92 @@
+<?php namespace App;
+
+use Illuminate\Auth\Authenticatable;
+use Illuminate\Database\Eloquent\Model;
+use Illuminate\Auth\Passwords\CanResetPassword;
+use Illuminate\Contracts\Auth\Authenticatable as AuthenticatableContract;
+use Illuminate\Contracts\Auth\CanResetPassword as CanResetPasswordContract;
+
+class User extends Model implements AuthenticatableContract, CanResetPasswordContract {
+
+	use Authenticatable, CanResetPassword;
+
+	/**
+	 * The database table used by the model.
+	 *
+	 * @var string
+	 */
+	protected $table = 'users';
+
+	/**
+	 * The attributes that are mass assignable.
+	 *
+	 * @var array
+	 */
+	protected $fillable = ['name', 'email', 'password'];
+
+	/**
+	 * The attributes excluded from the model's JSON form.
+	 *
+	 * @var array
+	 */
+	protected $hidden = ['password', 'remember_token'];
+
+    public function websites(){
+        return $this->hasMany('App\Website');
+    }
+		public function sliders(){
+        return $this->hasMany('App\Slider');
+                }
+    public function cities(){
+        return $this->hasMany('App\City');
+    }
+    public function locationCategories(){
+        return $this->hasMany('App\LocationCategory');
+    }
+
+     public function locationItems(){
+        return $this->hasMany('App\LocationItem');
+    }
+		public function sliderItems(){
+        return $this->hasMany('App\SliderItem');
+    }
+
+    public function templates(){
+        return $this->hasMany('App\Template');
+    }
+
+    public function pages(){
+        return $this->hasMany('App\Page');
+    }
+
+    public function componentTemplates(){
+        return $this->hasMany('App\ComponentTemplate');
+    }
+    public function componentDatas(){
+        return $this->hasMany('App\ComponentData');
+    }
+<<<<<<< HEAD
+		public function contacts(){
+				return $this->hasMany('App\Contact');
+		}
+=======
+    public function menus() {
+        return $this->belongsTo('App\Menu');
+    }
+    public function menuItems() {
+        return $this->belongsTo('App\MenuItem');
+    }
+    
+    public function similar_sections() {
+        return $this->hasMany('App\Similar_sections');
+    }
+    public function categories() {
+            return $this->hasMany('App\Category');
+    
+    }
+     public function products() {
+            return $this->hasMany('App\Product');
+    
+    }
+>>>>>>> a74d4c4bc3b14a450e86c85acb21b00139900e9e
+}

@@ -1,0 +1,20 @@
+@import url('//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
+.bread-crumb span {
+  color: #9DC45F;
+  font-size: 20px;
+}
+form label {
+  color: #404d5b;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.error {
+  color: #D8000C;
+  background-color: #FFBABA;
+}
+.error i {
+    margin:10px 22px;
+    font-size:2em;
+    vertical-align:middle;
+}

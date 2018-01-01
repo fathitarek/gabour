@@ -1,0 +1,356 @@
+/*
+* js ver1.0
+* Written by Variety Article Factory 2015.08 
+******************************************vaf*/
+
+$(function(){
+	areaList = {};
+	targetList = {};
+	
+	
+	$.ajax({
+		type: "GET",
+		url: "/etc/designs/fuso/core/xml/en/worldmap.xml",
+		datatype: "xml",
+		error: function(r,s,t){
+			//console.log(s);
+		}
+		,success: function(pXml){
+			$(pXml).find('area').each(function(){
+				//-- area list
+				var areaname = $(this).attr('type');
+				if(!areaList[areaname]) {
+					areaList[areaname] = [];
+				}
+				
+				//- entry
+				$(this).find('entry').each(function(){
+					var no = "";
+					var tit = "";
+					var cmp = [];
+					var comlist = [];
+					var list = {};
+					
+					no = $(this).find('id').text();
+					tit = $(this).find('title').text();
+					//console.log(tit);
+					
+					//-- company
+					$(this).find('company').each(function(){
+						var nm = "";
+						var txt = [];
+						var data = {};
+						
+						nm = $(this).find('name').text();
+						
+						//-- text
+						$(this).find('text').each(function(){
+							txt.push($(this).text());
+						});
+						
+						data = {
+							name: nm,
+							text: txt
+						}
+						comlist.push(data);
+					});
+					
+					list = {
+						id: no,
+						title: tit,
+						company: comlist,
+						area: areaname
+					}
+					
+					areaList[areaname].push(list);
+				});
+			});
+			
+			//-- 初期
+			$("#GLOBALMENU_FIELD select[name=f_arealist]").change();
+		}
+	});
+	
+	
+	//-- PC hover
+	//-- LIST view
+	var hoverflg = false;
+	$('#MAP_NAVI .maparea a').hover(function(){
+		if(!hoverflg){
+			$('#MD_BASE').hide();
+			$(this).next().find('img').eq(0).css('display', 'block');
+		}
+	}, function(){
+		if(!hoverflg){
+			$('#MD_BASE').show();
+			$(this).next().find('img').eq(0).css('display', 'none');
+		}
+	});
+	//-- LIST map
+	$('#MAP_AREA map[name=distributors] area').hover(function(){
+		var idStr = $(this).data("mapid");
+		if(!hoverflg){
+			$('#MD_BASE').hide();
+			$('#'+idStr).find('img').eq(0).css('display', 'block');
+		}
+	}, function(){
+		var idStr = $(this).data("mapid");
+		$('#MD_BASE').show();
+		$('#'+idStr).find('img').eq(0).css('display', 'none');
+	});
+	
+	//-- PC click
+	//-- view
+	$('#MAP_NAVI .maparea a').click(function(){
+		_mapclick($(this).text(), $(this).next().attr("id"));
+		
+		return false;
+	});
+	//-- map
+	$('#MAP_AREA map[name=distributors] area').click(function(){
+		var str = $(this).attr("href").replace("#", "");
+		_mapclick(str, $(this).data("mapid"));
+		
+		return false;
+	});
+	
+	//-- function
+	function _mapclick (pArea, pMapData){
+		//-- areamenu create
+		$('#AREA_LIST ul').remove();
+		var area = pArea;
+		if(!areaList) return false;
+        		
+		targetList = areaList[area];
+		
+		for(i in targetList){
+			//-- block change
+			if(i % 16 == 0) {
+				$('#AREA_LIST').append('<ul></ul>');
+			}
+			$('#AREA_LIST ul:last').append('<li class="'+targetList[i].id+'"><a href="#">'+targetList[i].title+'</a></li>');
+		}
+	
+		//-- viewset
+		$('#AREA_LIST').css('display', 'block');
+
+		$('#MAP_NAVI .maparea .mapimg img').css('display', 'none');
+		$('#AREA_DETAIL').css('display', 'none');
+		
+		$('#'+pMapData).find('img').eq(1).css('display', 'block');
+		
+		//-- hover Stop
+		hoverflg = true;
+		
+		
+		
+		//-- DETAIL view
+		$('#AREA_LIST li a').click(function(){
+            
+            targetList = areaList[area];
+            
+			var data = {};
+			
+			if(!areaList) return false;
+			
+			//-- data set
+			var idno = $(this).parent().eq(0).attr('class');
+			for(i in targetList){
+				if(targetList[i]['id'] == idno){
+					data = targetList[i];
+				}
+			}
+			
+			//-- detail create
+			$('#AREA_DETAIL .block').remove();
+			$('#AREA_DETAIL').prepend('<div class="block"></div>');
+			
+			//-- title
+			$('#AREA_DETAIL .block').append('<strong>'+data.title+'</strong>');
+			
+			//--company
+			for(i in data.company){
+				//-- name
+				$('#AREA_DETAIL .block').append('<p>'+data.company[i].name+'</p>');
+				
+				//-- text
+				for(j in data.company[i].text){
+					str = data.company[i].text[j];
+					flg = false;
+					//-- url
+					regexp = /^https?:\/\//;
+					if(str.match(regexp)){
+						$('#AREA_DETAIL .block').append('<a class="website" href="'+str+'" target="_blank">Web site</a>');
+						flg = true;
+					}
+					
+					//-- Address
+					regexp = /^([Aa]ddress:)(.+)/;
+					if(match = str.match(regexp)){
+						$('#AREA_DETAIL .block').append('<dl><dt>'+match[1]+'</dt><dd>'+match[2]+'</dd></dl>');
+						flg = true;
+					}
+					//-- Phone
+					regexp = /^([Pp]hone:)(.+)/;
+					if(match = str.match(regexp)){
+						$('#AREA_DETAIL .block').append('<dl><dt>'+match[1]+'</dt><dd>'+match[2]+'</dd></dl>');
+						flg = true;
+					}
+					//-- Fax
+					regexp = /^([Ff]ax:)(.+)/;
+					if(match = str.match(regexp)){
+						$('#AREA_DETAIL .block').append('<dl><dt>'+match[1]+'</dt><dd>'+match[2]+'</dd></dl>');
+						flg = true;
+					}
+					
+					//-- その他（どれにも該当せず）
+					if(!flg){
+						$('#AREA_DETAIL .block dl:last').append('<dd>'+str+'</dd>');
+					}
+					
+					
+				}
+			}
+			
+			//-- viewset
+			$('#AREA_DETAIL').css('display', 'block');
+			$('#AREA_LIST').css('display', 'none');
+			
+			return false;
+		});
+		
+		
+		
+		return false;
+	}
+	
+	$('#AREA_LIST .close').click(function(){
+		//-- viewset
+		$('#AREA_LIST').css('display', 'none');
+		
+		$('#MAP_NAVI .maparea .mapimg img').css('display', 'none');
+		$('#MD_BASE').css('display', 'block');
+		
+		//-- hover start
+		hoverflg = false;
+		
+		return false;
+	});
+	$('#AREA_DETAIL .close').click(function(){
+		
+		//-- viewset
+		$('#AREA_DETAIL').css('display', 'none');
+		
+		$('#MAP_NAVI .maparea .mapimg img').css('display', 'none');
+		$('#MAP_NAVI li div img:eq(2)').css('display', 'none');
+		
+		$('#MD_BASE').css('display', 'block');
+		
+		return false;
+	});
+	
+	
+	
+	//-- Mobile
+	//-- LIST view
+	$("#GLOBALMENU_FIELD select[name=f_arealist]").change(function(){
+		$('#GLOBALMENU_FIELD select[name=f_countrylist] option').remove();
+		$('#GLOBALMENU_FIELD select[name=f_countrylist]').append('<option value="0">-</option>');
+			
+		if($(this).val()){
+			if(!areaList) return false;
+			
+			var area = $(this).val();
+			targetList = areaList[area];
+			
+			for(i in targetList){
+				//-- block change
+				$('#GLOBALMENU_FIELD select[name=f_countrylist]').append('<option value="'+targetList[i].id+'">'+targetList[i].title+'</option>');
+			}
+		}else{
+		}
+	});
+	$("#GLOBALMENU_FIELD select[name=f_countrylist]").change(function(){
+		if($(this).val()){
+			var data = {};
+			if(!areaList) return false;
+			
+			$("#MB_AREADETAIL").show();
+			//-- data set
+			var idno = $(this).val();
+			for(i in targetList){
+				if(targetList[i]['id'] == idno){
+					data = targetList[i];
+				}
+			}
+			
+			//-- detail create
+			$('#MB_AREADETAIL .block').remove();
+			$('#MB_AREADETAIL').prepend('<div class="block"></div>');
+			
+			//-- areatitle
+			$('#MB_AREADETAIL .block').append('<a href="#" class="close">'+data.area+'</a>');
+			//-- countrytitle
+			$('#MB_AREADETAIL .block').append('<strong>'+data.title+'</strong>');
+			
+			//--company
+			for(i in data.company){
+				//-- name
+				$('#MB_AREADETAIL .block').append('<p>'+data.company[i].name+'</p>');
+				
+				//-- text
+				for(j in data.company[i].text){
+					str = data.company[i].text[j];
+					flg = false;
+					//-- url
+					regexp = /^https?:\/\//;
+					if(str.match(regexp)){
+						$('#MB_AREADETAIL .block').append('<a class="website" href="'+str+'" target="_blank">Web site</a>');
+						flg = true;
+					}
+					
+					//-- Address
+					regexp = /^([Aa]ddress:)(.+)/;
+					if(match = str.match(regexp)){
+						$('#MB_AREADETAIL .block').append('<dl><dt>'+match[1]+'</dt><dd>'+match[2]+'</dd></dl>');
+						flg = true;
+					}
+					//-- Phone
+					regexp = /^([Pp]hone:)(.+)/;
+					if(match = str.match(regexp)){
+						$('#MB_AREADETAIL .block').append('<dl><dt>'+match[1]+'</dt><dd>'+match[2]+'</dd></dl>');
+						flg = true;
+					}
+					//-- Fax
+					regexp = /^([Ff]ax:)(.+)/;
+					if(match = str.match(regexp)){
+						$('#MB_AREADETAIL .block').append('<dl><dt>'+match[1]+'</dt><dd>'+match[2]+'</dd></dl>');
+						flg = true;
+					}
+					
+					//-- その他（どれにも該当せず）
+					if(!flg){
+						$('#MB_AREADETAIL .block dl:last').append('<dd>'+str+'</dd>');
+					}
+					
+					
+				}
+			}
+			
+			//-- close
+			$('#MB_AREADETAIL .close').click(function(){
+				$(window).scrollTop(0);
+				
+				$("#GLOBALMENU_FIELD select[name=f_countrylist]").attr("selected", false);
+				$("#GLOBALMENU_FIELD select[name=f_countrylist]").val(0);
+				$("#MB_AREADETAIL").toggle();
+				
+				return false;
+			});
+			
+		}else{
+			$("#MB_AREADETAIL").hide();
+		}
+	});
+	
+});

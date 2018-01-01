@@ -1,0 +1,112 @@
+
+h1 {
+	font-size: 16px;
+	font-weight: normal;
+	margin: 15px 0;
+	text-transform: uppercase;
+	color: #c0c0c0;
+}
+h1 span {
+	color: #868585;
+}
+/* Truck holder */
+#truckimg {
+	position: relative;
+	width: 600px;
+	height: 380px;
+	overflow: hidden;
+	float:left;
+	line-height: 0;
+}
+#truckimg img {
+	width: 600px;
+	height: 380px;
+	position: absolute;
+	line-height: 0;
+}
+#truckimg .filter {
+	display: none;
+}
+#truckimg.metallic .filter.metallic {
+	display: block;
+}
+#truckimg.pearl .filter.pearl {
+	display: block;
+}
+
+/* Info bar */
+.infobar {
+	float: right;
+	color: #6a6a6a;
+	text-align: left;
+}
+.infobar h3 {
+	font-size: 25px;
+	margin: 8px 0 3px;
+	color: #3f3f3f;
+}
+.current {
+	border: 1px solid #dcdcdc;
+	background: #f4f4f4;
+	padding: 0 0 8px 8px;
+	width: 180px;
+	margin: 0 0 20px;
+}
+.currentcolor {
+}
+#colorcode {
+	background-image: url(../images/bg_infobarColors.png);
+	background-position: 0 0;
+	display: inline-block;
+	width: 33px;
+	height: 33px;
+	float: left;
+	border: 1px solid #d0d0d0;
+}
+#colorcode.metallic {
+	background-position: 0 -33px;
+}
+#colorcode.pearl {
+	background-position: 0 -66px;
+}
+#colorname {
+	font-size: 20px;
+	display: inline-block;
+	vertical-align: top;
+	width: 135px;
+	float: right;
+	line-height: 100%;
+	padding: 0 0 0 5px;
+}
+
+
+/* Copy */
+.copy .columnLeft,
+.copy .columnRight {
+	float: left;
+	width: 48%;
+}
+.copy .columnLeft {
+	margin-right: 2%;
+}
+
+
+.clearfix {
+	zoom: 1;
+}
+.clearfix:after {
+	content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+
+#maincolors,
+#colorplate,
+#urldialog,
+#maildialog,
+.shareblock,
+.recent {
+	display: none;
+}

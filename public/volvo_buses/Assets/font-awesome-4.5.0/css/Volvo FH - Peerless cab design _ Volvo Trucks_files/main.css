@@ -1,0 +1,742 @@
+﻿@charset "utf-8";
+@-webkit-viewport   { width: device-width; }
+@-moz-viewport      { width: device-width; }
+@-ms-viewport       { width: device-width; }
+@-o-viewport        { width: device-width; }
+@viewport           { width: device-width; }
+
+@font-face {
+  font-family: 'VolvBro';
+  src: url('../fonts/VolvBro.ttf')  format('truetype');
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	outline: 0;
+}
+
+body {
+	background: #fff;
+	text-align: left;
+}
+
+body, textarea, input, select {
+	font: 12px/17px Arial, Helvetica, sans-serif;
+}
+
+/* Markup */
+h1 {
+	font: normal 16px/100% Arial, Helvetica, sans-serif;
+	text-transform: uppercase;
+	color: #c0c0c0;
+}
+h1 span {
+	color: #868585;
+}
+
+h3 {
+	color: #444036;
+}
+
+a {
+	text-decoration: none;
+}
+
+label {
+	display: block;
+	font-size: 11px;
+	margin: 5px 0 0;
+	color: #444036;
+}
+
+input.input,
+textarea {
+	padding: 2px;
+	width: 345px;
+	border: 1px solid #d1ccc0;
+	resize: none;
+}
+button.submit {
+	width: auto;
+	padding: 0 10px;
+	font-size: 12px;
+	margin: 10px 0 0 0;
+	float: right;
+	background: url(../images/bg_sharebtn.png) 0 0 repeat-x;
+	border: 1px solid #919191;
+	border-radius: 3px;
+	color: #333;
+	cursor: pointer;
+}
+button.submit:hover {
+	border: 1px solid #717171;
+	color: #000;
+}
+
+img {
+	border: 0;
+}
+
+hr {
+    border-color: #c0c0c0;
+    margin: 10px auto 15px auto;
+}
+
+
+/* Truck holder */
+#truckimg {
+	position: relative;
+	display: block;
+	width: 100%;
+	overflow: hidden;
+	padding-top: 63.3%;
+}
+#truckimg img {
+	position:  absolute;
+    width: 101%;
+    height: 201%;
+	top: -1px;
+	left: -1px;
+	bottom: 0;
+	right: 0;
+}
+#truckimg .truck {
+	z-index: 1;
+	top: -100.8%;
+}
+#truckimg.dark .truck {
+	top: -1px;
+}
+#truckimg .texture {
+	display: none;
+}
+#truckimg.pearl .texture {
+	display: block;
+    top: -100%;
+}
+#truckimg.metallic .texture {
+	display: block;
+}
+
+/* Search */
+#search-results:after, #mobile-search-results:after {
+    content: "";
+    display: block;
+    clear: both;
+}
+#mobile-search-results {
+    display: block;
+    background-color: #f4f4f4;
+}
+.search-title {
+    display: none;
+}
+h3.search-title {
+    position: relative;
+    font-size: 16px;
+    color: #3f3f3f;
+    font-weight: bold;
+    margin-bottom: 25px;
+}
+    .search-title hr {
+        margin: 15px auto -13px;
+    }
+    .search-title .closeBtn.dark {
+        top: -5px;
+        right: 15px;
+    }
+#search-form, #mobile-search-form {
+    width: 100%;
+    background-color: #f4f4f4;
+    margin: 3px auto;
+    padding: 15px;
+    padding-right: 40px;
+    border: 1px solid #fff;
+}
+#search-form:focus {
+	outline: 0;
+	box-shadow: none;
+	border: 1px solid #1251b5;
+}
+.search-form {
+    position: relative;
+    margin-top: 20px;
+}
+.search-icon {
+    position: absolute;
+    bottom: 18px;
+    right: 15px;
+    color: #9c9b9b;
+}
+    .search-icon:before {
+        font-size: 20px;
+    }
+
+#mobile-search-form {
+    background-color: #fff;
+}
+.search-noResult {display: none;}
+.search-colorblock {
+    position: relative;
+    display: inline-block;
+    float: left;
+    text-align: center;
+    width: 112px;
+    margin: 7px 7px 20px;
+}
+.search-colorblock:before {
+    content:'';
+    position:absolute;
+    display:block;
+    width: 120%;
+    margin: -20px auto 0 -10px;
+    border-top: 1px solid #c0c0c0;
+}
+    .search-colorblock .search-color {
+        display: block;
+        height: 112px;
+        width: 100%;
+        background-image: url('../images/none_bg.png');
+        background-size: 100%;
+        background-position: 0 0;
+        border: 1px solid #d0d0d0;
+        overflow: hidden;
+    }
+    .search-colorblock .search-color.pearl {background-image: url('../images/pearl_bg.png');}
+    .search-colorblock .search-color.metallic {background-image: url('../images/metallic_bg.png');}
+    .search-colorblock h4 {
+        display: inline-block;
+        font-size: 12px;
+        width: 100%;
+        font-weight: bold;
+        margin-bottom: 3px;
+    }
+		.search-colorblock p {
+			min-height: 35px;
+			margin-bottom: 0px;
+		}
+
+@media screen and (max-width: 1200px) {
+   .search-colorblock {
+       width: 120px;
+   }
+   .search-colorblock .search-color {
+       height: 120px;
+   }
+}
+
+@media screen and (max-width: 767px) {
+   .search-colorblock {
+       width: 29%;
+       margin: 0px 2%;
+   }
+   .search-colorblock:before {
+       border: 0;
+       margin: 0;
+   }
+   .search-colorblock .search-color {
+       height: 80px;
+   }
+   .search-noResult { margin: 50px auto 70px; }
+
+	 .search-form {
+		 margin-top: 0;
+	 }
+}
+
+@media screen and (max-width: 450px) {
+    .search-colorblock {
+        width: 41%;
+        margin: 0px 4%;
+    }
+    .search-colorblock .search-color {
+       height: 70px;
+   }
+}
+
+
+
+/* Main colors */
+.maincolors ul {
+	list-style: none;
+}
+.maincolors li {
+	cursor: pointer;
+	float: left;
+	margin: 0 5px 0 0;
+}
+.maincolors li.active {
+	position: relative;
+}
+.maincolors li span {
+	cursor: pointer;
+	vertical-align: middle;
+	display: inline-block;
+	width: 17px;
+	height: 17px;
+	margin: 8px;
+	background-image: url(../images/bg_infobarColors.png);
+}
+.maincolors li em {
+	font-style: normal;
+	padding: 0 12px 0 0;
+	vertical-align: middle;
+}
+.maincolors a:link,
+.maincolors a:visited {
+	padding: 0;
+	display: block;
+	font-weight: bold;
+	text-decoration: none;
+	color: #222;
+	background: url(../images/bg_tabs.png) 0 0 repeat-x;
+}
+.maincolors a:hover,
+.maincolors a:active,
+.maincolors li.active a {
+	background: #fff;
+}
+.maincolors li span {
+	border: 1px solid #d0d0d0;
+}
+.maincolors .white span {
+	background-color: #fff;
+}
+.maincolors .yellow span {
+	background-color: #ffd800;
+}
+.maincolors .brown span {
+	background-color: #a56519;
+}
+.maincolors .green span {
+	background-color: #549952;
+}
+.maincolors .red span {
+	background-color: #d93800;
+}
+.maincolors .blue span {
+	background-color: #008ad9;
+}
+.maincolors .black span {
+	background-color: #000000;
+}
+.maincolors .metallic span {
+	background-color: #999999;
+	background-position: 0 -33px;
+}
+.maincolors .pearl span {
+	background-color: #8b1fd0;
+	background-position: 0 -66px;
+}
+
+
+/* Info bar */
+#infobar {
+	font-size: 16px;
+	color: #000;
+    z-index: 4;
+}
+#infobar h3 {
+	font-size: 16px;
+	color: #3f3f3f;
+    font-weight: bold;
+}
+#infobar a {
+	color: #3f3f3f;
+    transition: ease 0.1s;
+}
+#infobar a:hover {
+	color: #9c9b9b;
+}
+
+#colorname {
+    display: block;
+    min-width: 300px;
+}
+
+#solidText,
+#clearcoatText {
+    float: left;
+}
+
+#textureinfo,
+#colorinfo,
+#colorinfo2 {
+    font-weight: bold;
+    float: right;
+    padding-right: 20px;
+}
+
+.shareblock i {
+    font-size: 16px;
+}
+
+.recent {
+	background: #f4f4f4;
+	padding: 8px 0 0 8px;
+	// width: 123px;
+}
+
+#recent {
+	display: inline-block;
+	border-right: 0;
+	line-height: 0;
+	font-size: 0;
+	overflow: hidden;
+}
+#recent .colorpick {
+	display: inline-block;
+	width: 33px;
+	height: 33px;
+	margin: 0 5px 6px 0;
+	border: 1px solid #d0d0d0;
+	background-image: url(../images/bg_infobarColors.png);
+	background-position: 0 0;
+	background-repeat: repeat-x;
+}
+#recent .colorpick.metallic {
+	background-position: 0 -33px;
+}
+#recent .colorpick.pearl {
+	background-position: 0 -66px;
+}
+
+
+/* Dialogs */
+.dialog {
+	position: absolute;
+    left: 50%;
+    width: 360px;
+    height: auto;
+    margin-left: -180px;
+    background: #f4f4f4;
+    padding: 20px;
+    z-index: 5;
+	display: none;
+}
+.dialog input,
+.dialog textarea {
+    width: 100%;
+}
+.dialog button.submit {
+    background: #01548b;
+    width: 45%;
+    color: #fff;
+    border-radius: 0px;
+    padding: 2px;
+}
+
+.submit i {
+    font-size: 10px;
+    font-weight: normal;
+}
+.dialog h3 {
+    margin-top: 0px;
+    font-family: 'VolvBro', Arial, sans-serif;
+}
+
+.closeBtn {
+    font-size: 15px;
+   	position: absolute;
+	top: 10px;
+	right: 20px;
+    color: #000;
+}
+.closeBtn i:hover {
+	color: #9c9b9b;
+}
+.closeBtn.dark {
+    font-size: 25px;
+    top: 20px;
+}
+
+
+/* URL dialog */
+.urldialog {
+    top: 140px;
+}
+
+
+/* Mail dialog */
+#maildialog label {
+    margin-top: 30px;
+}
+.maildialog {
+    top: 70px;
+}
+.maildialog .errorSend,
+.maildialog .afterSend {
+	display: none;
+}
+.maildialog .afterSend .btnSmall {
+	width: auto;
+}
+.requiredMessage {
+	visibility: hidden;
+	position: absolute;
+	color: #900;
+    z-index: 6;
+}
+
+
+/* Color dialog */
+#colordialog {
+    display: none;
+    position: relative;
+    min-height: 500px;
+}
+
+
+/* Color plate */
+.colorplate {
+	padding: 20px 0 20px 0px;
+}
+.colorplate.load {
+	background: url(../images/colorloader.gif) center center no-repeat;
+}
+.colorloader {
+	text-align: center;
+	padding: 10px;
+	display: none;
+}
+
+.colorblock {
+	display: block;
+    overflow: hidden;
+}
+.colorblock li {
+	display: block;
+	float: left;
+	width: 32px;
+	height: 34px;
+}
+.colorblock a {
+	display: block;
+	overflow: hidden;
+	width: 32px;
+	height: 34px;
+	background-position: 0 0;
+	background-image: url(../images/bg_colorizer.png);
+}
+.colorblock a:hover {
+	background-position: 0 -80px;
+}
+.colorblock a.active {
+	background-position: 0 -40px;
+}
+
+.colorblock a.metallic {
+	background-position: -32px 0;
+}
+.colorblock a.metallic:hover {
+	background-position: -32px -80px;
+}
+.colorblock a.metallic.active {
+	background-position: -32px -40px;
+}
+
+.colorblock a.pearl {
+	background-position: -64px 0;
+}
+.colorblock a.pearl:hover {
+	background-position: -64px -80px;
+}
+.colorblock a.pearl.active{
+	background-position: -64px -40px;
+}
+
+
+/* Extra */
+.hidden {
+	display: none;
+}
+.clearfix {
+	clear: both;
+}
+.clearfix:after {
+	content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+
+
+@media screen and (max-width: 767px) {
+
+    #truckimg{
+        width: 81%;
+	    padding-top: 50.6%;
+        text-align: center;
+        margin: auto;
+    }
+
+    .shareblock i {
+        font-size: 30px;
+    }
+
+    .urldialog {
+        top: 100px;
+    }
+
+    .closeBtn {
+        font-size: 18px;
+    }
+
+    #selectColourBtn {
+        width: 100%;
+        background: #01548b;
+        color: #fff;
+        border: none;
+        padding: 15px;
+        margin: 20px auto;
+        font-weight: bold;
+    }
+    #selectColourBtn:hover, #selectColourBtn:active {
+        background: #0b64a0;
+    }
+
+    .recent {
+	    width: 100%;
+    }
+
+    #recent {
+        width: 100%;
+        padding: 5% 0% 5% 2%;
+    }
+
+    #recent .colorpick {
+	    position: relative;
+        display: block;
+        float: left;
+        width: 18%;
+        height: 0;
+        margin: 0 3% 6% 3%;
+        padding-top: 18%;
+        background-size: 100%;
+    }
+    #recent .colorpick.none,
+    #colordialog .colorblock a.none {
+	    background-position: 0 0;
+        background-image: url('../images/none_bg.png');
+    }
+    #recent .colorpick.metallic,
+    #colordialog .colorblock a.metallic {
+	    background-position: 0 0;
+        background-image: url('../images/metallic_bg.png');
+    }
+    #recent .colorpick.pearl,
+    #colordialog .colorblock a.pearl {
+	    background-position: 0 0;
+        background-image: url('../images/pearl_bg.png');
+    }
+
+    #colordialog {
+    left: 0px;
+    width: 100%;
+    margin-left: 0px;
+    }
+
+    #colordialog .colorblock  {
+        margin: 0 -2%;
+    }
+
+    #colordialog .colorblock li {
+        position: relative;
+        width: 16%;
+        height: 0;
+        overflow: hidden;
+        margin: 0 2% 4% 2%;
+        padding-top: 16%;
+    }
+
+    #colordialog .colorblock a {
+        position: absolute;
+        display: block;
+        width: 100%;
+	    top: 0;
+	    left: 0;
+	    bottom: 0;
+	    right: 0;
+        height: 100%;
+        background-size: 100%;
+        border: 1px solid #d0d0d0;
+    }
+     #colordialog .colorblock a:hover,
+     #colordialog .colorblock a:active {
+        border-color: #9b9b9b;
+    }
+}
+
+
+@media screen and (max-width: 450px) {
+
+    #truckimg {
+	    width: 101%;
+	    padding-top: 63.3%;
+    }
+
+    .dialog {
+        position: absolute;
+        left: 0;
+        width: 100%;
+        height: auto;
+        margin-left: 0;
+    }
+
+     #recent {
+        width: 100%;
+        padding: 5% 0% 5% 1%;
+    }
+
+    #recent .colorpick {
+	    position: relative;
+        display: block;
+        float: left;
+        width: 26%;
+        height: 0;
+        margin: 0 3% 6% 3%;
+        padding-top: 26%;
+    }
+
+    #colordialog {
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    margin-left: 0px;
+    }
+
+    #colordialog .colorblock  {
+        margin: 0 -3%;
+    }
+
+    #colordialog .colorblock li {
+        position: relative;
+        width: 19%;
+        height: 0;
+        overflow: hidden;
+        margin: 0 3% 5% 3%;
+        padding-top: 19%;
+    }
+
+    #colordialog .colorblock a {
+        position: absolute;
+        display: block;
+        width: 100%;
+	    top: 0;
+	    left: 0;
+	    bottom: 0;
+	    right: 0;
+        height: 100%;
+    }
+}
+
+
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  select,
+  textarea,
+  input {
+    font-size: 16px;
+  }
+}

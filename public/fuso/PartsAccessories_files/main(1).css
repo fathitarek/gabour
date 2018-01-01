@@ -1,0 +1,4343 @@
+/*
+* css ver1.0
+* Written by Variety Article Factory 2015.08
+******************************************vaf*/
+
+body {
+	background: #3d3d3d;
+	height: 100%;
+}
+html{height:100%;}
+
+.pc_display {}
+.mb_display {
+	display: none;
+}
+
+ul,ol {
+	list-style: none;
+}
+
+.text ul {
+    list-style: outside;
+}
+
+.text ol {
+   list-style-type: decimal;
+   list-style-position: inside;
+}
+
+.text ul {
+    margin-left: 20px;
+}
+
+a{
+ color:#939393;
+ text-decoration:none;
+}
+a:hover{
+	color:#fff;
+}
+
+hr {
+    margin: 0px;
+    padding: 1em 0px;
+}
+
+
+#HEADER_IMAGE h2 {
+    background: transparent;
+    padding: 70px 40px;
+    font-size: 40px;
+    background-repeat: no-repeat;
+}
+
+#HEADER_IMAGE h2.lightcolorscheme {
+    color: white;
+}
+
+#GE_SERVICE_DATA {
+    background: #8f9299 url(genuine_data_bg.png) no-repeat scroll right center;
+    border: 1px solid #fff;
+    border-radius: 10px;
+    height: 400px;
+    margin-bottom: 30px;
+    margin-right: -5px;
+    position: relative;
+}
+
+#GE_SERVICE_DATA dl {
+    width: 220px;
+}
+
+#GE_DATA_A {
+    margin: 20px 20px 40px;
+}
+
+#GE_SERVICE_DATA dt {
+    background: #fff none repeat scroll 0 0;
+    border: 2px solid #fff;
+    border-radius: 3px;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 5px 5px 3px;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+#GE_SERVICE_DATA dd {
+    color: #fff;
+    line-height: 1.2;
+    padding: 7px 5px;
+    font-size: 12px;
+}
+
+#GE_DATA_B {
+    margin-left: 20px;
+}
+
+#GE_DATA_C {
+    left: 270px;
+    position: absolute;
+    top: 20px;
+}
+
+#GE_SERVICE_DATA h4 {
+    background: rgba(0, 0, 0, 0) url(/etc/designs/fuso/core/image/service/service/genuine_data_h4.png) no-repeat scroll 0 0;
+    height: 58px;
+    left: 292px;
+    position: absolute;
+    text-indent: -1000em;
+    top: 279px;
+    width: 201px;
+}
+
+#VALUE_SECTION_A, #VALUE_TAB {
+    margin-bottom: 40px;
+}
+
+#VALUE_TAB a {
+    display: block;
+    height: 54px;
+    text-indent: -10000em;
+    text-align: left;
+}
+
+#VTAB_A {
+    float: left;
+}
+
+#VTAB_A a {
+    width: 402px;
+    background: url(/content/dam/jp/core/image/service/service/value_tab_a_off.png) no-repeat 0 0;
+}
+
+#VTAB_B {
+    float: right;
+}
+
+#VTAB_B {
+    float: right;
+}
+
+#VTAB_B a {
+    width: 399px;
+    background: url(/content/dam/jp/core/image/service/service/value_tab_b_off.png) no-repeat 0 0;
+}
+
+.value_section {
+    padding: 0 30px 40px 0;
+    background: url(/content/dam/jp/core/image/service/service/value_list_bg.png) no-repeat 395px 0;
+}
+
+.value_data li a {
+    padding-right: 20px;
+    font-size: 12px;
+    color: #000;
+    text-decoration: underline;
+    background: url(/content/dam/core/image/design/icon/outof_link.png) no-repeat right 1px;
+}
+
+.value_data h3 {
+    color: #0263b4;
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+.value_data ul {
+    margin: 20px 0 0;
+    padding-top: 20px;
+    border-top: 1px solid #eee;
+}
+
+.value_data li a:hover {
+    color: #787878;
+}
+
+.thumbnailed-link {
+    display: inline-block;
+    vertical-align: top;
+    width: 100%;
+}
+
+.thumbnailed-link img.thumb {
+    float: left;
+}
+
+.thumbnailed-link a {
+    display: inline-block;
+    vertical-align: top;
+    color: black;
+    width: 65%;
+    padding-left: 10px;
+    font-size: 12px;
+}
+
+.value_image {
+    float: left;
+    width: 380px;
+}
+
+.value_data {
+    float: right;
+    width: 340px;
+}
+
+.boxed-text {
+    margin-bottom: 30px;
+    border: 1px solid #ccc;
+    padding: 18px 18px 18px;
+}
+
+.pdf-small-text {
+    display:inline-block;
+    width: auto;
+    font-size: 70%;
+}
+
+.fuso-header-logo {
+    float: right;
+    position: absolute;
+    right: 20px;
+    top: 20px;
+}
+
+a#surveylink {
+    display: block;
+    width: 190px;
+    height: 32px;
+    background: url(/etc/designs/fuso/jp/core/image/news/survey_banner.png) no-repeat 0 0;
+    top: 30px;
+    right: 50px;
+    text-indent: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+#SUPPORT_MODEL {
+    height: 320px;
+    position: relative;
+    width: 820px;
+    margin-bottom: 20px;
+}
+
+#MODEL_PIC {
+    left: 40.5%;
+    top: 50px;
+}
+
+#SUPPORT_MODEL .catalog_data a {
+    display: block;
+    color: #000;
+    padding: 10px 0 0;
+}
+
+#SUPPORT_MODEL .catalog_data a span {
+    padding: 5px 0 5px 25px;
+    background: url(/etc/designs/fuso/core/image/design/icon/pdf.png) no-repeat 0 0;
+}
+
+#SUPPORT_MODEL dl {
+    width: 310px;
+}
+
+#SUPPORT_MODEL dt {
+    background: #ff0000 none repeat scroll 0 0;
+    border: 3px solid #ff0000;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 14px;
+    margin-bottom: 15px;
+    padding: 5px;
+    text-align: center;
+}
+
+#SUPPORT_MODEL dd {
+    line-height: 1.5;
+    padding: 5px 0 15px;
+}
+
+#SUPPORT_MODEL .catalog_data dt {
+    background: transparent;
+    border: none;
+    float: left;
+    margin: 15px 0 0;
+}
+
+#SUPPORT_MODEL .catalog_data dd {
+    padding: 25px 0 0 60px;
+    font-size: 12px;
+}
+
+#MODEL_PIC {
+    position: absolute;
+    left: 40.5%;
+    top: 50px;
+}
+
+#MODEL_A {
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+#MODEL_B {
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+#MODEL_C {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}
+
+#MODEL_D {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
+
+.whitebutton {
+    display: inline-block;
+    padding: 10px 20px;
+    color: #000;
+    font-size: 14px;
+    background-image: url(/etc/designs/fuso/core/image/design/icon/list_alw_c_off.png);
+    background-repeat: no-repeat;
+    background-position: 10px center;
+    border: 1px solid #ccd;
+    margin-right: 10px;
+    margin-bottom: 10px;
+}
+
+.whitebutton:hover {
+    color: #666;
+    background-color: #eee;
+    background-image: url(/etc/designs/fuso/core/image/design/icon/list_alw_c_on.png);
+    background-repeat: no-repeat;
+    background-position: 10px center;
+}
+
+.careers-header img {
+    float: right;
+}
+
+.map-popup b {
+    font-size: 18px;
+}
+
+p {
+    line-height: 1.5;
+}
+
+.dot-map {
+    position: relative;
+    max-width: 532px;
+    max-height: 532px;
+}
+
+.dot-map img {
+    width: 100%;
+}
+
+.dot-map .dot-map-text {
+    position: absolute;
+    top: 20px;
+    left: 0px;
+    max-width: 300px;
+}
+
+.dot-map .dot-map-text h3 {
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 1.5;
+}
+
+.dot-map .dot {
+    position: absolute;
+    cursor: pointer;
+}
+
+.dot-map .dot {
+    width: 5%;
+}
+
+.dot-map .dot img {
+    width: 100%;
+}
+
+.dot-map .mobile-dots a, .dot-map .mobile-dots a:hover {
+    color: black;
+}
+
+.dot-map .mobile-dots li {
+    list-style-type: disc;
+    margin-left: 15px;
+}
+
+.cboxWrapper b {
+    font-size: 18px;
+}
+
+.redbuttonlarge {
+    display: inline-block;
+    padding: 15px 80px 15px 30px;
+    background: #ff0000 url(/etc/designs/fuso/core/image/design/menu/lets_alw.png) no-repeat 90% center;
+    color: #fff;
+    font-size: 32px;
+    color: white !important;
+}
+
+.redbuttonlarge:hover {
+    background: #c90000 url(/etc/designs/fuso/core/image/design/menu/lets_alw.png) no-repeat 90% center;
+    color: white !important;
+}
+
+.redbuttonlarge * {
+    color: white !important;
+}
+
+.movie_download {
+    padding: 2px 0 3px 55px;
+    background: url(/etc/designs/fuso/jp/core/image/service/service/c_sub_a_pict_04.png) no-repeat 0 center;
+    display: inline-block;
+    color: black;
+}
+
+.redbutton {
+    display: inline-block;
+    padding: 10px 30px 10px 15px;
+    color: #fff;
+    font-size: 14px;
+    background: #ff0000 url(/etc/designs/fuso/core/image/design/icon/list_alw_on.png) no-repeat 85% center;
+}
+
+.redbutton:hover {
+    background: #c90000 url(/etc/designs/fuso/core/image/design/icon/list_alw_hover.png) no-repeat 85% center;
+}
+
+#HEADER_IMAGE {
+    background-repeat: no-repeat;
+}
+
+.overlaid-image {
+    background-repeat: no-repeat;
+}
+
+
+
+.overlaid-image p {
+    max-width: 350px;
+    padding: 30px 20px;
+    line-height: 18px;
+}
+
+.overlaid-image p.lightcolorscheme {
+    color: white;
+}
+
+.movie_download * {
+    color:black;
+}
+
+.movie_download:hover, .movie_download *:hover {
+    color:#ff0000;
+}
+
+
+
+.pdf_download {
+    padding-left: 35px;
+    background: url(/etc/designs/fuso/core/image/design/icon/pdf_m.png) no-repeat 0 0;
+    display: inline-block;
+    min-height: 30px;
+    color: black;
+}
+
+.SHARE_ON_FB {
+    display: inline-block;
+    color: #3b3b3b;
+    font-size: 14px;
+    padding: 10px 80px 10px 5px;
+    font-weight: bold;
+    border-top: 1px dotted #acacac;
+    border-bottom: 1px dotted #acacac;
+    background: url(/etc/designs/fuso/core/image/design/icon/fb.png) no-repeat center right;
+}
+
+.newspageitem {
+    margin: 0 0 15px;
+    padding: 0 0 15px;
+    border-bottom: 1px solid #eee;
+}
+
+.newspageitem a, .newspageitem a:hover {
+    color: #939393;
+}
+
+.newspageitem a:hover {
+    color: black;
+}
+
+.news_image {
+    float: left;
+    width: 72px;
+}
+
+.newspageitem .dt {
+    color: #666;
+    padding-bottom: 7px;
+}
+
+.mainte_list dt {
+    float: left;
+    padding-right: 10px;
+}
+
+.mainte_list dd {
+    font-size: 13px;
+    margin-left: 65px;
+}
+
+.mainte_list dl {
+    padding: 10px 3px 10px 10px;
+    line-height: 1.5;
+}
+
+.video_wrap {
+	position: relative;
+	padding-bottom: 56.25%; /* 16:9 */
+	padding-top: 25px;
+	height: 0;
+    margin-bottom: 25px;
+}
+.video_wrap iframe {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+.btn_red_type a{
+ display:inline-block !important;
+ padding:5px 20px;
+ font-size:16px;
+ background:#ff0000;
+ color:#fff;
+}
+.btn_red_type a:hover{
+ background:#c90000;
+}
+.btn_red_type .glyphicon {
+	vertical-align: bottom;
+}
+
+
+.btn_red_type.moreinfo a{
+    font-size: 12px;
+}
+
+.arrowLink {
+ display: inline-block;
+ width: auto;
+ padding-right:20px;
+ background:url(/etc/designs/fuso/core/image/design/icon/outof_link.png) no-repeat right center;
+}
+
+.outofLink{
+ padding-right:20px;
+ background:url(/etc/designs/fuso/core/image/design/icon/outof_link.png) no-repeat right center;
+}
+.outofLink_2{
+ margin-left:20px;
+ padding-left:15px;
+ background:url(/etc/designs/fuso/core/image/design/icon/outof_link.png) no-repeat 0 center;
+}
+.outofLink3{
+ padding-right:30px;
+ background:url(/etc/designs/fuso/core/image/design/icon/outof_link3.png) no-repeat right center;
+}
+
+img.align-center {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+img.align-right {
+    margin-left: auto;
+}
+
+#BBP_LINK_MODEL {
+    margin: 0;
+    position: absolute;
+    top: 40px;
+    right: 30px;
+}
+
+#BBP_LINK_MODEL a {
+    margin: 0;
+    display: inline-block;
+    color: #666;
+}
+
+
+/*
+* WRAPPER
+**************************************/
+#WRAPPER {
+ position:static;
+	width: 1100px;
+	margin: auto;
+	background: #262626;
+}
+
+
+/*
+* HEADER_AREA
+**************************************/
+#HEADER_AREA {
+	position:static;
+	/*height:100%; */
+ overflow:hidden;
+}
+#HEADER_WRAP{
+	 position:fixed;
+	 height:100%;
+    z-index:130;
+	background: #262626;
+}
+
+	/* パーツ整理 */
+	#HEADER_AREA h1{
+	 display:table-cell;
+	 width:95px; height:95px;
+		text-align:center;
+		vertical-align:middle;
+		background:#fff;
+	}
+	#HEADER_AREA h1 a{
+	 display:block;
+	 width:100%; height:100%;
+	}
+	#HEADER_AREA h1 img{
+ margin:15px 0 0;
+		}
+
+	/* グローバルナビ制御 */
+	#GLOBALMENU_FIELD,.menu_all{
+	 position:static;
+	}
+	.gnv_products .p_gnv:hover,.gnv_products .selected .p_gnv,.products .gnv_products .p_gnv,
+	.used .gnv_products .p_gnv
+	{
+	 background-image:url(../image/design/menu/menu_products_on.png);
+	 background-repeat:no-repeat;
+	 background-position:center center;
+	}
+	.jp_mode .gnv_products .p_gnv:hover,.jp_mode .gnv_products .selected .p_gnv,.jp_mode.products .gnv_products .p_gnv,
+	.jp_mode.used .gnv_products .p_gnv
+	{
+	 background-image:url(../image/design/menu/menu_jp_products_on.png);
+	 background-repeat:no-repeat;
+	 background-position:center center;
+	}
+	.gnv_parts .p_gnv:hover,.gnv_parts .selected .p_gnv,.service .gnv_parts .p_gnv{
+	 background-image:url(../image/design/menu/menu_parts_on.png);
+	 background-repeat:no-repeat;
+	 background-position:center center;
+	}
+	.jp_mode .gnv_parts .p_gnv:hover,.jp_mode .gnv_parts .selected .p_gnv,.jp_mode.service .gnv_parts .p_gnv{
+	 background-image:url(../image/design/menu/menu_jp_parts_on.png);
+	 background-repeat:no-repeat;
+	 background-position:center center;
+	}
+	.gnv_aboutus .p_gnv:hover,.gnv_aboutus .selected .p_gnv,.aboutus .gnv_aboutus .p_gnv{
+	 background-image:url(../image/design/menu/menu_aboutus_on.png);
+	 background-repeat:no-repeat;
+	 background-position:center center;
+	}
+	.jp_mode .gnv_aboutus .p_gnv:hover,.jp_mode .gnv_aboutus .selected .p_gnv,.jp_mode.aboutus .gnv_aboutus .p_gnv{
+	 background-image:url(../image/design/menu/menu_jp_aboutus_on.png);
+	 background-repeat:no-repeat;
+	 background-position:center center;
+	}
+	.jp_mode .gnv_used .p_gnv:hover,.jp_mode .gnv_used .selected .p_gnv,.jp_mode.used .gnv_used .p_gnv{
+	 background-image:url(../image/design/menu/jp_menu_used_on.png);
+	}
+	.gnv_news .p_gnv:hover,.gnv_news .selected .p_gnv,.press_release .gnv_news .p_gnv{
+	 background-image:url(../image/design/menu/menu_news_on.png) !important;
+	 background-repeat:no-repeat;
+	 background-position:center center;
+	}
+	.jp_mode .gnv_news .p_gnv:hover,.jp_mode .gnv_news .selected .p_gnv,.jp_mode.press_release .gnv_news .p_gnv{
+	 background-image:url(../image/design/menu/menu_jp_news_on.png) !important;
+	 background-repeat:no-repeat;
+	 background-position:center center;
+	}
+
+	.gnv_network .p_gnv:hover,.gnv_network .selected .p_gnv{
+	 background-image:url(../image/design/menu/menu_distributors_on.png);
+	 background-repeat:no-repeat;
+	 background-position:center center;
+	}
+	.jp_mode .gnv_jpnetwork .p_gnv:hover,.jp_mode .gnv_jpnetwork .selected .p_gnv{
+	 background-image:url(../image/design/menu/menu_jp_distributors_on.png);
+	}
+
+	.gnv_career .p_gnv:hover,.gnv_career .selected .p_gnv{
+	 background-image:url(../image/design/menu/menu_career_on.png);
+	 background-repeat:no-repeat;
+	 background-position:center center;
+	}
+
+
+.menu_all.selected,.menu_all .selected,.products .gnv_products,.service .gnv_parts,.aboutus .gnv_aboutus,.press_release .gnv_news,.used .gnv_products{
+  background-color:#ff0000;
+}
+
+.menu_all a{
+  display:table-cell;
+  width:95px; height:95px;
+  text-align:center;
+  vertical-align:middle;
+}
+
+a.menu_all img{
+    opacity: 0.8;
+}
+
+.selected a.menu_all img, a.menu_all:hover img {
+    opacity: 1.0;
+}
+
+ /* サブナビ制御 */
+ .submenu{
+  display:none;
+  position:fixed;
+  top:0; z-index:11111 !important;
+  margin:0 0 0 95px;
+  padding:95px 0 0; height:100%;
+  background:#ff0000;
+
+ }
+ .submenu a{
+  position:relative;
+  display:table-cell;
+  width:95px; height:95px;
+  text-align:center;
+  vertical-align:middle;
+ }
+ .submenu a:hover,.submenu .active_menu{
+  background-color:#c90000;
+ }
+
+.submenu a img {
+    opacity: 0.8;
+}
+
+.submenu a:hover img {
+    opacity: 1.0;
+}
+
+ .snv_truck a:hover img,.snv_truck a.active img{
+	 background-image:url(../image/design/menu/side_trucks_on.png);
+	 background-repeat:no-repeat;
+	 background-position:center center;
+ }
+ .snv_buses a:hover img,.snv_buses a.active img{
+	 background-image:url(../image/design/menu/side_buses_on.png);
+	 background-repeat:no-repeat;
+	 background-position:center center;
+ }
+ .snv_engine a:hover img,.snv_engine a.active img{
+	 background-image:url(../image/design/menu/side_engine_on.png);
+	 background-repeat:no-repeat;
+	 background-position:center center;
+ }
+
+ .snv_parts a:hover img,.snv_parts a.active img{
+	 background-image:url(../image/design/menu/side_parts_on.png);
+	 background-repeat:no-repeat;
+	 background-position:center center;
+ }
+ .snv_service a:hover img,.snv_service a.active img{
+	 background-image:url(../image/design/menu/side_service_on.png);
+	 background-repeat:no-repeat;
+	 background-position:center center;
+ }
+ .snv_tco a:hover img,.snv_tco a.active img{
+	 background-image:url(../image/design/menu/side_tco_on.png);
+	 background-repeat:no-repeat;
+	 background-position:center center;
+ }
+ .snv_fc a:hover img,.snv_fc a.active img{
+	 background-image:url(../image/design/menu/side_fc_on.png);
+	 background-repeat:no-repeat;
+	 background-position:center center;
+ }
+
+ .snv_fuso a:hover img,.snv_fuso a.active img{
+	 background-image:url(../image/design/menu/side_brand_on.png);
+	 background-repeat:no-repeat;
+	 background-position:center center;
+ }
+ .snv_cp a:hover img,.snv_cp a.active img{
+	 background-image:url(../image/design/menu/side_cp_on.png);
+	 background-repeat:no-repeat;
+	 background-position:center center;
+ }
+ .snv_career a:hover img,.snv_career a.active img{
+	 background-image:url(../image/design/menu/side_career_on.png);
+	 background-repeat:no-repeat;
+	 background-position:center center;
+ }
+
+ .snv_release a:hover img,.snv_release a.active img{
+	 background-image:url(../image/design/menu/side_press_on.png);
+	 background-repeat:no-repeat;
+	 background-position:center center;
+ }
+ .snv_gallery a:hover img,.snv_gallery a.active img{
+	 background-image:url(../image/design/menu/side_media_on.png);
+	 background-repeat:no-repeat;
+	 background-position:center center;
+ }
+ .snv_magazine a:hover img,.snv_magazine a.active img{
+	 background-image:url(../image/design/menu/side_magazine_on.png);
+	 background-repeat:no-repeat;
+	 background-position:center center;
+ }
+ .snv_info a:hover img,.snv_info a.active img{
+	 background-image:url(../image/design/menu/side_recall_on.png);
+	 background-repeat:no-repeat;
+	 background-position:center center;
+ }
+
+
+
+
+
+.jp_mode .snv_truck a:hover img,.jp_mode .snv_truck a.active img{
+	 background-image:url(../image/design/menu/jp_side_trucks_on.png);
+ }
+.jp_mode .snv_buses a:hover img,.jp_mode .snv_buses a.active img{
+	 background-image:url(../image/design/menu/jp_side_buses_on.png);
+ }
+.jp_mode .snv_engine a:hover img,.jp_mode .snv_engine a.active img{
+	 background-image:url(../image/design/menu/jp_side_engine_on.png);
+ }
+
+.jp_mode .snv_parts a:hover img,.jp_mode .snv_parts a.active img{
+	 background-image:url(../image/design/menu/jp_side_parts_on.png);
+ }
+.jp_mode .snv_service a:hover img,.jp_mode .snv_service a.active img{
+	 background-image:url(../image/design/menu/jp_side_service_on.png);
+ }
+.jp_mode .snv_tco a:hover img,.jp_mode .snv_tco a.active img{
+	 background-image:url(../image/design/menu/jp_side_tco_on.png);
+ }
+.jp_mode .snv_fc a:hover img,.jp_mode .snv_fc a.active img{
+	 background-image:url(../image/design/menu/jp_side_fc_on.png);
+ }
+.jp_mode .snv_fuso a:hover img,.jp_mode .snv_fuso a.active img{
+	 background-image:url(../image/design/menu/jp_side_brand_on.png);
+ }
+.jp_mode .snv_cp a:hover img,.jp_mode .snv_cp a.active img{
+	 background-image:url(../image/design/menu/jp_side_cp_on.png);
+ }
+.jp_mode .snv_career a:hover img,.jp_mode .snv_career a.active img{
+	 background-image:url(../image/design/menu/jp_side_career_on_02.png);
+ }
+.jp_mode .snv_release a:hover img,.jp_mode .snv_release a.active img{
+	 background-image:url(../image/design/menu/jp_side_press_on.png);
+ }
+.jp_mode .snv_gallery a:hover img,.jp_mode .snv_gallery a.active img{
+	 background-image:url(../image/design/menu/jp_side_media_on.png);
+ }
+.jp_mode .snv_magazine a:hover img,.jp_mode .snv_magazine a.active img{
+	 background-image:url(../image/design/menu/jp_side_magazine_on.png);
+ }
+.jp_mode .snv_info a:hover img,.jp_mode .snv_info a.active img{
+	 background-image:url(../image/design/menu/jp_side_recall_on.png);
+ }
+
+
+
+
+
+
+
+
+
+
+
+ .active_alw{
+  position:absolute;
+  right:0; top:40px;
+  z-index:300;
+  display:none;
+ }
+
+li.selected > a > .active_alw {
+    display:block;
+}
+
+ul.submenu > li.selected > a {
+    background-color: #c90000;
+}
+
+ a:hover .active_alw{
+  background:transparent !important;
+ }
+
+/*
+* FOOTER_AREA
+**************************************/
+#FOOTER_AREA{
+ clear:both;
+	position:relative;
+	z-index:50;
+	background:#2c2c2c;
+}
+
+/* Copyright */
+#COPYRIGHT{
+ position:relative;
+ margin:0 0 0 95px;
+ padding:15px 0 20px 110px;
+ background: #262626;
+}
+#COPYRIGHT *{
+ display:block;
+}
+#COPYRIGHT img{
+ float:left;
+ margin:7px 15px 0 0;
+}
+#COPYRIGHT span{
+ padding:10px 0 0 0;
+ color:#fff;
+ font-style:normal;
+}
+
+/* GLJP Changes */
+#GLJP_CHANGES *{
+	text-align:center !important;
+}
+#GLJP_CHANGES{
+	position:fixed;
+	z-index:150;
+	bottom:0; padding:15px 0;
+	width:94px; background:#262626;
+}
+#GLJP_CHANGES li{
+	padding:5px 0 0 1px;
+ color:#fff;
+}
+#GLJP_CHANGES a{
+	font-size:16px;
+	color:#b5b5b5;
+	text-align:center !important;
+}
+#GLJP_CHANGES a:hover{
+	color:#fff;
+}
+.eng_mode #GHANGES_GL a,.jp_mode #GHANGES_JP a{
+ display:none;
+}
+
+
+/* Search */
+#LAST_AREA{
+	position:relative;
+}
+#LAST_AREA * {
+  -webkit-box-sizing: content-box;
+     -moz-box-sizing: content-box;
+          box-sizing: content-box;
+}
+*:before,
+*:after {
+  -webkit-box-sizing: content-box;
+     -moz-box-sizing: content-box;
+          box-sizing: content-box;
+}
+
+#LAST_AREA img {
+     vertical-align: top;
+}
+
+#LAST_AREA dl {
+    margin-top: 0;
+     margin-bottom: 0px;
+}
+
+#LAST_AREA ul, ol {
+    margin-top: 0;
+    margin-bottom: 0px;
+}
+
+#LAST_AREA dt {
+    font-weight: normal;
+}
+#searchform{
+	position:absolute;
+	right:15px;
+    bottom:17px;
+    z-index: 50;
+}
+#searchform dt{
+	float:left;
+}
+#searchform dt input{
+ padding-left:10px;
+ width:133px; height:29px;
+ background:#000;
+ border:none; line-height:30px;
+ color:#b5b5b5;
+}
+#searchform dd{
+ float:right;
+ width:33px; height:30px;
+ background:#ff0000 url("icon_search.png") no-repeat center center;
+}
+#searchform dd{
+	display:block;
+	cursor:pointer;
+}
+
+a#banner {
+    display: block;
+    width: 190px;
+    height: 32px;
+    background: url(/content/dam/jp/core/image/news/survey_banner.png) no-repeat 0 0;
+    position: absolute;
+    top: 30px;
+    right: 50px;
+    text-indent: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+a#banner:hover {
+    background: url(/content/dam/jp/core/image/news/survey_banner.png) no-repeat 0 -32px;
+}
+
+
+/* Footer Links */
+#FOOTER_MENU{
+ float:left;
+	padding:20px 20px 0 110px;
+}
+#FOOTER_MENU dl{
+	float:left;
+	padding:0 30px 0 0;
+}
+#FOOTER_MENU dt,#FOOTER_MENU dd{
+}
+#FOOTER_MENU dt{
+	margin-bottom:20px;
+	font-size:14px;
+	color:#fff;
+}
+#FOOTER_MENU dt a{
+	color:#fff;
+}
+#FOOTER_MENU dd ul{
+	margin-bottom:30px;
+}
+#FOOTER_MENU dd ul + ul{
+	margin-bottom:20px;
+}
+#FOOTER_MENU dd li{
+	font-size:12px;
+	line-height:1.6;
+}
+
+
+.jp_mode #FOOTER_MENU dl{
+	padding:0 30px 0 0;
+}
+.jp_mode #FOOTER_MENU dd a{
+ font-size:10px;
+	font-family:"メイリオ",Meiryo, sans-serif;
+}
+
+/* SNS Field */
+#SNS_FIELD{
+ float:right;
+ width:150px;
+ padding-top:20px;
+}
+#SNS_FIELD dl{
+ clear:both;
+}
+#SNS_FIELD dt{
+ margin-bottom:10px;
+ color:#9b9b9b;
+ font-size:14px;
+}
+#SNS_FIELD li{
+ float:left;
+ padding-right:10px;
+}
+#SHARE_ON{
+ padding-top:20px;
+}
+#SNS_FIELD img{
+ opacity:0.75;
+}
+#SNS_FIELD a:hover img{
+ opacity:1.0;
+}
+
+#SNS_FIELD{
+ margin-left:-60px;
+ padding-right:60px;
+}
+#SNS_FIELD dt{
+ float:left;
+ width:70px;
+}
+#SHARE_ON{
+ padding-top:10px;
+}
+
+#SNS_FIELD li{
+ padding-right:2px;
+}
+#JP_ORG_LINKS{
+ margin-top:8px;
+}
+#JP_ORG_LINKS li{
+ clear:both !important;
+ margin-bottom:25px;
+}
+#JP_ORG_LINKS li a{
+ border:1px solid #fff;
+ padding:5px 10px;
+ color:#fff;
+	font-family:"メイリオ",Meiryo, sans-serif;
+}
+#JP_ORG_LINKS li a:hover{
+ background:#262626;
+ border-color:#9b9b9b;
+ color:#9b9b9b;
+}
+
+/*
+* CONTENTS_AREA
+**************************************/
+#CONTENTS_AREA {
+ position:relative;
+	margin-left:95px;
+	background:#000 !important;
+}
+
+
+/*
+* MAIN
+**************************************/
+
+#IE_DOWNLOADS{
+ width:100%;
+ padding:20px 0;
+ background:#ffcfcf;
+ border:1px solid #df8f90;
+ text-align:center;
+ font-weight:bold;
+ font-size:14px;
+ position:fixed;
+ z-index:10000;
+}
+#IE_DOWNLOADS a{
+ color:#000;
+ text-decoration:underline;
+}
+#IE_DOWNLOADS a:hover{
+ color:#666;
+ text-decoration:none;
+}
+
+/*
+* NAVI AREA
+**********************************************/
+
+.newsmapsection.section, .ennewsmapsection.section {
+    background-color: #000;
+}
+
+.sld_data,.moreinfo{
+ position:absolute;
+}
+
+.sld_data{
+	position:absolute;
+	z-index:1 !important;
+ padding:15px 20px;
+ background-color: rgba(0, 0, 0, 0.7);
+ background: rgba(0, 0, 0, 0.7);
+ color: rgba(0, 0, 0, 0.7);
+}
+.sld_data *{
+ color:#fff;
+}
+.sld_data dt{
+ font-size:24px;
+ font-weight:bold;
+ margin-bottom:7px;
+}
+.sld_data dd{
+ font-size:16px;
+}
+.sld_type_a .sld_data{
+ left:30px; top:40px;
+}
+.sld_type_b .sld_data{
+ right:30px; top:40px;
+}
+.sld_type_c .sld_data{
+ left:30px; bottom:80px;
+}
+.sld_type_d .sld_data{
+ right:30px; bottom:80px;
+}
+
+.moreinfo a{
+ padding:15px 20px;
+}
+.sld_type_a .moreinfo{
+ left:30px; top:125px;
+}
+.sld_type_b .moreinfo{
+ right:30px; top:125px;
+}
+.sld_type_c .moreinfo{
+ left:30px; bottom:31px;
+}
+.sld_type_d .moreinfo{
+ right:30px; bottom:31px;
+}
+
+.jp_mode .sld_type_c .moreinfo{
+ bottom:36px;
+}
+.jp_mode .sld_type_d .moreinfo{
+ bottom:36px;
+}
+
+.bx-prev{
+ z-index:1 !important;
+}
+.leftContact {
+	width: 245px;
+	height: 400px;
+	background-color: #FF0000;
+	float: left;
+	margin-right: 10px;
+}
+.leftContact h3 {
+	color: #FFFFFF;
+	text-align: left;
+	border-left-style: none;
+	border-right-style: none;
+	border-top-style: none;
+	padding-top: 50px;
+	font-size: large;
+	margin-left: 10%;
+	margin-right: 10%;
+
+}
+.leftContact p {
+	color: #FFFFFF;
+	margin-left: 10%;
+	margin-right: 10%;
+	padding-top: 10px;
+}
+#formDiv .btn {
+	border-radius: 0px;
+	background-color: #FF0000;
+	padding-right: 20px;
+	padding-left: 20px;
+	/* [disabled]margin-bottom: 20px; */
+}
+#LAST_AREA {
+}
+.displayBlockX {
+	display: block;
+}
+.displayNoneX {
+	display: none;
+}
+
+#btnFuso {
+    border-radius: 0px;
+    background-color: #FF0000;
+    padding-right: 20px;
+    padding-left: 20px;
+	margin-left: -20px;
+}
+#btnFuso3 {
+    border-radius: 0px;
+    background-color: #FF0000;
+    padding-right: 20px;
+    padding-left: 20px;
+	margin-left: -20px;
+}
+
+
+
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+.sld_type_a .moreinfo{
+ top:124px;
+}
+#formDiv .form-control {
+	border-radius: 0px;
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+
+.sld_type_b .moreinfo{
+ top:124px;
+}
+
+.jp_mode .sld_type_c .moreinfo{
+ bottom:37px;
+}
+.jp_mode .sld_type_d .moreinfo{
+ bottom:37px;
+}
+
+
+}
+
+
+/*
+* FOOTER_WRAP
+**********************************************/
+#FOOTER_WRAP {
+}
+
+
+/*
+* CONTENTS_AREA
+**********************************************/
+#CONTENTS_AREA{
+	position:static;
+}
+/* Top Menu */
+#TOP_MENU_AREA ul{
+ border-left:1px solid #f0f0f0;
+}
+#TOP_MENU_AREA li{
+ display:block;
+ text-indent:-10000em; text-align:left;
+ float:left;
+ border-right:1px solid #909090;
+ border-bottom:4px solid #909090;
+}
+#TOP_MENU_AREA li:hover{
+ border-bottom:4px solid #ff0000;
+}
+#TOP_MENU_AREA li a{
+ display:block;
+ width:250px; height:146px;
+}
+
+.last_list a{
+ width:251px !important;
+ border-right:none;
+}
+
+.jp_mode #TMN_A a{
+ width:199px;
+}
+.jp_mode #TMN_B a{
+ width:195px;
+}
+.jp_mode #TMN_C a{
+ width:199px;
+}
+.jp_mode #TMN_D a{
+ width:205px;
+}
+.jp_mode #TMN_E a{
+ width:202px !important;
+}
+
+/*Gallery X-Team*/
+
+.row > .column {
+/*  padding: 0 3px;*/
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.column {
+  float: left;
+  width: 25%;
+	background-color: #fff;
+}
+
+/* The Modal (background) */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+/*  padding-top: 100px;*/
+	padding-top: 20px;
+	padding-left: 40px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: black;
+}
+
+/* Modal Content */
+.modal-content {
+  position: relative;
+  background-color: #fefefe;
+  margin: auto;
+  padding: 0;
+  width: 90%;
+  max-width: 700px;
+}
+
+/* The Close Button */
+.close {
+  color: white;
+  position: absolute;
+  top: 10px;
+  right: 50px;
+  font-size: 35px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #999;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.mySlides {
+  display: none;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -50px;
+  color: #000000;
+  font-weight: bold;
+  font-size: 20px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+.prev {
+    left: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+.caption-container {
+  text-align: center;
+  background-color: black;
+  padding: 2px 16px;
+  color: white;
+}
+
+img.demo {
+  opacity: 0.6;
+}
+
+.active,
+.demo:hover {
+  opacity: 1;
+}
+
+img.hover-shadow {
+  transition: 0.3s
+}
+
+.hover-shadow:hover {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)
+}
+
+
+/*end Gallery X-Team*/
+
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+.last_list{
+ margin-right:-3px;
+ width:251px !important;
+	}
+.jp_mode #TMN_E{
+ margin-right:-5px;
+ width:202px !important;
+	}
+}
+
+
+#TMN_A a{
+	background:#f0f0f0 url(/etc/designs/fuso/en/core/image/top/menu_track_off.png) no-repeat center center;
+}
+#TMN_B a{
+	background:#f0f0f0 url(/etc/designs/fuso/en/core/image/top/menu_busesvans_off.png) no-repeat center center;
+}
+#TMN_C a{
+	background:#f0f0f0 url(/etc/designs/fuso/en/core/image/top/menu_engine_off.png) no-repeat center center;
+}
+#TMN_D a{
+	background:#f0f0f0 url(/etc/designs/fuso/en/core/image/top/menu_parts_off.png) no-repeat center center;
+}
+#TMN_A a:hover{
+	background:#fff url(/etc/designs/fuso/en/core/image/top/menu_track_on.png) no-repeat center center;
+}
+#TMN_B a:hover{
+	background:#fff url(/etc/designs/fuso/en/core/image/top/menu_busesvans_on.png) no-repeat center center;
+}
+#TMN_C a:hover{
+	background:#fff url(/etc/designs/fuso/en/core/image/top/menu_engine_on.png) no-repeat center center;
+}
+#TMN_D a:hover{
+	background:#fff url(/etc/designs/fuso/en/core/image/top/menu_parts_on.png) no-repeat center center;
+}
+
+.jp_mode #TMN_A a{
+	background:#f0f0f0 url(/etc/designs/fuso/jp/core/image/top/menu_track_off.png) no-repeat center center;
+}
+.jp_mode #TMN_B a{
+	background:#f0f0f0 url(/etc/designs/fuso/jp/core/image/top/menu_busesvans_off.png) no-repeat center center;
+}
+.jp_mode #TMN_C a{
+	background:#f0f0f0 url(/etc/designs/fuso/jp/core/image/top/menu_engine_off.png) no-repeat center center;
+}
+.jp_mode #TMN_D a{
+	background:#f0f0f0 url(/etc/designs/fuso/jp/core/image/top/menu_used_off.png) no-repeat center center;
+}
+.jp_mode #TMN_E a{
+	background:#f0f0f0 url(/etc/designs/fuso/jp/core/image/top/menu_parts_off.png) no-repeat center center;
+}
+.jp_mode #TMN_A a:hover{
+	background:#fff url(/etc/designs/fuso/jp/core/image/top/menu_track_on.png) no-repeat center center;
+}
+.jp_mode #TMN_B a:hover{
+	background:#fff url(/etc/designs/fuso/jp/core/image/top/menu_busesvans_on.png) no-repeat center center;
+}
+.jp_mode #TMN_C a:hover{
+	background:#fff url(/etc/designs/fuso/jp/core/image/top/menu_engine_on.png) no-repeat center center;
+}
+.jp_mode #TMN_D a:hover{
+	background:#fff url(/etc/designs/fuso/jp/core/image/top/menu_used_on.png) no-repeat center center;
+}
+.jp_mode #TMN_E a:hover{
+	background:#fff url(/etc/designs/fuso/jp/core/image/top/menu_parts_on.png) no-repeat center center;
+}
+
+/* Usage page */
+
+.protection_date{
+ margin:0 0 80px;
+ font-size:12px;
+}
+.protection_read{
+ line-height:1.5;
+ margin:0 0 20px;
+}
+
+.pi_protection h3{
+ margin-bottom:20px;
+}
+.pi_protection h2 + h3{
+ margin-bottom:3px;
+ font-weight:normal;
+ font-size:12px;
+}
+.protection_caption{
+ font-size:12px;
+ margin-bottom:25px;
+}
+
+.protection_section{
+ margin:0 0 45px;
+}
+
+.pi_protection table{
+ margin-bottom:20px;
+ line-height:1.5;
+}
+.pi_protection th,.pi_protection td{
+ padding:10px 7px;
+ border:1px solid #666;
+}
+.pi_protection th{
+ vertical-align:top;
+ font-weight:normal;
+ background:#dcdcdc;
+}
+.pi_protection td a:hover{
+ color:#000;
+}
+
+.table_2nd{
+ margin:5px 0 15px 10px;
+ text-align:left;
+}
+.table_2nd th{
+ background:#eee;
+ text-align:center;
+ padding-left:5px;
+}
+
+table.type_b{
+ width:100%;
+}
+table.type_b th{
+ text-align:left;
+ padding-left:10px;
+}
+table.type_b td{
+ padding-left:10px;
+}
+
+table.type_b .col_1,table.type_b .col_3,table.type_b .col_5{
+ border-right:none;
+}
+.null_cell{
+ border-right:1px solid #666 !important;
+}
+table.type_b .col_2,table.type_b .col_4,table.type_b .col_6{
+ border-left:1px dotted #666 !important;
+}
+
+.flow_image{
+ margin-bottom:50px;
+}
+.flow_image dt{
+ float:left;
+ width:280px;
+}
+.flow_image dd{
+ margin:0 0 0 280px;
+ padding:40px 0 0 0;
+ line-height:1.5;
+}
+
+.pdfdownload dt{
+ float:left;
+}
+.pdfdownload dd{
+ float:right;
+}
+
+.inner_wrap{
+ padding:10px;
+ margin:10px 10px 5px;
+ background:#ececec;
+}
+.inner_wrap dt{
+ float:left;
+}
+
+.plugin_download{
+ margin-bottom:20px;
+}
+.plugin_download dt{
+ padding-bottom:10px;
+}
+.link_url{
+ float:left;
+}
+.plugin_bnr{
+ float:right;
+}
+
+.plugin_download a:hover,#PAGE_LINKS a:hover{
+ color:#000;
+}
+
+.pi_protection h2 {
+    margin-bottom: 15px;
+    font-size: 28px;
+    font-weight: normal;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #eee;
+}
+
+#PAGE_LINKS li{
+ line-height:1.6;
+}
+
+.pdf_download dt {
+    float: left;
+}
+
+.pdf_download dd {
+    float: right;
+}
+
+/* FAQ page */
+
+.faq-page h2 {
+    font-size: 20px;
+    margin: 0 0 10px;
+}
+
+.faq_section {
+    margin: 0 0 40px;
+    text-align: center;
+    line-height: 1.5;
+}
+
+.faq_section h3, .faq_section h4, .faq_section dl {
+    margin: 0 0 20px;
+}
+
+.faq_section dd strong {
+    padding-right: 10px;
+    color: #ff0000;
+}
+
+.faq_section .fred, .faq_section a, .faq_section a:hover {
+    color: #ff0000;
+}
+
+/* Brochure box */
+
+.brochure {
+    width: 79px;
+    display: inline-block;
+    margin: 0px 5px 25px;
+    vertical-align: top;
+}
+
+.brochure dt{
+    font-size:10px;
+    margin-bottom:7px;
+}
+
+.brochure a {
+    color: #666;
+}
+
+.brochure a:hover {
+    color: black;
+}
+
+/* Information Area 160322*/
+#INFORMATION_AREA{
+ position:relative;
+ z-index:200;
+ float:right;
+ width:250px;
+ color:#a4a4a4;
+}
+.jp_mode #INFORMATION_AREA{
+ width:400px;
+ margin-left:-200px;
+}
+
+#INFORMATION_AREA a{
+ display:block;
+}
+#INFORMATION_AREA h2{
+ padding:35px 15px 40px;
+ font-size:16px;
+ font-weight:normal;
+}
+.jp_mode #INFORMATION_AREA h2{
+ padding:35px 15px 20px;/*160322*/
+}
+
+#INFORMATION_AREA ol{
+ padding:0 15px;
+}
+#INFORMATION_AREA ol li{
+ padding:0 0 10px;/*160322*/
+ margin-bottom:10px;/*160322*/
+ border-bottom:1px solid #333;
+}
+#INFORMATION_AREA li div{
+ color:#666;
+ margin-bottom:10px;
+}
+#INFORMATION_AREA dt{
+ font-size:16px;
+ margin-bottom:5px;
+	font-family:"メイリオ",Meiryo, sans-serif;
+}
+#INFORMATION_AREA dd{
+ font-size:11px;
+ line-height:1.4;
+	font-family:"メイリオ",Meiryo, sans-serif;
+}
+
+#INFORMATION_AREA a:hover,#INFORMATION_AREA a:hover div{
+ color:#fff !important;
+}
+
+#INFORMATION_AREA .btn_red_type{
+ padding:3px 0 0 16px;
+}
+
+
+/* 20160322
+　 最新リリース一覧下のリンクボタン */
+.jp_mode #INFORMATION_AREA .btn_gry_type li{
+	display: table !important;
+	padding-left: 16px;
+	float: left;
+	width: 100px;
+	border-bottom-style: none;
+	margin-top: 10px;
+}
+
+.jp_mode #INFORMATION_AREA .btn_gry_type li a{
+	display: table-cell !important;
+	background-color: #5b5b5b;
+	color: #FFF;
+	font-size: 12px;
+	text-align: center;
+	vertical-align: middle;
+	height: 36px;
+	padding-right: 5px;
+	padding-left: 5px;
+}
+
+.jp_mode #INFORMATION_AREA .btn_gry_type li a:hover{
+	background:#fe0000;
+}
+
+
+
+/* end */
+
+
+/* Company Data */
+#COMPANY_DATA{
+ width:547px;
+ position:relative;
+ z-index:1000;
+ border:solid 2px #dfdfde;
+ -moz-border-radius-topleft: 10px;
+ -moz-border-radius-topright:10px;
+ -moz-border-radius-bottomleft:10px;
+ -moz-border-radius-bottomright:10px;
+ -webkit-border-top-left-radius:10px;
+ -webkit-border-top-right-radius:10px;
+ -webkit-border-bottom-left-radius:10px;
+ -webkit-border-bottom-right-radius:10px;
+ border-top-left-radius:10px;
+ border-top-right-radius:10px;
+ border-bottom-left-radius:10px;
+ border-bottom-right-radius:10px;
+}
+#COMPANY_DATA_WRAP{
+ position:absolute;
+ z-index:0;
+ right:-2px; top:-2px;
+ width:33px; height:32px;
+ background:url(/etc/designs/fuso/core/image/aboutus/profile/table_top.png) no-repeat right 0;
+}
+#COMPANY_DATA th{
+ white-space:nowrap;
+}
+#COMPANY_DATA th,#COMPANY_DATA td{
+ padding:7px 15px;
+ text-align:left;
+ line-height:1.5;
+ vertical-align:top;
+}
+#ROW_TOP th,#ROW_TOP td{
+ padding-top:35px !important;
+}
+#COMPANY_DATA .row_b th{
+ background:#f6f6f6;
+}
+#COMPANY_DATA .row_b td{
+ background:#f0f0f0;
+}
+#COMPANY_DATA a{
+ color:#000;
+}
+#COMPANY_DATA a:hover{
+ color:#666;
+}
+#COMPANY_DATA span{
+ padding:0 0 0 5px;
+}
+
+
+/* Map Area */
+#MAP_AREA{
+ position:relative;
+ z-index:0;
+ float:left;
+ width:753px; height:491px;
+}
+#MAP_NAVI *{
+ position:absolute;
+ left:0; top:0;
+}
+#MAP_NAVI img {
+ display: none;
+}
+#MAP_NAVI li{
+}
+#MAP_NAVI a{
+ z-index:10;
+}
+#MAP_AREA #COUNTRY_NO{
+ position:absolute;
+ z-index:15;
+ right:28px; bottom:42px;
+ font-size:38px;
+ font-weight:bold;
+ color:#fff;
+}
+#MAP_NAVI a{
+ display:block;
+ top:20px;
+ height:40px;
+ text-indent:-10000em;
+ text-align:left;
+
+
+ background: #fff;
+ opacity: 0;
+}
+
+#AREA_LIST {
+	overflow: hidden;
+	position: absolute;
+	top: 70px;
+	left: 20px;
+	z-index: 100;
+	max-width: 715px;
+	max-height: 290px;
+	padding: 20px 20px 30px 20px;
+	font-size: 12px;
+	line-height: 12px;
+	background-color: rgba(0,0,0,0.5);
+
+	display: none;
+}
+#AREA_LIST ul {
+	float: left;
+	width: 130px;
+}
+#AREA_LIST ul +ul {
+	margin-left: 10px;
+}
+#AREA_LIST li {
+	margin-bottom: 5px;
+}
+#AREA_LIST a {
+	color: #ffffff;
+}
+#AREA_LIST a:hover {
+	color: #666666;
+}
+#AREA_LIST .close {
+	position: absolute;
+	right: 10px;
+	bottom: 10px;
+}
+#AREA_DETAIL {
+	position: absolute;
+	top: 70px;
+	left: 20px;
+	z-index: 200;
+	max-width: 755px;
+	max-height: 300px;
+	padding-bottom: 40px;
+	font-size: 15px;
+	word-wrap: break-word;
+	color: #ffffff;
+	line-height: 12px;
+	background-color: rgba(0,0,0,0.5);
+
+	display: none;
+}
+#AREA_DETAIL .block {
+	overflow: auto;
+	max-width: 715px;
+	max-height: 280px;
+	padding: 20px 20px 0 20px;
+}
+#AREA_DETAIL strong {
+	display: block;
+	font-size 20px;
+}
+#AREA_DETAIL p {
+	line-height: 1.6;
+	margin-top: 15px;
+	margin-bottom: 15px;
+}
+#AREA_DETAIL .website {
+	display: inline-block;
+	padding: 10px 15px;
+	margin-bottom: 30px;
+	font-size 15px;
+	color: #ffffff;
+	background: #ff0000;
+}
+#AREA_DETAIL .website + .website {
+	margin-left: 5px;
+}
+#AREA_DETAIL .website:hover {
+	background-color: #c90000;
+}
+#AREA_DETAIL dt {
+	margin-bottom: 5px;
+	color: #9b9a9a;
+}
+#AREA_DETAIL dd {
+	margin-bottom: 5px;
+	font-size: 12px;
+}
+#AREA_DETAIL .close {
+	position: absolute;
+	right: 10px;
+	bottom: 10px;
+}
+
+
+#MAP_NAVI #MNV_BASE img {
+ display: block;
+}
+#MNV_EUROPE a{
+ width:70px; left:15px;
+}
+#MNV_ASIA a{
+ width:50px; left:95px;
+}
+#MNV_EAST a{
+ width:120px; left:160px;
+}
+#MNV_AFRICA a{
+ width:70px; left:290px;
+}
+#MNV_LATIN a{
+ width:125px; left:360px;
+}
+#MNV_OCEANIA a{
+ width:90px; left:495px;
+}
+#MNV_NORTH a{
+ width:130px; left:590px;
+}
+
+/* JPMAP */
+#MAP_TRIGGER {
+ position:absolute;
+ left:29px; top:86px;
+}
+#MAP_AREA .off a, #MAP_AREA .on a{
+ display:block;
+ text-indent:-10000em;
+ width:205px; height:31px;
+ background:url(/etc/designs/fuso/jp/core/image/map/map_dropdown_off.png) no-repeat 0 0;
+}
+#MAP_AREA .on a{
+ background:url(/etc/designs/fuso/jp/core/image/map/map_dropdown_on.png) no-repeat 0 0;
+}
+#MAP_LIST {
+ overflow: auto;
+ position:absolute;
+ display:block;
+ left:29px; top:118px;
+ width: 205px;
+ max-height: 340px;
+ font-size: 12px;
+ background: rgba(0,0,0,0.5);
+
+ display: none;
+
+}
+#MAP_LIST ul {
+ padding: 20px;
+}
+#MAP_LIST li+li {
+ margin-top: 8px;
+}
+#MAP_LIST a {
+ color: #ffffff;
+}
+#MAP_LIST a:hover {
+ color: #666666;
+}
+
+.jp_mode #MAP_NAVI {}
+.jp_mode #MAP_NAVI a {
+ top: 50px;
+ height: 30px;
+}
+
+
+#MAP_NAVI #MNV_BASE img {
+ display: block;
+}
+#MNV_HOKKAIDO a{
+ width:70px; left:15px;
+}
+#MNV_TOHOKU a{
+ width:40px; left:95px;
+}
+#MNV_KANTO a{
+ width:40px; left:145px;
+}
+#MNV_CHUBU a{
+ width:40px; left:195px;
+}
+#MNV_KINKI a{
+ width:40px; left:245px;
+}
+#MNV_CHUGOKU a{
+ width:40px; left:297px;
+}
+#MNV_SHIKOKU a{
+ width:40px; left:347px;
+}
+#MNV_KYUSHU a{
+ width:40px; left:396px;
+}
+#MNV_OKINAWA a{
+ width:40px; left:447px;
+}
+
+#JPAREA_LIST {
+ position: absolute;
+ left: 30px;
+ top: 100px;
+}
+#JPAREA_LIST li {
+ margin-bottom: 5px;
+ border: 1px solid #cccccc;
+ border-radius: 5px;
+ text-align: center;
+}
+#JPAREA_LIST li a {
+ display: block;
+ min-width: 56px;
+ padding: 5px 10px 4px;
+ border-radius: 5px;
+ color: #ffffff;
+}
+#JPAREA_LIST li a.active ,
+#JPAREA_LIST li a:hover {
+ background: #fe0000;
+}
+
+@media screen and (max-width:640px){
+
+    /*
+    * css ver1.0
+    * Written by Variety Article Factory 2015.08
+    ******************************************vaf*/
+	.COPYRIGHT2 {
+		margin-left: 0px;
+		padding: 10px;
+	}
+
+	.COPYRIGHT2 span {
+		font-size: small;
+	}
+
+
+	#COPYRIGHT {
+		margin: 0px;
+	}
+	#COPYRIGHT {
+		padding: 0px;
+		background: #262626;
+	}
+
+    .fuso-header-logo {
+        display: none
+    }
+
+    body {
+    }
+
+
+    /*
+    * HEADER_WRAP
+    **********************************************/
+    #HEADER_WRAP {
+    }
+
+    /*
+    * FOOTER_WRAP
+    **********************************************/
+    #FOOTER_WRAP {
+    }
+
+
+    /*
+    * CONTENTS_AREA
+    **********************************************/
+    #CONTENTS_AREA {
+     position: relative;
+    }
+    /* Slide Mov */
+    #SLIDE_MENU{
+     position:relative;
+     background:#161616;
+     background-color:#161616;
+    }
+    .sld_data{
+     color:#fff;
+     padding:15px;
+    }
+    .sld_data dt{
+     padding:5px 0 0;
+     margin-bottom:1%;
+     font-size:90%;
+    }
+    .sld_data dd{
+     width:70%;
+     font-size:70%;
+    }
+    #SLIDE_MENU .moreinfo{
+     position:absolute;
+     right:1%; bottom:20px;
+    }
+    #SLIDE_MENU .moreinfo a{
+     padding:5px;
+     font-size:12px;
+     font-family:"メイリオ",Meiryo, sans-serif;
+    }
+
+    /* Top Menu */
+    #MB_TOP_MENU_AREA li{
+     display:block;
+     margin:0 -1px;
+     float:left;
+     width:50%;
+     background:#f0f0f0;
+     border:1px solid #999;
+    }
+    #MTMN_C,#MTMN_D,#MTMN_E{
+     border-top:none !important;
+     border-bottom:none !important;
+    }
+    #MTMN_E{
+     width:100% !important;
+    }
+    #MB_TOP_MENU_AREA img{
+     width:100%;
+    }
+
+
+    /* Information */
+    #INFORMATION_AREA{
+     padding:20px;
+     background:#262626;
+     color:#a4a4a4;
+    }
+    #INFORMATION_AREA a{
+     display:block;
+    }
+    #INFORMATION_AREA h2{
+     padding:0 0 30px;
+     font-size:16px;
+     font-weight:normal;
+    }
+    #INFORMATION_AREA li{
+     padding:0 0 12px;
+     margin-bottom:12px;
+     border-bottom:1px solid #333;
+    }
+    #INFORMATION_AREA li div{
+     color:#666;
+     margin-bottom:20px;
+    }
+    #INFORMATION_AREA dt{
+     font-size:16px;
+     margin-bottom:5px;
+     font-family:"メイリオ",Meiryo, sans-serif;
+    }
+    #INFORMATION_AREA dd{
+     font-size:11px;
+     line-height:1.4;
+     font-family:"メイリオ",Meiryo, sans-serif;
+    }
+
+    #INFORMATION_AREA a:hover,#INFORMATION_AREA a:hover div{
+     color:#fff !important;
+    }
+
+    #INFORMATION_AREA .btn_red_type{
+     padding:3px 0 0 0;
+    }
+
+
+    /* 20160322
+      最新リリース一覧下のリンクボタン */
+
+    .jp_mode #INFORMATION_AREA .btn_gry_type ul{
+        display: table;
+        margin-bottom: -15px;
+    }
+
+    .jp_mode #INFORMATION_AREA .btn_gry_type li{
+        display: table-cell !important;
+        padding-left: 16px;
+        float: left;
+        border-bottom-style: none;
+        margin-top: 10px;
+    }
+
+    .jp_mode #INFORMATION_AREA .btn_gry_type li a{
+        display: table-cell !important;
+        background-color: #5b5b5b;
+        color: #FFF;
+        font-size: 105%;
+        text-align: center;
+        width: 110px;
+        vertical-align: middle;
+        height: 40px;
+        padding-right: 5px;
+        padding-left: 5px;
+    }
+
+    .jp_mode #INFORMATION_AREA .btn_gry_type li a:hover{
+        background:#fe0000;
+    }
+
+
+    /* end */
+
+
+    /* 以下、動きが決まるまでの暫定処理用 */
+    #MB_MAP_NAVI li .select{
+     display:block !important;
+     border-bottom:none;
+    }
+
+	#searchform {
+		position: absolute;
+		right: 10px;
+		top: 33%;
+		bottom: 23%;
+		z-index: 50;
+	}
+
+	#searchform dt {
+		float: left;
+	}
+
+	#searchform dt input {
+		float: right;
+		width: 80%;
+		height: 15px;
+		padding: 7px 15px;
+		color: #fff;
+		border: 1px solid #706f6f;
+			border-right-width: 1px;
+			border-right-style: solid;
+			border-right-color: rgb(112, 111, 111);
+		border-right: 1px solid #911818;
+		background: #2f2e2e;
+	}
+
+	#searchform dd {
+		float: left;
+		width: 29px;
+		height: 29px;
+		background: #ff0000 url(icon_search.png) no-repeat center center;
+	}
+	#searchform dd {
+		display: block;
+		cursor: pointer;
+	}
+
+
+}
+
+
+/* Ad-comm scrollbar for menu*/
+
+@media screen and (max-height:750px){
+    .menu_all a.menu_all {
+        width:95px;
+        height:68px;
+    }
+
+    .menu_all a.menu_all img  {
+        width:50%;
+        /*width:45px;*/
+    }
+
+    .p_gnv:hover, .menu_all .selected, .menu_all .p_gnv {
+        background-size: 100% 100% !important;
+    }
+}
+
+/* Custom styles down from here. */
+
+div#FOOTER_AREA {
+    margin-left: 95px;
+}
+
+body {
+    font-family: "メイリオ",Meiryo, Helvetica,sans-serif;
+    height: auto;
+}
+
+/* EXEC TAB setting */
+
+#EXEC_TAB {
+    clear:both;
+    margin:20px 0;
+    border-bottom:1px solid #eee;
+    height: 36px;
+}
+
+#EXEC_TAB li{
+ float:left;
+ margin-right:1px;
+}
+
+#EXEC_TAB a{
+ display:block;
+ padding:10px 20px;
+ background:#eee;
+ color:#000;
+ text-align:center;
+}
+
+#EXEC_TAB a:hover,
+.exec_section_a #EXEC_TAB_A a,
+.exec_section_b #EXEC_TAB_B a,
+.exec_section_c #EXEC_TAB_C a{
+ color:#fff;
+ background:#ff0000;
+}
+
+#EXEC_TAB a.active{
+    color: #fff;
+    background: #ff0000;
+}
+
+/* Exec links CSS */
+
+.EXEC_LINK_TITLE {
+    margin: 0 0 15px 10px;
+    color: #666;
+    font-weight: normal;
+}
+
+.EXEC_LINKS li {
+    margin-bottom: 10px;
+    font-size: 12px;
+    padding-left: 12px;
+}
+
+.EXEC_LINKS li:hover {
+    background: url(/etc/designs/fuso/core/image/design/icon/list_alw_r_on.png) no-repeat 0 2px;
+}
+
+.EXEC_LINKS li a {
+    color: #000;
+}
+
+.EXEC_LINKS li a:hover {
+    color: #ff0000;
+}
+
+/* Header CSS */
+
+.head_style_a{
+ clear:both;
+ font-size:26px;
+ margin:0 0 20px;
+ font-weight:normal;
+}
+
+.fusopageheader .head_style_a {
+    font-weight: bold;
+    font-size: 24px;
+}
+
+.head_style_b{
+ clear:both;
+ margin-bottom:20px;
+}
+.head_style_c{
+ clear:both;
+ margin-bottom:20px;
+ font-size:16px;
+ font-weight:normal;
+}
+
+.head_style_d{
+ clear:both;
+ font-size:26px;
+ margin:0 0 20px;
+ padding:0 0 10px;
+ font-weight:normal;
+ border-bottom:1px solid #eee;
+ margin-bottom: 20px;
+}
+
+.head_style_e{
+    padding: 7px 7px 3px !important;
+    background: #ccc;
+    border: none;
+    margin-bottom: 20px;
+}
+
+.head_style_f{
+    background: #dbdcdc;
+    font-size: 16px;
+    border-left: 7px solid #ff0000;
+    padding: 7px 7px 5px;
+    margin-bottom: 20px;
+
+}
+
+.head_style_g{
+    font-size: 14px;
+    color: #00427e;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.head_style_h {
+    font-size: 20px;
+    margin: 0 0 30px;
+}
+
+.head_style_i{
+    font-size: 14px;
+    color: #6dbf67;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.aem-menu-editor {
+    width: 95px !important;
+    height: 100vh !important;
+}
+
+h2 {
+    font-size: 28px;
+    font-weight: normal;
+    padding-bottom: 15px;
+}
+
+.header h2 {
+    margin-bottom: 15px;
+    border-bottom: 1px solid #dcdcdc;
+}
+
+.listpageitem {
+    display: inline-block;
+    width: 199px;
+    vertical-align: top;
+    margin-right: 5px;
+}
+
+.listpageitem > span {
+    position: relative;
+    z-index: 1;
+}
+
+.p-nm {
+    margin-bottom: 5px;
+    padding: 5px 0 5px 0px;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+a .p-nm {
+    color: #696969;
+    padding: 5px 0 5px 13px;
+}
+
+.listpageitem span{
+  font-weight:normal;
+}
+.listpageitem span.sml{
+  display:block;
+  font-size:10px;
+}
+.listpageitem span.fred{
+  color:#cc0000;
+}
+
+.jp_mode .p-nm {
+    font-family: "メイリオ",Meiryo, sans-serif;
+    height: 2.5em;
+    font-size: 14px;
+}
+
+.jp_mode .listpageitem a:hover .p-nm {
+    color: #000;
+    background-image: url(/etc/designs/fuso/core/image/design/icon/alw_red.png);
+    background-repeat: no-repeat;
+    background-position: 0 10px;
+}
+
+.catalog_dl {
+    float: right;
+    margin-top: -21px;
+    margin-right: 15px;
+    position: relative;
+    z-index: 2;
+}
+
+.cq-dd-image {
+    max-width: 100%;
+    display: block;
+}
+
+#BACK_PAGES {
+    padding: 0 0 30px;
+}
+
+div.new.section {
+    display: none;
+}
+
+.edit-mode div.new.section, .edit-mode div.new.section {
+    display: block;
+}
+
+/* PDFs */
+
+.pdf {
+    position: relative;
+    display: inline-block;
+    margin: 0 0 40px 0;
+    vertical-align: top;
+    width: 49.5%;
+}
+
+
+.pdf.pdf-alternativestyle {
+    width: 210px;
+}
+
+.PDF {
+    display: inline-block;
+    width: 100%;
+}
+
+.PDF.alternativestyle .pdf_image {
+    float: none;
+}
+
+.pdf dt {
+    font-size: 30px;
+    margin-bottom: 15px;
+}
+
+.pdf dt .subtitle {
+    display: block;
+    font-size: 18px;
+    color: #8e8e8e;
+}
+
+.pdf_image {
+    float: left;
+    width: 195px;
+}
+
+.pdf_image img {
+    max-width: 183px;
+}
+
+.pdf dd {
+    color: #696969;
+    line-height: 1.3;
+    font-size: 12px;
+}
+
+a.pdflink, a.pdflink:hover, a.pdflink:visited {
+    display: block;
+    color: #000;
+    min-height: 35px;
+}
+
+.pdflink img {
+    float:left;
+    padding-right:5px;
+}
+
+a.pdflink:hover {
+    color: #666;
+}
+
+.pdflink span {
+    vertical-align: top;
+    display: block;
+    width: auto;
+}
+
+.grade-image {
+    height: 20px;
+}
+
+.fusopageheader {
+    margin-bottom: 20px;
+}
+
+.fusopageheader .cq-dd-image {
+    margin-top: 40px;
+    max-height: 230px;
+    float: right;
+}
+
+.pdf-boldedtext {
+    font-weight:bold;
+    font-size: 14px;
+}
+
+/* PC section */
+
+/* Tab Setting */
+#ENGINE_TABS{
+ clear:both;
+ margin:20px 0;
+ border-bottom:1px solid #eee;
+}
+#ENGINE_TABS li{
+ float:left;
+ margin-right:1px;
+}
+#ENGINE_TABS a{
+ display:block;
+ padding:10px 20px;
+ background:#eee;
+ color:#000;
+ text-align:center;
+}
+#ENGINE_TABS a:hover,
+.engine_lineup #ETAB_001 a,
+.engine_wwd #ETAB_002 a{
+ color:#fff;
+ background:#ff0000;
+}
+
+/* DataGraph Setting */
+#DATA_GRAPH_WRAP,#D_SERIES,#M_SERIES,#M_SERIES_A,#M_SERIES_B{
+  position:relative;
+}
+#D_SERIES,#M_SERIES,#M_SERIES_A,#M_SERIES_B{
+  width:400px;
+}
+#D_SERIES,#M_SERIES_A{
+  float:left;
+}
+#M_SERIES,#M_SERIES_B{
+  float:right;
+}
+#DATA_GRAPH_WRAP li{
+  position:absolute;
+}
+#DATA_GRAPH_WRAP li a{
+  display:block;
+  height:30px;
+  text-indent:-10000em;
+}
+#MORE_INFO_TXT{
+  clear:both;
+  color:#8c8c8c;
+  padding:25px 0 23px 25px;
+  background:url(/etc/designs/fuso/en/core/image/lineup/engine/icon_more_info.png) no-repeat 0 center;
+}
+
+/* EN用 */
+#D_LIST_01{
+  left:74px; top:178px;
+  width:170px;
+}
+#D_LIST_02{
+  left:137px; top:109px;
+  width:215px;
+}
+#D_LIST_03{
+  left:53px; top:232px;
+  width:95px;
+}
+#D_LIST_04{
+  left:92px; top:205px;
+  width:100px;
+}
+#D_LIST_01:hover{
+  background:url(/etc/designs/fuso/en/core/image/lineup/engine/d_list_01.png) no-repeat 0 0;
+}
+#D_LIST_02:hover{
+  background:url(/etc/designs/fuso/en/core/image/lineup/engine/d_list_02.png) no-repeat 0 0;
+}
+#D_LIST_03:hover{
+  background:url(/etc/designs/fuso/en/core/image/lineup/engine/d_list_03.png) no-repeat 0 0;
+}
+#D_LIST_04:hover{
+  background:url(/etc/designs/fuso/en/core/image/lineup/engine/d_list_04.png) no-repeat 0 0;
+}
+#M_LIST_01{
+  left:84px; top:215px;
+  width:105px;
+}
+#M_LIST_02{
+  left:105px; top:187px;
+  width:140px;
+}
+
+#M_LIST_01:hover{
+  background:url(/etc/designs/fuso/en/core/image/lineup/engine/m_list_01.png) no-repeat 0 0;
+}
+#M_LIST_02:hover{
+  background:url(/etc/designs/fuso/en/core/image/lineup/engine/m_list_02.png) no-repeat 0 0;
+}
+
+/* JP用 */
+#JM_LIST_05A{
+  left:83px; top:215px;
+  width:96px;
+}
+#JM_LIST_05B{
+  left:108px; top:215px;
+  width:95px;
+}
+#JM_LIST_06A{
+  left:106px; top:179px;
+  width:220px;
+}
+#JM_LIST_06B{
+  left:202px; top:187px;
+  width:70px;
+}
+
+#JD_LIST_01{
+  left:101px; top:174px;
+  width:141px;
+}
+#JD_LIST_02{
+  left:168px; top:107px;
+  width:179px;
+}
+#JD_LIST_03A{
+  left:118px; top:203px;
+  width:86px;
+}
+#JD_LIST_03B{
+  left:46px; top:215px;
+  width:71px;
+}
+#JD_LIST_03C{
+  left:62px; top:239px;
+  width:79px;
+}
+
+
+#JM_LIST_05A:hover{
+  background:url(/etc/designs/fuso/jp/core/image/lineup/engine/jm_list_05a.png) no-repeat 0 0;
+}
+#JM_LIST_06A:hover{
+  background:url(/etc/designs/fuso/jp/core/image/lineup/engine/jm_list_06a.png) no-repeat 0 0;
+}
+#JM_LIST_05B:hover{
+  background:url(/etc/designs/fuso/jp/core/image/lineup/engine/jm_list_05b.png) no-repeat 0 0;
+}
+#JM_LIST_06B:hover{
+  background:url(/etc/designs/fuso/jp/core/image/lineup/engine/jm_list_06b.png) no-repeat 0 0;
+}
+#JD_LIST_02:hover{
+  background:url(/etc/designs/fuso/jp/core/image/lineup/engine/jd_list_02.png) no-repeat 0 0;
+}
+#JD_LIST_01:hover{
+  background:url(/etc/designs/fuso/jp/core/image/lineup/engine/jd_list_01.png) no-repeat 0 0;
+}
+#JD_LIST_03A:hover{
+  background:url(/etc/designs/fuso/jp/core/image/lineup/engine/jd_list_03a.png) no-repeat 0 0;
+}
+#JD_LIST_03B:hover{
+  background:url(/etc/designs/fuso/jp/core/image/lineup/engine/jd_list_03b.png) no-repeat 0 0;
+}
+#JD_LIST_03C:hover{
+  background:url(/etc/designs/fuso/jp/core/image/lineup/engine/jd_list_03c.png) no-repeat 0 0;
+}
+
+/* WWD Setting */
+.wwd_data h3{
+  margin:0 0 20px;
+  color:#ff0000;
+}
+.wwd_data a{
+  color:#000;
+  text-decoration: underline;
+}
+.wwd_data a:hover{
+  color:#666;
+}
+.address_txt,.wwd_data dl{
+  padding:0 0 20px;
+  margin:0 0 20px;
+  border-bottom:1px solid #eee;
+}
+.wwd_1line{
+  margin-bottom:20px;
+  border-bottom:1px solid #eee;
+}
+.wwd_1line p,.wwd_1line dl{
+  padding:0 0 5px;
+}
+.wwd_1line .address_txt,.wwd_1line dl{
+  border:none;
+}
+.wwd_data dl{
+  line-height:1.5;
+}
+.wwd_data dt{
+  float:left;
+  clear:left;
+  font-weight:bold;
+  margin-right:7px;
+}
+.wwd_1line .address_txt,.wwd_1line dl,.wwd_left,.wwd_right{
+  width:49%;
+}
+.wwd_1line .address_txt,.wwd_left{
+  float:left;
+}
+.wwd_1line dl,.wwd_right{
+  float:right;
+}
+
+.two-images {
+    display: inline-block;
+    width: 49%;
+}
+
+.fuso-red, .fuso-red * {
+    color: #ff0000 !important;
+}
+
+.fuso-dark-blue, .fuso-dark-blue * {
+    color: #144e8b !important;
+}
+
+.fuso-link-blue, .fuso-link-blue * {
+    color: #004EAE !important;
+}
+
+.fuso-orange, .fuso-orange * {
+    color: #e0a459 !important;
+}
+
+.fuso-pink, .fuso-pink * {
+    color: #c989ac !important;
+}
+
+.gray, .gray * {
+    color: #8a8a8a !important;
+}
+
+.solid-black, .solid-black * {
+    color: #000000 !important;
+}
+
+.small-text {
+    font-size: 12px;
+}
+
+.engine-header-text {
+    font-size: 18px;
+}
+
+.large-text {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.products .truck .snv_truck,.products .buses .snv_buses,.products .engine .snv_engine{
+  background-color:#c90000;
+}
+.products .truck .snv_truck img{
+	 background-image:url(../image/design/menu/side_trucks_on.png);
+	 background-repeat:no-repeat;
+	 background-position:center center;
+}
+.products .buses .snv_buses img{
+	 background-image:url(../image/design/menu/side_buses_on.png);
+	 background-repeat:no-repeat;
+	 background-position:center center;
+}
+
+.products .engine .snv_engine img{
+	 background-image:url(../image/design/menu/side_engine_on.png);
+	 background-repeat:no-repeat;
+	 background-position:center center;
+}
+
+.products .truck .snv_truck .active_alw,
+.products .buses .snv_buses .active_alw,
+.products .engine .snv_engine .active_alw{
+	 background:transparent !important;
+	 display:block;
+}
+
+
+.jp_mode.products .truck .snv_truck img{
+	 background-image:url(../image/design/menu/jp_side_trucks_on.png);
+}
+.jp_mode.products .buses .snv_buses img{
+	 background-image:url(../image/design/menu/jp_side_buses_on.png);
+}
+
+.jp_mode.products .engine .snv_engine img{
+	 background-image:url(../image/design/menu/jp_side_engine_on.png);
+}
+
+#BACK_PAGES{
+  padding:0 0 30px;
+}
+#BACK_PAGES a{
+  color:#000;
+}
+#BACK_PAGES a:hover{
+  color:#666;
+}
+#BACK_PAGES span{
+  text-decoration: underline;
+}
+
+
+/*
+* FOOTER_WRAP
+**********************************************/
+#FOOTER_WRAP {
+}
+
+
+/*
+* CONTENTS_AREA
+**********************************************/
+#MAIN_CONTENTS{
+ position:relative;
+ padding:30px 30px 0px 120px;
+ background:#fff;
+}
+
+.index-page #MAIN_CONTENTS{
+    padding: 0px;
+}
+
+/* EXEC_HEADER setting */
+
+#EXEC_NAME{
+ font-size:24px;
+ margin-bottom:15px;
+}
+#EXEC_WEIGHT{
+ margin-bottom:15px;
+}
+#EXEC_WEIGHT img{
+ height:20px;
+}
+#EXEC_PICT{
+ float:right;
+ margin-top:-40px;
+}
+#EXEC_PICT img{
+ width:300px;
+}
+#EXEC_TEXT{
+ width:500px;
+ line-height:1.6;
+}
+
+/* EXEC TAB setting */
+
+#EXEC_TAB{
+ clear:both;
+ margin:20px 0;
+ border-bottom:1px solid #eee;
+}
+#EXEC_TAB li{
+ float:left;
+ margin-right:1px;
+}
+#EXEC_TAB a{
+ display:block;
+ padding:10px 15px;
+ background:#eee;
+ color:#000;
+ text-align:center;
+}
+#EXEC_TAB a:hover,
+.exec_section_a #EXEC_TAB_A a,
+.exec_section_b #EXEC_TAB_B a,
+.exec_section_c #EXEC_TAB_C a{
+ color:#fff;
+ background:#ff0000;
+}
+
+/* EXEC LINK setting */
+
+#EXEC_LINKS{
+ float:right;
+ width:155px;
+}
+#EXEC_LINK_TITLE{
+ margin:0 0 15px 10px;
+ color:#666;
+ font-weight:normal;
+}
+#EXEC_LINKS li{
+ margin-bottom:10px;
+ font-size:12px;
+ padding-left:12px;
+}
+#EXEC_LINKS li:hover{
+ background:url(../image/design/icon/list_alw_r_on.png) no-repeat 0 2px;
+}
+#EXEC_LINKS li a{
+ color:#000;
+}
+#EXEC_LINKS li a:hover{
+ color:#ff0000;
+}
+
+.exec_section_c #ELINK_002{
+  display:none;
+}
+
+
+/* EXEC_MAIN */
+
+#EXEC_MAIN_DATA{
+ float:left;
+ width:660px;
+}
+
+sup{
+ font-size:10px;
+ vertical-align: super;
+}
+
+#EXEC_MAIN_DATA  p .outofLink_2{
+ margin-left:0;
+ color:#000;
+}
+
+
+/* Section Style */
+#EXEC_MAIN_DATA .section_type_a{
+ margin-bottom:40px;
+}
+#EXEC_MAIN_DATA .section_type_b{
+ margin-bottom:40px;
+ border-bottom:1px solid #eee;
+}
+#EXEC_MAIN_DATA .section_type_c{
+ margin-bottom:40px;
+ background:url(../../jp/core/image/lineup/exec/bg_section_c.png) repeat-x 0 bottom;
+}
+
+/* Midashi Style */
+#EXEC_MAIN_DATA h3 span,#EXEC_MAIN_DATA h4 span{
+  font-weight:normal;
+}
+#EXEC_MAIN_DATA .head_style_a{
+ clear:both;
+ font-size:26px;
+ margin:0 0 20px;
+ font-weight:normal;
+}
+#EXEC_MAIN_DATA .head_style_b{
+ clear:both;
+ margin-bottom:20px;
+}
+#EXEC_MAIN_DATA .head_style_c{
+ clear:both;
+ margin-bottom:20px;
+ font-size:16px;
+ font-weight:normal;
+}
+#EXEC_MAIN_DATA .head_style_c2{
+  clear:both;
+  margin-bottom:20px;
+  font-size:16px;
+  font-weight:bold;
+}
+#EXEC_MAIN_DATA .head_style_d{
+ clear:both;
+ font-size:26px;
+ margin:0 0 20px;
+ padding:0 0 10px;
+ font-weight:normal;
+ border-bottom:1px solid #eee;
+}
+#EXEC_MAIN_DATA .head_style_e{
+ clear:both;
+ margin-bottom:10px;
+ font-size:14px;
+ font-weight:normal;
+}
+#EXEC_MAIN_DATA .head_style_f{
+ clear:both;
+ font-size:18px;
+ margin:0 0 20px;
+ font-weight:normal;
+}
+#EXEC_MAIN_DATA .head_style_g{
+ margin-bottom:5px;
+ font-size:12px;
+}
+
+/* Text Style */
+
+#EXEC_MAIN_DATA .text_style_a{
+ clear:both;
+ line-height:1.6;
+}
+#EXEC_MAIN_DATA .text_style_b{
+  clear:both;
+ line-height:1.6;
+ margin-bottom:20px;
+}
+#EXEC_MAIN_DATA .text_style_c{
+  clear:both;
+ line-height:1.6;
+ padding:0 10px 5px 0;
+}
+
+
+/* Pict Box Style */
+#EXEC_MAIN_DATA .pict_box_a{
+ margin-bottom:15px;
+}
+#EXEC_MAIN_DATA .pict_box_b,#EXEC_MAIN_DATA .pict_box_d{
+ margin-bottom:20px;
+}
+#EXEC_MAIN_DATA .pict_box_b2,#EXEC_MAIN_DATA .pict_box_b3{
+ margin-bottom:20px;
+ text-align:center;
+}
+#EXEC_MAIN_DATA .pict_box_a img,#EXEC_MAIN_DATA .pict_box_b img{
+ width:100%;
+}
+#EXEC_MAIN_DATA .pict_box_b2 img,#EXEC_MAIN_DATA .pict_box_b3 img{
+ margin:auto;
+ display:block;
+}
+
+
+#EXEC_MAIN_DATA .pict_box_c,#EXEC_MAIN_DATA .pict_box_d{
+ margin-bottom:15px;
+}
+#EXEC_MAIN_DATA .pict_box_c li,#EXEC_MAIN_DATA .pict_box_d li{
+ float:left;
+ padding:0 12px 20px 0;
+ width:31.5%;
+}
+#EXEC_MAIN_DATA .pict_box_c li img,#EXEC_MAIN_DATA .pict_box_d li img{
+ width:100%;
+}
+#EXEC_MAIN_DATA .pict_box_c li dt{
+ margin-bottom:20px;
+}
+
+
+/* List Box Style */
+#EXEC_MAIN_DATA .list_type_a li{
+ float:left;
+ width:50%;
+ margin-bottom:30px;
+}
+#EXEC_MAIN_DATA .list_type_b li{
+ float:left;
+ width:33%;
+ margin-bottom:30px;
+}
+#EXEC_MAIN_DATA .list_type_a dl,#EXEC_MAIN_DATA .list_type_b dl{
+ padding:0 5px;
+}
+#EXEC_MAIN_DATA .list_type_a dt,#EXEC_MAIN_DATA .list_type_b dt{
+ font-size:18px;
+ font-weight:bold;
+ margin-bottom:10px;
+}
+#EXEC_MAIN_DATA .list_type_a dt span,#EXEC_MAIN_DATA .list_type_b dt span{
+ font-weight:normal;
+ padding-left:5px;
+}
+#EXEC_MAIN_DATA .list_type_a dd,#EXEC_MAIN_DATA .list_type_b dd,#EXEC_MAIN_DATA .list_type_c li{
+ line-height:1.6;
+ font-size:14px;
+}
+#EXEC_MAIN_DATA .list_type_c {
+  padding-bottom:30px;
+}
+#EXEC_MAIN_DATA .list_type_c dt{
+  font-size:14px;
+  font-weight:bold;
+}
+#EXEC_MAIN_DATA .list_type_c dd{
+  line-height:1.6;
+  font-size:14px;
+}
+
+
+/* Table Type */
+.table_type_a{
+ width:100%;
+}
+.table_type_a th{
+ width:220px;
+ text-align:left;
+}
+.table_type_a td{
+ width:190px;
+ vertical-align:top;
+}
+.table_type_a th,.table_type_a img{
+ vertical-align:middle;
+}
+.table_type_a img{
+ width:95%;
+}
+.table_type_a .table_wrap{
+ margin-right:10px;
+ height:110px;
+ border-bottom:1px solid #eee;
+}
+.queen .table_type_a .table_wrap{
+  height:130px;
+}
+.table_type_a th,.table_type_a td{
+ padding-top:25px;
+}
+.table_type_a h4{
+ margin-bottom:10px;
+ padding-top:5px;
+}
+.table_type_a a{
+ display:block;
+ margin-bottom:10px;
+ padding:3px 0 3px 20px;
+ color:#000;
+ background:url(../image/design/icon/pdf.png) no-repeat 0 center;
+}
+.table_type_a a:hover{
+ color:#666;
+}
+.table_type_a li{
+}
+
+
+/* Wrapper Type */
+#EXEC_MAIN_DATA .left_box_a img,#EXEC_MAIN_DATA .right_box_a img,
+#EXEC_MAIN_DATA .left_box_a2 img,#EXEC_MAIN_DATA .right_box_a2 img,
+#EXEC_MAIN_DATA .left_box_a3 img,#EXEC_MAIN_DATA .right_box_a3 img,
+#EXEC_MAIN_DATA .left_box_b img,#EXEC_MAIN_DATA .right_box_b img,
+#EXEC_MAIN_DATA .left_box_c img,#EXEC_MAIN_DATA .right_box_c img
+{
+ width:100%;
+}
+
+#EXEC_MAIN_DATA .left_box_a,#EXEC_MAIN_DATA .left_box_a3{
+ clear:both;
+ float:left; padding-bottom:20px;
+ width:49.5%;
+}
+#EXEC_MAIN_DATA .right_box_a,#EXEC_MAIN_DATA .right_box_a3{
+ float:right;
+ padding-bottom:20px;
+ width:49.5%;
+}
+#EXEC_MAIN_DATA .left_box_a2{
+ clear:both;
+ float:left;
+ width:49.5%;
+}
+#EXEC_MAIN_DATA .right_box_a2{
+ float:right;
+ width:49.5%;
+}
+
+#EXEC_MAIN_DATA .left_box_b{
+ float:left;
+ width:40%;
+}
+#EXEC_MAIN_DATA .right_box_b{
+ float:right;
+ width:55%;
+}
+#EXEC_MAIN_DATA .left_box_c{
+ float:left;
+ width:68%;
+}
+#EXEC_MAIN_DATA .right_box_c{
+ float:right;
+ width:30%;
+}
+
+/* SPECIAL LINK  */
+
+#UNDER_LINKS li{
+ float:left;
+ margin:0 20px 40px 0;
+}
+#UNDER_LINKS li a{
+ display:block;
+ padding:15px 30px;
+}
+#UNV_A a{
+ color:#fff;
+ background:#ff0000;
+}
+#UNV_A a:hover{
+ color:#fff;
+ background:#c70000;
+}
+#UNV_B a{
+ color:#c4c4c4;
+ border:1px solid #c4c4c4;
+}
+#UNV_B a:hover{
+ color:#666;
+ background:#ececec;
+}
+
+/* NEW ICON  */
+
+span.new-icon {
+  display: inline-block;
+  background: #ff0000;
+  padding: 1px 5px;
+  margin:  0px 5px 5px 3px;;
+  vertical-align: middle; /* 先行する文字列と上下中央揃え */
+  font-size: 0.6em;
+  font-weight: bold;
+  color: #fff;
+}
+
+/* 20160630canter-sp-bnr */
+.special_bnr {
+    background: url("../../jp/core/image/lineup/exec/canter/special-site-02.jpg") no-repeat;
+}
+
+.special_bnr a {
+    display: inline-block;
+}
+
+.special_bnr a:hover {
+	background-color: transparent; /* IE6対応 */
+}
+
+.special_bnr a:hover img {
+    visibility: hidden;
+}
+
+
+@media screen and (max-width: 640px) {
+
+	#searchform dd {
+		float: left;
+		width: 29px;
+		height: 29px;
+		background: #ff0000 url(icon_search.png) no-repeat center center;
+	}
+	#searchform dd {
+		display: block;
+		cursor: pointer;
+	}
+
+	#searchform dt input {
+		float: right;
+		width: 80%;
+		height: 15px;
+		padding: 7px 15px;
+		color: #fff;
+		border: 1px solid #706f6f;
+			border-right-width: 1px;
+			border-right-style: solid;
+			border-right-color: rgb(112, 111, 111);
+		border-right: 1px solid #911818;
+		background: #2f2e2e;
+	}
+
+
+    #MAP_AREA {
+        display: none;
+    }
+
+    .faq-page #HEADER_IMAGE img, .faq_section h3 img {
+        width: 100%;
+    }
+
+    #MODEL_PIC, #MODEL_A, #MODEL_B, #MODEL_C, #MODEL_D {
+        position: static;
+    }
+
+    #MODEL_PIC img {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 10px;
+    }
+
+    #SUPPORT_MODEL {
+        width: 100%;
+        height: auto;
+    }
+
+    #SUPPORT_MODEL dl {
+        width: 100%;
+    }
+
+    #GE_SERVICE_DATA {
+        height: auto;
+        background: #8f9299 url(genuine_data_bg.png) no-repeat right 0;
+        background-size: 100% auto;
+    }
+
+    #GE_DATA_C {
+        margin-left: 20px;
+        position: static;
+    }
+
+    #GE_SERVICE_DATA h4 {
+        margin: 140px 0 120px 35px;
+        position: static;
+    }
+
+    #GE_SERVICE_DATA dl {
+        padding: 0 20px 40px;
+        margin: 0px;
+    }
+
+    #MENU_FIELD {
+        display: none;
+    }
+
+    #MENU_FIELD.menu-show-on-mobile {
+        display: block;
+    }
+
+    #JP_ORG_LINKS,#LAST_AREA #searchform{
+     display:none !important;
+    }
+    #MAP_AREA,#JP_ORG_LINKS{
+    }
+
+    /**/
+    body {
+        background: #383838;
+        overflow-x:hidden;
+        max-width: 100vw;
+    }
+
+    .pc_display,#GLJP_CHANGES,.active_alw{
+     display:none;
+    }
+    ul,ol {
+        list-style: none;
+    }
+
+    a{
+     color:#939393;
+     text-decoration:none;
+    }
+    a:hover{
+        color:#fff;
+    }
+
+    .faq_section .fred, .faq_section a, .faq_section a:hover {
+        color: #ff0000;
+    }
+
+
+    .btn_red_type a{
+     display:inline-block !important;
+     padding:5px 20px;
+     font-size:105%;
+     background:#ff0000;
+     color:#fff;
+    }
+    .btn_red_type a:hover{
+     background:#c90000;
+    }
+
+    .outofLink{
+     padding-right:20px;
+     background:url(../image/design/icon/outof_link.png) no-repeat right center;
+    }
+    .outofLink_2{
+     margin-left:20px;
+     padding-left:15px;
+     background:url(../image/design/icon/outof_link.png) no-repeat 0 center;
+    }
+    .outofLink3{
+     padding-right:30px;
+     background:url(../image/design/icon/outof_link3.png) no-repeat right center;
+    }
+
+    /*
+    * HEADER
+    **************************************/
+    #HEADER_AREA{
+    }
+    h1{
+     float:left;
+     width:15%;
+     border-right:1px solid #fff;
+    }
+    h1 img{
+     display:table-cell;
+     vertical-align:middle;
+     width:100%;
+    }
+    #MB_DROP_DOWN{
+    /* float:left;
+     width:69%;*/
+     position:absolute;
+     left:15.5%; width:70%;
+     z-index:1000;
+     text-align:center;
+    }
+
+
+    /* MB DropDown*/
+    #DROP_LIST{
+     display:none;
+    }
+    #MB_DROP_DOWN h2{
+     padding:6% 0;
+     color:#fff;
+     font-size:140%;
+     font-weight:normal;
+		margin-top: 0;
+    }
+    #MFUSO_TOP #MB_DROP_DOWN h2{
+     background:url(../image/design/menu/drop_down_off.png) no-repeat 93% center;
+     background-size: 6%;
+    }
+    #MB_DROP_DOWN h2.select{
+     background:url(../image/design/menu/drop_down_on.png) no-repeat 93% center !important;
+     background-size: 6% !important;
+    }
+    #MFUSO_TOP #MB_DROP_DOWN h2:hover{
+     cursor:pointer;
+    }
+    #MB_DROP_DOWN ul{
+     padding:0 10px;
+     font-size:16px;
+     background:#383838;
+    }
+    #MB_DROP_DOWN a{
+     display:block;
+     padding:20px;
+    }
+    #DROP_GL a{
+     border-bottom:1px dotted #ccc;
+    }
+
+    #INFORMATION_AREA, .jp_mode #INFORMATION_AREA {
+        width: auto;
+        margin-left: 0px;
+    }
+
+
+
+    /*
+    * FOOTER
+    **************************************/
+    /* SNS */
+    #SNS_FIELD{
+     padding: 10px 0px 10px 0px;
+     color:#fff;
+     background:#2c2c2c;
+    }
+
+    #SNS_FIELD dl{
+        float:left;
+        width:48%;
+    }
+
+    #SNS_FIELD dl#FOLLOW_US {
+        margin-left: 3%;
+    }
+	#SNS_FIELD dl#FOLLOW_US3 {
+        margin-left: 3%;
+    }
+
+    #SNS_FIELD dt{
+        float:left;
+        padding-right:5px;
+        font-size: 12px;
+        width: auto;
+    }
+
+    #SNS_FIELD dl li{
+     float:left;
+     padding-right:10px;
+    }
+
+    /* Copyright */
+    #COPYRIGHT{
+     background:#262626;
+    }
+    #COPYRIGHT *{
+     display:block;
+    }
+    #COPYRIGHT img{
+     float:left;
+     margin:7px 15px 0 0;
+    }
+    #COPYRIGHT span{
+     padding:10px 0 0 10px;
+     color:#fff;
+     font-size:10px;
+     font-style:normal;
+    }
+
+    /*
+    * CONTENTS_AREA
+    **************************************/
+    #CONTENTS_AREA {
+     clear:both;
+     background:#fff;
+    }
+
+
+
+
+    /*
+    * Navi
+    **************************************/
+    /* Trigger */
+    #MOBILE_MENU_TRIGGER{
+     float:right;
+     width:15%;
+     border-left:1px solid #fff;
+    }
+    #MOBILE_MENU_TRIGGER img,#MOBILE_MENU_CLOSE img{
+     display:table-cell;
+     vertical-align:middle;
+     width:100%;
+    }
+
+    /* Menu Field */
+    #MENU_FIELD{
+     display:none;
+     position:absolute;
+     z-index:10000;
+     width:85%; height:100%;
+     right:0; top:0;
+    }
+
+    #MB_MENU_HEAD{
+     position:relative;
+     z-index:8000;
+     background:#2f2e2e;
+    }
+    #MOBILE_MENU_CLOSE{
+     float:left;
+     width:17.5%;
+    }
+
+    #searchform{
+     position:absolute;
+     right:10px; top:33%; bottom:23%;
+    }
+    #searchform dt{
+     float:left;
+    }
+    #searchform dt input{
+     float:right;
+     width:90%; height:15px;
+     padding:7px 15px;
+     color:#fff;
+     border:1px solid #706f6f;
+     border-right:1px solid #911818;
+     background:#2f2e2e;
+    }
+    #searchform dd{
+     float:left;
+     width:29px; height:29px;
+     background:#ff0000 url("icon_search.png") no-repeat center center;
+    }
+
+    #GLOBALMENU_FIELD{
+     position:relative;
+     float:right;
+     width:83%;
+     background:#262626;
+     border-left:1px solid #000;
+
+    }
+    #GLOBALMENU_FIELD a{
+     color:#fff;
+    }
+
+    .careers-header img {
+        display: none;
+    }
+
+    .careers-header {
+        background-image: url(/content/dam/core/image/aboutus/career/mb_logo.png);
+        background-repeat: no-repeat;
+        background-position: 97.5% center;
+        font-size: 22px;
+        width: 80%;
+        padding-right: 20%;
+        padding-bottom: 20%;
+        margin-bottom: 20px;
+    }
+
+    li.menu_all{
+     border-bottom:1px solid #838383;
+    }
+    a.menu_all{
+     display:block;
+     padding:10px 18px 25px;
+     background:url(../image/design/menu/mb_drop_down_off.png) no-repeat 97% center;
+    }
+    a.selected,.selected a.menu_all{
+     background:url(../image/design/menu/mb_drop_down_on.png) no-repeat 97% center !important;
+    }
+    .menu_all .p_gnv{
+     float:left;
+    }
+    .menu_all > .mb_txt{
+     display:block;
+     padding:18px 0 0 75px;
+    }
+    .submenu{
+     clear:both;
+     display:none;
+    }
+    .submenu li{
+     background:#4c4c4c;
+     border-top:1px solid #838383;
+    }
+    .submenu li a{
+     display:block;
+     padding:20px 0 20px 98px;
+    }
+    .submenu li select{
+     display:block;
+     width: 85%;
+     margin: auto;
+    }
+    .submenu li p{
+     width: 85%;
+     margin: auto;
+     margin-bottom: 5px;
+     color: #ffffff;
+    }
+    .submenu .snv_map {
+     padding: 10px 0;
+    }
+
+    a.selected,.menu_all.selected > a{
+     border-left:5px solid #ff0000 !important;
+    }
+    .selected a a{
+     border-left:none !important;
+    }
+
+
+
+    /* MB_AREADETAIL */
+    #MB_AREADETAIL {
+     position:absolute;
+     z-index:10000;
+     width:90%; min-height:100%;
+     right:0; top:0;
+     padding: 5%;
+     font-size: 18px;
+     color: #ffffff;
+     background: #535353;
+
+     display:none;
+    }
+    #MB_AREADETAIL .close {
+     display: block;
+     margin-bottom: 40px;
+     padding-bottom: 25px;
+     border-bottom: 1px solid #eee;
+     font-size: 28px;
+     color: #ffffff;
+     background: url(../image/design/icon/mb_areadetail_close.png) no-repeat scroll right 0;
+     background-size: 35px 35px;
+    }
+    #MB_AREADETAIL strong {
+     display: block;
+     margin-bottom: 30px;
+     font-weight: normal;
+     font-size: 24px;
+    }
+    #MB_AREADETAIL p {
+     display: block;
+     margin-bottom: 20px;
+     padding-top: 15px;
+     border-top: 1px dotted #a9a9a9;
+    }
+    #MB_AREADETAIL .website {
+     display: inline-block;
+     margin-left: 2px;
+     margin-right: 2px;
+     margin-bottom: 20px;
+     padding: 5px 10px;
+     color: #ffffff;
+     background-color: #ff0000;
+    }
+
+    #MB_AREADETAIL dt {
+     display: block;
+     margin-bottom: 5px;
+     color: #a9a9a9;
+    }
+    #MB_AREADETAIL dd {
+     display: block;
+     margin-bottom: 40px;
+    }
+
+
+    /* SNS */
+    #MENU_LAST_AREA{
+     clear:both;
+     float:right;
+     width:83%;
+     background:#2f2e2e;
+    }
+
+
+    /**/
+    #MENU_LAST_AREA{
+     position:relative;
+     padding-top:220px;
+     border-bottom:1px solid #000;
+     border-left:1px solid #000;
+    }
+    #MENU_LAST_AREA br,.eng_mode #MB_GHANGES_GL a,.jp_mode #MB_GHANGES_JP a{
+     display:none;
+    }
+    #MB_GLJP_CHANGES {
+        padding-bottom: 10px;
+    }
+    #MB_GLJP_CHANGES strong{
+    }
+    #MB_GLJP_CHANGES a{
+     display:inline-block;
+     margin:5px 20px;
+     padding:10px 20px;
+     color:#fff;
+     border:1px solid #fff;
+    }
+    #MB_GLJP_CHANGES img{
+     vertical-align:bottom;
+    }
+
+
+    #MB_SNS_FIELD{
+     margin:15px 0 30px 20px;
+    }
+    #MB_SNS_FIELD dl{
+     float:left;
+     width:45%;
+    }
+    #MB_SNS_FIELD dt{
+     float:left;
+     color:#bebebe;
+    }
+    #MB_SNS_FIELD dd img{
+     float:left;
+     margin:0 2px;
+    }
+
+    #MB_GL_CATAROG,#MB_GL_INQUIRY{
+     margin-bottom:-30px !important;
+    }
+    #MB_GL_CATAROG a,#MB_GL_INQUIRY a{
+     padding:10px 25px !important;
+    }
+
+    #CONTENTS_AREA {
+        margin-left: 0px;
+    }
+
+    #HEADER_AREA {
+        height: auto;
+    }
+
+    #HEADER_WRAP {
+        position: static;
+        width: 100%;
+        height: auto;
+    }
+
+    #HEADER_AREA h1 {
+        float: left;
+        width: 15%;
+        margin-top: 0px;
+        height: auto;
+		margin-bottom: 0px;
+    }
+
+
+
+    #HEADER_AREA h1 img.mb_display {
+        margin-top: 0px;
+        display: table-cell;
+        width: 100%;
+    }
+
+    #MAIN_CONTENTS {
+        padding: 40px 10px;
+    }
+
+    #WRAPPER {
+        width: 100%;
+    }
+
+    #SNS_FIELD {
+        margin-left: 0px;
+        float: left;
+    }
+
+    div#FOOTER_AREA {
+        margin-left: 0px;
+    }
+
+    #FOLLOW_US {
+        float: left;
+        width: 50%;
+        clear: none;
+    }
+
+    #SNS_FIELD {
+        width: 100%;
+    }
+
+    #SNS_FIELD dl {
+        clear: none;
+    }
+
+    #SHARE_ON {
+        float: left;
+        width: 50%;
+        clear: none;
+        padding-top: 0px;
+    }
+
+    #FOLLOW_US dl {
+        clear: none;
+    }
+
+    #COPYRIGHT {
+        margin: 0px;
+    }
+
+    .EXEC_LINK_TITLE {
+        clear: both;
+        margin: 0 0 10px;
+        padding: 0 0 10px;
+        color: #666;
+        font-size: 20px;
+        border-bottom: 1px solid #ccc;
+        font-weight: bold;
+    }
+
+    .EXEC_LINKS li {
+        padding-left: 0px;
+        font-size: 14px;
+    }
+
+    .EXEC_LINKS li:hover {
+        color: #000;
+        background-image: none;
+    }
+
+    .EXEC_LINKS li a:hover {
+        color: #000;
+    }
+
+    .mb_display {
+        display: block;
+    }
+
+    .submenu {
+        position: static;
+        padding: 0px;
+        margin: 0px;
+    }
+
+    .submenu a {
+        height: auto;
+        text-align: left;
+    }
+
+    .submenu li a {
+        display: block;
+        padding: 20px 0 20px 98px;
+    }
+
+    .menu_all a {
+        width: auto;
+        height: auto;
+    }
+
+    .menu_all.selected {
+        background-color: black;
+    }
+
+    .submenu a:hover, .submenu .active_menu {
+        background-color: #4c4c4c;
+    }
+
+    .listpageitem {
+        width: 47%;
+    }
+
+    .listpageitem .p-img img {
+        max-width: 100%;
+    }
+
+    .listpageitem .class-icon img {
+        height: 14px;
+    }
+
+    a.menu_all {
+        padding: 10px 18px 25px;
+    }
+
+    a.selected, .menu_all.selected > a {
+        border-left: 5px solid #ff0000 !important;
+    }
+
+    .menu_all a.menu_all {
+        width: auto;
+        height: auto;
+    }
+
+    #SNS_FIELD img {
+        opacity: 1.0;
+    }
+
+    #SNS_FIELD dt {
+        color: white;
+    }
+
+    #EXEC_TAB {
+        border-bottom: 0px;
+    }
+
+    #EXEC_TAB li {
+        display: inline-block;
+        width: auto;
+        margin-bottom: 5px;
+    }
+
+
+
+    .index-page #MB_DROP_DOWN h2 {
+        background: url(/etc/designs/fuso/core/image/design/menu/drop_down_off.png) no-repeat 93% center;
+        background-size: 6%;
+    }
+
+    #MB_DROP_DOWN {
+        position: absolute;
+        left: 15.5%;
+        width: 70%;
+        z-index: 1000;
+        text-align: center;
+    }
+
+    .dot-map .dot-map-text h3 {
+        font-size: 16px;
+        font-weight: normal;
+    }
+
+    .dot-map .dot-map-text p {
+        color: #666;
+        font-size: 12px;
+        margin-bottom: 12px;
+    }
+
+    .pdf {
+        width: 100%;
+    }
+
+    .PDF.alternativestyle {
+        width: 180px;
+    }
+}
+
+
+.index-alternative-page .menu_all
+{
+    width: 140px;
+    height: 115px;
+    padding-top: 5px;
+    float: left;
+}
+
+.index-alternative-page #HEADER_WRAP {
+    position: relative;
+    width: 100%;
+    height: 120px;
+}
+
+.index-alternative-page h1
+{
+    float: left;
+}
+
+.index-alternative-page #MENU_FIELD
+{
+    float: left;
+}
+
+.index-alternative-page .menu_all > a > img
+{
+  position: relative;
+  top: 40%;
+  transform: translateY(-50%);
+}
+
+.index-alternative-page #CONTENTS_AREA {
+    margin-left: 0px;
+}
+
+.index-alternative-page #CONTENTS_AREA, .index-alternative-page #WRAPPER {
+    width: 1000px;
+}
+
+.index-alternative-page #HEADER_AREA h1 {
+    width: 120px;
+    height: 120px;
+    background-color: white;
+}
+
+.index-alternative-page .submenu {
+    width: 1000px;
+    position: absolute;
+    height: 105px;
+    top: 120px;
+    padding-top: 10px;
+    margin-left: 0px;
+    left: 0px;
+}
+
+.index-alternative-page .submenu li {
+    width: 120px;
+    float: left;
+}
+
+.index-alternative-page .menu_all {
+    z-index: 10000;
+}
+
+.index-alternative-page #GLOBALMENU_FIELD {
+    z-index: 9000;
+    background-color: black;
+}
+
+.index-alternative-page nav {
+    z-index: 8000;
+}
+
+.index-alternative-page #HEADER_AREA {
+    overflow: visible;
+}
+
+.index-alternative-page .submenu a {
+    width: 120px;
+}
+
+.index-alternative-page #HEADER_AREA {
+    background-color: black;
+}
+
+.index-alternative-page.index-alternative-page-v2 li.menu_all > a > img {
+    display: none;
+}
+
+.index-alternative-page.index-alternative-page-v2 li.menu_all a .mb_txt {
+    display: inline-block;
+    color: white;
+    padding-top: 30px;
+
+}
+
+.index-alternative-page.index-alternative-page-v2 .submenu a img {
+    display: none;
+}
+
+.index-alternative-page.index-alternative-page-v2 .submenu  > a > .mb_txt {
+    display: inline-block;
+    color: white;
+    padding-top: 20px;
+}
+
+.cq-text-placeholder-ipe {
+display:none !important;
+}

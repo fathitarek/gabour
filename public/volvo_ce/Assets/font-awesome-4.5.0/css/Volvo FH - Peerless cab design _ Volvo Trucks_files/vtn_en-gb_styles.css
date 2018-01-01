@@ -1,0 +1,92 @@
+/* ---------- CSS For Funkis Template Project------------- 
+------- Created by JT 2008-07-05 ----------------------*/
+/*
+CSS property		ActionScript property		
+
+color				color	 					
+Only hexadecimal color values are supported. Named colors (such as blue ) are not supported. Colors are written in the following format: #FF0000 .
+
+display				display
+Supported values are inline , block , and none .
+
+font-family			fontFamily
+A comma-separated list of fonts to use, in descending order of desirability. Any font family name can be used. If you specify a generic font name, it is converted to an appropriate device font. The following font conversions are available: mono is converted to _typewriter , sans-serif is converted to _sans , and serif is converted to _serif .
+
+font-size			fontSize	
+Only the numeric part of the value is used. Units (px, pt) are not parsed; pixels and points are equivalent.
+
+font-style			fontStyle
+Recognized values are normal and italic .
+
+font-weight			fontWeight
+Recognized values are normal and bold .
+
+kerning				kerning
+Recognized values are true and false . Kerning is supported for embedded fonts only. Certain fonts, such as Courier New, do not support kerning. The kerning property is only supported in SWF files created in Windows, not in SWF files created on the Macintosh. However, these SWF files can be played in non-Windows versions of Flash Player and the kerning still applies.
+
+leading				leading
+The amount of space that is uniformly distributed between lines. The value specifies the number of pixels that are added after each line. A negative value condenses the space between lines. Only the numeric part of the value is used. Units (px, pt) are not parsed; pixels and points are equivalent.
+
+letter-spacing		letterSpacing
+The amount of space that is uniformly distributed between characters. The value specifies the number of pixels that are added after each character. A negative value condenses the space between characters. Only the numeric part of the value is used. Units (px, pt) are not parsed; pixels and points are equivalent.
+
+margin-left			marginLeft
+Only the numeric part of the value is used. Units (px, pt) are not parsed; pixels and points are equivalent.
+
+margin-right		marginRight
+Only the numeric part of the value is used. Units (px, pt) are not parsed; pixels and points are equivalent.
+
+text-align			textAlign
+Recognized values are left , center , right , and justify .
+
+text-decoration		textDecoration	 
+Recognized values are none and underline .
+
+text-indent			textIndent
+Only the numeric part of the value is used. Units (px, pt) are not parsed; pixels and points are equivalent.
+
+*/
+
+
+/*  --------------- NAV INTERFACES ------------------------ */
+
+.hotspot {
+    color: #ffffff;
+    font-family: Arial;
+    font-size: 9px;
+    letter-spacing:0.1px;
+    font-weight: normal;
+    display: block;
+    text-align:left;
+}
+
+.hotspot-read {
+    color: #7E00FF;
+    font-family: Arial;
+    font-size: 9px;
+    letter-spacing:0.1px;
+    font-weight: bold;
+    display: block;
+    text-align:left;
+}
+
+.hotspot-hover {
+    color: #ffffff;
+    font-family: Arial;
+    letter-spacing:0.1px;
+    font-size: 9px;
+    font-weight: normal;
+    display: block;
+    text-align:left;
+}
+
+.hotspot-2d {
+    color: #ffffff;
+    font-family: Arial;
+    font-size: 9px;
+    letter-spacing:0.1px;
+    font-weight: normal;
+    display: block;
+    text-align:center;
+}
+

@@ -1,0 +1,51 @@
+(function (){
+  var usc, j, s, w;
+  if (!usObject) return;
+  usObject._usci = usgetCookie('usonarid');
+  usObject._usf = "";
+  if (!usObject._usci) {
+    usObject._usci = "CID" + (String(Math.random()).substr(2,13) + (new Date().getTime().toString().slice(0, 13))).slice(-13) + String(Math.random()).substr(2,4);
+    usObject._usf = "1";
+  }
+  w = new Date();
+  w.setFullYear(w.getFullYear() + 1);
+  ussetCookie("usonarid",usObject._usci,w,"/");
+  usObject._usc = (document.cookie) ? true : false;
+  s = usObject.path + "alog.php";
+  s += "?gid=" + usObject.gid + "&uid=" + usObject.uid + "&pw=" + usObject.pw;
+  s += "&ourl=" + encodeURIComponent(location.href) + "&ref=" + encodeURIComponent(document.referrer) + "&title=" + encodeURIComponent(document.title);
+  s += "&_usc=" + usObject._usc + "&_usv=" + usObject._usv + "&_usci=" + usObject._usci + "&_usf=" + usObject._usf;
+  j = new Image(1, 1);
+  j.onload = function() { return; };
+  j.src = s;
+})();
+
+
+function ussetCookie (name,value,expires,path,theDomain,secure) { 
+   value = escape(value);
+   var theCookie = name + "=" + value + 
+   ((expires)    ? "; expires=" + expires.toGMTString() : "") + 
+   ((path)       ? "; path="    + path   : "") + 
+   ((theDomain)  ? "; domain="  + theDomain : "") + 
+   ((secure)     ? "; secure"            : ""); 
+   document.cookie = theCookie;
+} 
+
+function usgetCookie(key){
+  var arr = new Array();
+  if(document.cookie != ''){
+    var tmp = document.cookie.split('; ');
+    for(var i=0;i<tmp.length;i++){
+      var data = tmp[i].split('=');
+      arr[data[0]] = decodeURIComponent(data[1]);
+    }
+  }
+  return arr[key];
+}
+
+function usdelCookie(name,path,domain) {
+   if (usgetCookie(name)) document.cookie = name + "=" +
+      ((path)   ? ";path="   + path   : "") +
+      ((domain) ? ";domain=" + domain : "") +
+      ";expires=Thu, 01-Jan-70 00:00:01 GMT";
+}

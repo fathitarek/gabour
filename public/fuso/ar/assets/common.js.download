@@ -1,0 +1,8 @@
+/*
+* js ver1.0
+* Written by Variety Article Factory 2015.08 
+******************************************vaf*/
+
+var userAgent = window.navigator.userAgent.toLowerCase();
+var appVersion = window.navigator.appVersion.toLowerCase();
+

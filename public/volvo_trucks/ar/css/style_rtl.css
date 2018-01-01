@@ -1,0 +1,49 @@
+#nav1 span {
+    float: left;
+}
+
+.volvoLogo {
+    margin-right: 20px;
+}
+
+#searchNav {
+    float: left;
+}
+
+input {
+    margin-right: 10px;
+    margin-left: 0;
+}
+
+.carousel-indicators {
+    bottom: 0px;
+    background-color: rgba(0,0,0,0.50);
+    right: 50%;
+    width: 100%;
+    margin-right: -50%;
+    text-align: center;
+}
+
+#searchNav {
+    padding: 0;
+}
+
+#productSelector {
+    margin-left: 20px;    
+}
+
+.truckMenu .logoX {
+    float: right;
+}
+
+.truckMenu a {
+    float: right;
+}
+
+.heroImgX3 h3 {
+    padding-right: 30px;   
+}
+
+.heroImgX3 p {
+    padding-right: 30px;
+}

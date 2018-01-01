@@ -1,0 +1,15 @@
+body {
+    font-family: Helvetica, sans-serif;
+}
+
+#INFORMATION_AREA dt, #INFORMATION_AREA dd, #SLIDE_MENU .moreinfo a {
+    font-family: Helvetica, sans-serif;
+}
+
+.listpageitem .p-nm {
+    font-size: 14px;
+}
+
+.listpageitem span.sml {
+    font-size: 12px;
+}

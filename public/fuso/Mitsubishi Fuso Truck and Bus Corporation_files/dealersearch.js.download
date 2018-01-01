@@ -1,0 +1,192 @@
+/*
+* js ver1.0
+* Written by Variety Article Factory 2015.08 
+******************************************vaf*/
+
+$(function(){
+	areaList = {};
+	targetList = {};
+	
+	
+	$.ajax({
+		type: "GET",
+		url: "/etc/designs/fuso/core/xml/jp/japanmap.xml",
+		datatype: "xml",
+		error: function(r,s,t){
+			//console.log(s);
+		}
+		,success: function(pXml){
+			$(pXml).find('area').each(function(){
+				//-- area list
+				var areaname = $(this).attr('type');
+				if(!areaList[areaname]) {
+					areaList[areaname] = [];
+				}
+				
+				//- entry
+				$(this).find('entry').each(function(){
+					var no = "";
+					var tit = "";
+					var url = "";
+					var nm = "";
+					var map = "";
+					var cmp = [];
+					var comlist = [];
+					var list = {};
+					
+					no = $(this).find('id').text();
+					tit = $(this).find('title').text();
+					url = $(this).find('url').text();
+					nm = $(this).find('name').text();
+					map = $(this).find('map').text();
+                    
+                    
+					
+					
+					list = {
+						id: no,
+						title: tit,
+						name: nm,
+						url: url,
+						map: map,
+						area: areaname
+					}
+					
+					areaList[areaname].push(list);
+				});
+			});
+			
+			//-- 初期
+			//$("#GLOBALMENU_FIELD select[name=f_arealist]").change();
+		}
+	});
+	
+	//-- PC
+	//-- PC hover
+	//-- LIST view
+	var hoverflg = false;
+	$('#MAP_NAVI .maparea a').hover(function(){
+		if(!hoverflg){
+			$('#MD_BASE').hide();
+			$(this).next().find('img').eq(0).css('display', 'block');
+		}
+	}, function(){
+		if(!hoverflg){
+			$('#MD_BASE').show();
+			$(this).next().find('img').eq(0).css('display', 'none');
+		}
+	});
+	//-- LIST map
+	$('#MAP_AREA map[name=dealermap] area').hover(function(){
+		var idStr = $(this).data("mapid");
+		if(!hoverflg){
+			$('#MD_BASE').hide();
+			$('#'+idStr).find('img').eq(0).css('display', 'block');
+		}
+	}, function(){
+		var idStr = $(this).data("mapid");
+		$('#MD_BASE').show();
+		$('#'+idStr).find('img').eq(0).css('display', 'none');
+	});
+	
+	//-- PC click
+	//-- view
+	$('#MAP_NAVI .maparea a').click(function(){
+		_mapclick($(this).attr("href").replace("#", ""), $(this).next().attr("id"));
+		
+		return false;
+	});
+	//-- map
+	$('#MAP_AREA map[name=dealermap] area').click(function(){
+		var str = $(this).attr("href").replace("#", "");
+		_mapclick(str, $(this).data("mapid"));
+		
+		return false;
+	});
+	
+	//-- function
+	function _mapclick (pArea, pMapData){
+		$('#JPAREA_LIST ul').remove();
+		$('#MAP_AREA .dealermap').remove();
+		
+		var area = pArea;
+		if(!areaList) return false;
+		
+		targetList = areaList[area];
+		
+		//-- arealist
+		//-- dealermap
+		$('#JPAREA_LIST').append('<ul></ul>');
+		$('#MAP_AREA #PC_MAP').append('<map name="dealermap_'+area+'" class="dealermap"></map>');
+		
+		$('#MAP_AREA .dealermap').append('<area class="close" href="#" shape="poly" coords="30,10,30,45,180,45,180,10" alt="close">');
+		for(i in targetList){
+			$('#JPAREA_LIST ul:last').append('<li><a href="'+targetList[i].url+'" target="_blank" data-mapid="MP_'+area.toUpperCase()+'" data-target="'+targetList[i].name+'">'+targetList[i].title+'</a></li>');
+			
+			$('#MAP_AREA .dealermap').append('<area href="'+targetList[i].url+'" shape="poly" alt="'+targetList[i].title+'" data-mapid="MP_'+area.toUpperCase()+'" data-target="'+targetList[i].name+'" coords="'+targetList[i].map+'" target="blank">');
+		}
+		
+		
+		//-- viewset
+		$('#AREA_LIST').css('display', 'block');
+
+		$('#MAP_NAVI .maparea .mapimg img').css('display', 'none');
+		$('#AREA_DETAIL').css('display', 'none');
+		
+		$('#'+pMapData).find('img').eq(1).css('display', 'block');
+		
+		//-- hover Stop
+		hoverflg = true;
+		
+		
+		
+		//-- hover list
+		$('#JPAREA_LIST li a').hover(function(){
+			var idStr = $(this).data("mapid");
+			var targetStr = $(this).data("target");
+			$('#'+idStr).find('img[data-name='+targetStr+']').eq(0).css('display', 'block');
+		}, function(){
+			var idStr = $(this).data("mapid");
+			var targetStr = $(this).data("target");
+			$('#'+idStr).find('img[data-name='+targetStr+']').eq(0).css('display', 'none');
+		});
+		//-- hover map
+		$('#MAP_AREA .dealermap area').hover(function(){
+			var idStr = $(this).data("mapid");
+			var targetStr = $(this).data("target");
+			$('#'+idStr).find('img[data-name='+targetStr+']').eq(0).css('display', 'block');
+			$('#JPAREA_LIST li a[data-target='+targetStr+']').addClass('active');
+		}, function(){
+			var idStr = $(this).data("mapid");
+			var targetStr = $(this).data("target");
+			$('#'+idStr).find('img[data-name='+targetStr+']').eq(0).css('display', 'none');
+			$('#JPAREA_LIST li a[data-target='+targetStr+']').removeClass('active');
+		});
+		
+		//-- close
+		$('.dealermap .close').click(function(){
+			//-- viewset
+			$('#JPAREA_LIST ul').remove();
+			
+			$('#MAP_NAVI .maparea .mapimg img').css('display', 'none');
+			$('#MD_BASE').css('display', 'block');
+			
+			//-- hover start
+			hoverflg = false;
+			
+			return false;
+		});
+		
+		
+		return false;
+	}
+	
+	//-- MB
+	$('#GLOBALMENU_FIELD select[name="f_prefectureslist"]').change(function(){
+		if(!$(this).val()) { return false; }
+	});
+	
+	
+	
+	
+});

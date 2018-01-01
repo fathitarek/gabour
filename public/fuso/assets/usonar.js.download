@@ -1,0 +1,20 @@
+var usObject = usObject || {
+  _usv: "1.0",
+  _p: [],
+  req: function() { this._p.push(arguments); },
+  load: function(src) {
+     var a, s;
+     a = document.createElement('script');
+     a.type = 'text/javascript';
+     a.charset = "UTF-8";
+     a.async = true;
+     a.src = src;
+     s = document.getElementsByTagName('script')[0];
+     s.parentNode.insertBefore(a, s);
+   }
+};
+usObject.gid = "mitsubishifuso";
+usObject.uid = "XW9f4g9DCM9r9fmH";
+usObject.pw  = "AP3A6tmqpURW";
+usObject.path = 'https://apis.usonar.jp/alog/';
+usObject.load(usObject.path + 'js2/alog.js');
