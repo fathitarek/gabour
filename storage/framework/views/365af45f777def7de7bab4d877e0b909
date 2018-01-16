@@ -1,0 +1,6 @@
+<div class="form-group">
+    <?php echo Form::label($parameters['name'],$parameters['label']); ?>
+
+    <?php echo Form::textarea($parameters['name'],null,['class'=> 'form-control']); ?>
+
+</div>

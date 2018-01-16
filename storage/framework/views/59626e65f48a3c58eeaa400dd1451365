@@ -1,0 +1,14 @@
+<div class="form-group">
+    <?php echo Form::label($name,$label); ?>
+
+    <?php echo Form::select($name,[null=>$default_option]+$list_items,null,['class'=> 'form-control']); ?>
+
+</div>
+
+<?php if($errors->has($name)): ?>
+    <div class="error">
+        <i class="fa fa-times-circle"></i>
+        <?php echo e($errors->first($name)); ?>
+
+    </div>
+<?php endif; ?>

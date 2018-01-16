@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>GCV | Location</title>
+
+    <link href="assets/favIcon.png" rel="icon" type="image/png" />
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <!-- Bootstrap -->
+	<link href="css/bootstrap.css" rel="stylesheet">
+	<link rel="stylesheet" href="css/bootstrap_rtl.css">
+	<link href="css/style.css" rel="stylesheet" type="text/css">
+	<link rel="stylesheet" href="css/css-rtl.css">
+
+            <script src="http://maps.googleapis.com/maps/api/js?key=AIzaSyAvIsz3M59Jyze3pfpZSXcOmFzH7KQ79Ys"></script>
+
+	<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+	<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+	<!--[if lt IE 9]>
+		  <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+		  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+		<![endif]-->
+        
+         <script>
+
+            function initialize() {
+                var locations = [];
+
+                @if (count($locations))
+
+                @foreach($locations as $index => $location)
+                        @if ((trim($location['long']) != '') && (trim($location['lat'] != '')))
+                        var location = ['{{$location['name_ar']}}', '{{trim($location['long'])}}', '{{trim($location['lat'])}}','{{trim($location['address_ar'])}}','{{trim($location['phone'])}}','{{trim($location['fax'])}}','{{trim($location['email'])}}'];
+                 console.log(location)
+                locations.push(location);
+                @endif
+
+                        @endforeach
+                        @endif
+
+                        var map = new google.maps.Map(document.getElementById('googleMap'), {
+                        zoom: 6,
+                                center: new google.maps.LatLng(28.766622, 29.232078),
+//                               center: {lat: -34.397, lng: 150.644},
+                                mapTypeId: google.maps.MapTypeId.ROADMAP
+                        }
+                        );
+
+                var infowindow = new google.maps.InfoWindow();
+
+                var marker, i;
+
+                for (i = 0; i < locations.length; i++) {
+                    marker = new google.maps.Marker({
+                        position: new google.maps.LatLng(locations[i][1], locations[i][2]),
+                        map: map
+                    });
+
+                    google.maps.event.addListener(marker, 'click', (function (marker, i) {
+                        return function () {
+                            infowindow.setContent(locations[i][0]);
+                            infowindow.open(map, marker);
+                            hey(locations[i]);
+                        }
+                    })(marker, i));
+                }
+
+            }
+            google.maps.event.addDomListener(window, 'load', initialize);
+            function hey(obj){console.log("obj: "+obj[0]);
+            document.getElementById("location_item").innerHTML=obj[0];
+            document.getElementById("address_en").innerHTML=obj[3];
+            document.getElementById("fax").innerHTML=obj[5];
+            document.getElementById("phone").innerHTML=obj[4];
+            document.getElementById("type").innerHTML= localStorage.getItem("type");
+    }
+    
+        </script>
+        
+  </head>
+  <body>
+ <nav class="navbar navbar-default navbar-fixed-top">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <a href="tel: 19216" class="navbar-brand hidden-sm hidden-md hidden-lg" id="hotlineMobile"> <img src="/{{$current_website->name}}/assets/hotline.png" alt="" width="100" height="35" /></a>
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#topFixedNavbar1" aria-expanded="false"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button>
+            <a class="navbar-brand logoX" href="/"> <img src="/{{$current_website->name}}/assets/logo.png" alt="" width="118" height="54" /></a>
+        </div>
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="topFixedNavbar1">
+            <ul class="nav navbar-nav">
+
+            @foreach($menu->menuItems as $index =>$menu_item)
+                @if($menu_item->menu_item_id==0)
+                    @if(count($menu_item->menuItems))
+                         <li class="dropdown"> <a href="{{$menu_item->url}}"  class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">{{$menu_item->display_name}}&nbsp;<span class="glyphicon glyphicon-chevron-down pull-right"></span></a>
+                            <ul class="dropdown-menu row">
+                                @foreach($menu_item->menuItems as $sub_index =>$sub_menu_item)
+                                <li><a href="{{$sub_menu_item->url}}" >{{$sub_menu_item->display_name}}</a></li>
+                                @endforeach
+                            </ul>
+                        </li>
+                    @else
+                        <li><a href="{{$menu_item->url}}" id="{{explode( '/', $menu_item->url)[2]}}">{{$menu_item->display_name}}</a></li>
+                    @endif
+                @endif
+            @endforeach
+
+            </ul>
+            <ul class="nav navbar-nav navbar-left" id="hotlineMenu">
+                <li id="languageX"> <a id="arabic" href="/ghabbour_commercial_vehicles/home_ar">AR </a>/<a id="english" href="/ghabbour_commercial_vehicles/home" class="activeX"> EN</a> </li>
+                <li class="hidden-xs">
+                    <a href="tel: 19216" id="hotlineX"> <img src="/{{$current_website->name}}/assets/hotline.png" width="100" height="35" alt="" /></a>
+                </li>
+            </ul>
+            {{--<form class="navbar-form navbar-right" id="menuSearch" role="search">--}}
+                {{--<div class="input-group">--}}
+                    {{--<input type="text" class="form-control transparent-input" placeholder="Search...">--}}
+                    {{--<span class="input-group-btn">--}}
+            {{--<button class="btn searchIcon" type="submit"> <img src="/{{$current_website->name}}/assets/searchIcon.png" alt=""/> </button>--}}
+          {{--</span> </div>--}}
+                {{--<!-- /input-group -->--}}
+            {{--</form>--}}
+        </div>
+        <!-- /.navbar-collapse -->
+        <!-- /.container-fluid -->
+    </nav>
+<div class="row mobileSecond">
+  <img src="/{{$current_website->name}}/images/{{$settings->img_ar}}" class="img-responsive" alt="Placeholder image"> </div>
+  <div class="container-fluid" id="pageX">
+      <div class="row secondRowX" id="locationsX" style="margin-top: -80px">
+      <div class="col-sm-10 col-sm-offset-1">&nbsp;
+        <div class="col-sm-12">
+<!--          <h3 class="h3X">OUR</h3>-->
+          <h2 class="h2X">فروعنا</h2>
+          <br>
+          <p class="p col-sm-9">{{$settings->text_ar}}</p>
+        </div>
+      </div>
+    </div>
+</div>
+  
+      <div class="col-sm-12" style="margin-bottom: 20px;" >
+     {!!Form::open(['action'=>'GcvPagesController@locations_ar','method' => 'GET'])!!}
+     <div id="formLocationX">
+        
+          <?php foreach ($locationCategories as $locationCategory) { ?>
+          <label>
+         <input type="radio" name="location_category_id" value="<?=$locationCategory->id;?>" for='<?php echo $locationCategory->name_ar; ?>'/><span class="radioLocationX"><?php echo $locationCategory->name_ar; ?> </span> 
+          </label>
+             <?php } ?>
+        
+     </div>
+        <div id="tabContent1" class="tab-content">
+          <div role="tabpanel" class="tab-pane fade in active" id="home1">
+<!--            <div class="row" id="googleMap">
+              <iframe width="100%" height="500" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/view?zoom=17&center=30.0681%2C31.0378&key=AIzaSyBoBOJ5tVNmm0vNho8MCC-b1XV72Gv2ljQ" allowfullscreen></iframe>
+           
+            </div>-->
+              <div id="googleMap" style="height:500px"></div>
+            <div class="locationsTabSelect col-sm-4 col-sm-offset-1">
+              <div class="col-sm-12 locationsChooseCity text-center">
+<select  name='city_id' class="btn" style="color:#fff; border: none;">
+            <option  value=''> اختر المدينه</option>
+            
+                        @foreach($cities as $city)
+                            @if(isset($_REQUEST['city_id'])) 
+                                     @if($city->id ==$_REQUEST['city_id'])
+                                        <option  value="{{ $city->id}}" selected>{{$city->name_ar}}</option>
+                                     @else
+                                        <option  value="{{ $city->id}}" >{{$city->name_ar}}</option>
+                                     @endif
+
+                            @else
+                                <option  value="{{ $city->id}}" >{{$city->name_ar}}</option>
+                            @endif
+                        @endforeach
+                    </select>
+                    {!!Form::hidden('website_id',$current_website->id,['id'=>'website_id']) !!}
+
+      @include('Admin.form_parcials.submit_btn',['submit_btn_text'=>'ابحث'])
+                    {!!Form::close()!!}              </div>
+              <div class="col-sm-12 locationsChooseCity">
+                <article class="locationsResults">
+                    <h3 id="location_item" class="locationDataX"></h3>
+                    <h4 id="type" class="locationDataX"></h4>
+                  <p id="address_en" class="locationDataX"></p>
+                  <img src="assets/fusoS.png" width="60" height="59" alt=""/><img src="assets/volvoS.png" width="60" height="59" alt=""/>
+                  <p><img src="assets/poBox.png" width="26" height="26" alt="" /><span id="fax" class="locationDataX"></span> </p>
+                  <p><img src="assets/phone.png" width="26" height="26" alt="" /> <span id="phone" class="locationDataX"> </span>  </p>
+                </article>
+                
+              </div>
+            </div>
+</div>
+          <div role="tabpanel" class="tab-pane fade" id="paneTwo1">
+            <p>Content 2</p>
+          </div>
+          <div role="tabpanel" class="tab-pane fade" id="tabDropDownOne1">
+            <p>Dropdown content#1</p>
+          </div>
+          <div role="tabpanel" class="tab-pane fade" id="tabDropDownTwo1">
+            <p>Dropdown content#2 </p>
+          </div>
+        </div>
+     
+    </div>
+ <footer class="row">
+    <div class="col-sm-10 col-sm-offset-1">
+        
+        <ul class="nav navbar-nav navbar-right">
+            @foreach( $footer_menu->menuItems as $index =>$menu_item)
+                @if($menu_item->menu_item_id==0)
+                    @if(count($menu_item->menuItems))
+            <li><a href="{{$menu_item->url}}">{{$menu_item->display_name}}</a>
+            <ul class="nav navbar-nav navbar-right">
+                                @foreach($menu_item->menuItems as $sub_index =>$sub_menu_item)
+                                <li class="submenuFooter"><a href="{{$sub_menu_item->url}}" >{{$sub_menu_item->display_name}}</a></li>
+                                @endforeach
+                            </ul></li>
+            @else
+                        <li><a href="{{$menu_item->url}}">{{$menu_item->display_name}}</a></li>
+                    @endif
+                @endif
+            @endforeach
+        </ul>
+    </div>
+    <div class="col-sm-5 col-sm-offset-1 mortimerHarvey col-xs-6 text-left">All Rights Reserved 2017</div>
+    <div class="right col-sm-5 mortimerHarvey col-xs-6">Website by <a href="http://mortimerharvey.com/" target="_blank">Mortimer Harvey</a></div>
+    <div class="row"> </div>
+</footer>
+<script src="js/jquery-1.11.3.min.js"></script> 
+
+	<script src="js/bootstrap.js"></script>
+	<script src="js/script.js"></script>
+        
+        <script>
+    
+    var params = getUrlVars(window.location.href );
+//console.log(params['location_category_id']);
+var radios=document.getElementsByName('location_category_id');
+var length = radios.length;
+
+for (var i = 0; i <= length; i++) {
+   // alert(radios[i].value)
+    if (radios[i].value==params['location_category_id']) {
+       radios[i].checked=true;
+       console.log(radios[i].getAttribute("for"));
+       localStorage.setItem("type", radios[i].getAttribute("for"));
+        break;
+    }
+}
+    
+function getUrlVars(url) {
+    var hash;
+    var myJson = {};
+    var hashes = url.slice(url.indexOf('?') + 1).split('&');
+    for (var i = 0; i < hashes.length; i++) {
+        hash = hashes[i].split('=');
+        myJson[hash[0]] = hash[1];
+    }
+    return myJson;
+}
+    
+    
+    
+    </script>
+<script>
+    var newURL = window.location.protocol + "//" + window.location.host + "/" + window.location.pathname;
+    var pathArray = window.location.pathname.split('/');
+    var secondLevelLocation = pathArray[0];
+    var newPathname = "";
+        var id_link = document.getElementById(pathArray[2]);
+        console.log("!!"+id_link)
+  //alert(pathArray[2].split("_")[1]);
+  if(pathArray[2]=='contact_us_ar'){
+  $( "#mh" ).addClass( "text-left");
+  $("#hotlineMenu").removeClass("navbar-right");
+  $("#hotlineMenu").addClass("navbar-left");
+    }
+</script>
+<script>
+   var newURL = window.location.protocol + "//" + window.location.host + "/" + window.location.pathname;
+    var pathArray = window.location.pathname.split('/');
+    var secondLevelLocation = pathArray[0];
+    var newPathname = "";
+        var id_link = document.getElementById(pathArray[2]);
+        console.log("!!"+id_link)
+  if(pathArray[2].split("_")[1]=='ar'){
+  
+  $("#english").removeClass("activeX");
+  $("#arabic").addClass("activeX");
+    }
+ </script>
+  </body>
+</html>

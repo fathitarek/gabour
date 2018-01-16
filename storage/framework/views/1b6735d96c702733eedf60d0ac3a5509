@@ -1,0 +1,43 @@
+<?php $__env->startSection('content'); ?>
+<div class="bread-crumb"><p><a href="<?php echo e(action('CityController@index')); ?>">City</a> / <span>Add New</span></p></div>
+    <hr/>
+
+        <?php echo Form::open(['action'=>'CityController@index','files' => true]); ?>
+
+            <?php echo $__env->make('Admin.form_parcials.universal_text_field',['name'=>'name_en','label'=>'English Display Name:'], array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+            <?php if($errors->has('name_en')): ?>
+            <div class="error">
+              <i class="fa fa-times-circle"></i>
+              <?php echo e($errors->first('name_en')); ?></div>
+              <?php endif; ?>
+
+            <?php echo $__env->make('Admin.form_parcials.universal_text_field',['name'=>'name_ar','label'=>'Arabic Display Name:'], array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+              <?php if($errors->has('name_ar')): ?>
+              <div class="error">
+                <i class="fa fa-times-circle"></i>
+                <?php echo e($errors->first('name_ar')); ?>
+
+              </div>
+              <?php endif; ?>
+
+           <?php echo $__env->make('Admin.form_parcials.universal_select_field',['name'=>'website_id','label'=>'Web Site:','default_option'=>'Please Select Website','list_items'=>$website], array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+<?php if($errors->has('website_id')): ?>
+<div class="error">
+    <i class="fa fa-times-circle"></i>
+    <?php echo e($errors->first('website_id')); ?>
+
+</div>
+<?php endif; ?>
+
+            <?php echo $__env->make('Admin.form_parcials.published', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+            <?php echo $__env->make('Admin.form_parcials.submit_btn',['submit_btn_text'=>'Add'], array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+
+        <?php echo Form::close(); ?>
+
+
+    <?php /*<?php echo $__env->make('errors.list', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?> */ ?>
+
+
+<?php $__env->stopSection(); ?>
+
+<?php echo $__env->make('../../app', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>

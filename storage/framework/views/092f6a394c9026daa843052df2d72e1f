@@ -1,0 +1,13 @@
+ <div class="row imageText" id="volvo4">
+        <div class="col-md-10 col-md-offset-1">
+          <h3><?php echo e($page['know_more']['component_data']['title']); ?></h3>
+          <p><?php echo e($page['know_more']['component_data']['description']); ?></p>
+          <a href="<?php echo e($page['know_more']['component_data']['link']); ?>">
+            <p class="btnXBlue"> <?php echo e($page['know_more']['component_data']['title_btn']); ?> </p>
+          </a></div>
+    </div>
+    <style>
+        #volvo4 > div {
+	background-image: url("/<?php echo e($current_website->name); ?>/uploads/<?php echo e($page['know_more']['component_data']['file1']); ?>");
+}
+</style>

@@ -1,0 +1,46 @@
+<?php $__env->startSection('content'); ?>
+<style>
+form input[type="text"], select {
+  width:400px !important;
+}
+.show_items{
+  font-size: 22px;
+}
+</style>
+<div class="bread-crumb"><p><a href="/Admin/<?php echo e($current_website->name); ?>/sliders"><?php echo e($current_website->display_name_en); ?>  Sliders</a> / <span>Update Slider</span></p></div>
+  <hr/>
+
+    <?php echo Form::model($record,['method' =>'PATCH', 'action'=>['SliderController@update',$record->id],'files' => true]); ?>
+
+            <?php echo $__env->make('Admin.form_parcials.universal_text_field',['name'=>'name','label'=>'Name:'], array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+            <?php if($errors->has('name')): ?>
+            <div class="error">
+              <i class="fa fa-times-circle"></i>
+              <?php echo e($errors->first('name')); ?></div>
+              <?php endif; ?>
+
+          <?php echo Form::hidden('website_id',$current_website->id,['id'=>'website_id']); ?>
+
+
+         <?php echo $__env->make('Admin.form_parcials.universal_text_field',['name'=>'display_name','label'=>'Display Name:'], array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+           <?php if($errors->has('display_name')): ?>
+           <div class="error">
+             <i class="fa fa-times-circle"></i>
+             <?php echo e($errors->first('display_name')); ?>
+
+           </div>
+           <?php endif; ?>
+
+            <?php echo $__env->make('Admin.form_parcials.published', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+            <?php /* <?php echo e(action('SliderItemController@show',$record->id)); ?> */ ?>
+             <hr/>
+             <br/>
+            <?php echo $__env->make('Admin.form_parcials.submit_btn',['submit_btn_text'=>'Update'], array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+
+        <?php echo Form::close(); ?>
+
+    <?php /*<?php echo $__env->make('errors.list', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?> */ ?>
+
+<?php $__env->stopSection(); ?>
+
+<?php echo $__env->make('Admin.'.$current_website->name.'.app', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>

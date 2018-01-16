@@ -1,0 +1,5 @@
+<div class="image parbase cq-analyzable section">
+    
+    
+    <div id="cq-image-jsp-/content/fuso/en/service/service/promis/jcr:content/par/column_control/par1/image">
+        <img title="promise_h3" alt="promise_h3" class="cq-dd-image align-left" data-opennewwindow="" src="/{{$current_website->name}}/uploads/{{$page['right_img_wepromise']['component_data']['file']}}" data-pin-nopin="true"></div>

@@ -1,0 +1,13 @@
+<div class="form-group">
+    <?php echo Form::label($name,$label); ?>
+
+    <?php echo Form::file($name); ?>
+
+</div>
+<?php if($errors->has($name)): ?>
+  <div class="error">
+    <i class="fa fa-times-circle"></i>
+    <?php echo e($errors->first($name)); ?>
+
+  </div>
+<?php endif; ?>

@@ -1,0 +1,3 @@
+<div class="aboutX col-sm-9"><span class="spanX"><?php echo e($page['text_block_with_title']['component_data']['title']); ?></span>
+                        <p class="p"><?php echo e($page['text_block_with_title']['component_data']['text']); ?></p>
+                    </div>

@@ -1,0 +1,17 @@
+<div class="row volvo3setions">
+        <div class="col-md-10 col-md-offset-1">
+          <div class="row">
+            <div class="col-md-4"><img src="/<?php echo e($current_website->name); ?>/uploads/<?php echo e($page['sub_products']['component_data']['file1']); ?>" class="img-responsive" alt="Placeholder image">
+              <h5> <?php echo e($page['sub_products']['component_data']['title1']); ?><span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></h5>
+              <p> <?php echo e($page['volvo_excavators']['component_data']['desc1']); ?></p>
+            </div>
+            <div class="col-md-4"><img src="/<?php echo e($current_website->name); ?>/uploads/<?php echo e($page['sub_products']['component_data']['file2']); ?>" class="img-responsive" alt="Placeholder image">
+              <h5><?php echo e($page['sub_products']['component_data']['title2']); ?> <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></h5>
+<p> <?php echo e($page['sub_products']['component_data']['desc2']); ?></p></div>
+            <div class="col-md-4"><img src="/<?php echo e($current_website->name); ?>/uploads/<?php echo e($page['sub_products']['component_data']['file3']); ?>" class="img-responsive" alt="Placeholder image">
+              <h5><?php echo e($page['sub_products']['component_data']['title3']); ?><span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></h5>
+<p> <?php echo e($page['sub_products']['component_data']['desc3']); ?></p></div>
+          </div>
+        </div>
+      </div>
+</div>

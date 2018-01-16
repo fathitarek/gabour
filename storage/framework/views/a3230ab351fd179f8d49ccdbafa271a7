@@ -1,0 +1,71 @@
+<?php $__env->startSection('content'); ?>
+<div class="bread-crumb"><p><a><?php echo e($current_website->display_name_en); ?>   Page</a> / <span>Edit</span></p></div>
+<hr/>
+
+<?php echo Form::model($record,['method' =>'PATCH', 'action'=>['ComponentDataController@update',$record->id],'files' => true]); ?>
+
+
+        <div class="form-group">
+            <?php echo Form::label('component_template_id','Component Template:'); ?>
+
+            <?php echo Form::select('component_template_id',[null=>'Please Select Component Template']+$component_templates,null,['class'=> 'form-control','onChange'=>'renderFormFields()']); ?>
+
+        </div>
+        <?php if($errors->has('component_template_id')): ?>
+        <div class="error">
+            <i class="fa fa-times-circle"></i>
+            <?php echo e($errors->first('component_template_id')); ?>
+
+        </div>
+        <?php endif; ?>
+ <?php echo $__env->make('Admin.form_parcials.universal_text_field',['name'=>'name','label'=>'English Name:'], array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+    <?php if($errors->has('name')): ?>
+    <div class="error">
+      <i class="fa fa-times-circle"></i>
+      <?php echo e($errors->first('name')); ?></div>
+      <?php endif; ?>
+
+    <?php foreach(json_decode($record->componentTemplate['component_structure']) as $index => $field): ?>
+
+             <?php if(starts_with($index,'field')): ?>
+                 <?php
+                    $parameters=[];
+                    foreach($field as $f_index => $value){
+                        $parameters[$f_index]=$value;
+                   }
+                   if(isset(json_decode($record['component_data'],true)[$field->name])){
+                       $parameters['value']=json_decode($record['component_data'],true)[$field->name];
+                   }
+                   else{
+                       $parameters['value']='';
+
+                   }
+
+                   //print_r($parameters);
+                ?>
+                <?php echo $__env->make('Admin.components_parcials.'.$parameters['type'],$parameters, array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+             <?php endif; ?>
+
+    <?php endforeach; ?>
+    <?php echo $__env->make('Admin.form_parcials.universal_textarea_field',['name'=>'component_data','label'=>'Component Data:'], array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+                        <?php if($errors->has('component_data')): ?>
+                        <div class="error">
+                          <i class="fa fa-times-circle"></i>
+                          <?php echo e($errors->first('component_data')); ?>
+
+                        </div>
+                        <?php endif; ?>
+                      <?php echo Form::hidden('website_id',$current_website->id,['id'=>'website_id']); ?>
+
+
+    <?php echo $__env->make('Admin.form_parcials.published', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+    <?php echo $__env->make('Admin.form_parcials.submit_btn',['submit_btn_text'=>'Update'], array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+<?php echo Form::close(); ?>
+
+
+<?php /*<?php echo $__env->make('errors.list', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?> */ ?>
+
+
+<?php $__env->stopSection(); ?>
+
+<?php echo $__env->make('Admin.'.$current_website->name.'.app', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>

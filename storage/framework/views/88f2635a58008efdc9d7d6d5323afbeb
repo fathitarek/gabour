@@ -1,0 +1,8 @@
+<div class="form-group">
+    <?php echo Form::label('published','Published: '); ?>
+
+    <?php echo Form::checkbox('published',null,false); ?>
+
+</div>
+
+

@@ -1,0 +1,55 @@
+<?php $__env->startSection('content'); ?>
+<div class="bread-crumb"><p><a ><?php echo e($current_website->display_name_en); ?>  Menu</a> / <span>Add New</span></p></div>
+    <hr/>
+
+        <?php echo Form::open(['action'=>'MenuController@index','files' => true]); ?>
+
+            <?php echo $__env->make('Admin.form_parcials.universal_text_field',['name'=>'name','label'=>'English Name:'], array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+            <?php if($errors->has('name')): ?>
+            <div class="error">
+              <i class="fa fa-times-circle"></i>
+              <?php echo e($errors->first('name')); ?></div>
+              <?php endif; ?>
+
+            <?php echo $__env->make('Admin.form_parcials.universal_text_field',['name'=>'display_name','label'=>'Display Name:'], array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+              <?php if($errors->has('display_name')): ?>
+              <div class="error">
+                <i class="fa fa-times-circle"></i>
+                <?php echo e($errors->first('display_name')); ?>
+
+              </div>
+              <?php endif; ?>
+               <?php echo $__env->make('Admin.form_parcials.universal_text_field',['name'=>'url','label'=>'URL:'], array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+                <?php if($errors->has('url')): ?>
+                <div class="error">
+                  <i class="fa fa-times-circle"></i>
+                  <?php echo e($errors->first('url')); ?>
+
+                </div>
+                <?php endif; ?>
+
+                 <?php echo $__env->make('Admin.form_parcials.universal_textarea_field',['name'=>'description','label'=>'Description:'], array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+                <?php if($errors->has('description')): ?>
+                <div class="error">
+                  <i class="fa fa-times-circle"></i>
+                  <?php echo e($errors->first('description')); ?>
+
+                </div>
+                <?php endif; ?>
+
+              <?php echo Form::hidden('website_id',$current_website->id,['id'=>'website_id']); ?>
+
+
+
+            <?php echo $__env->make('Admin.form_parcials.published', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+            <?php echo $__env->make('Admin.form_parcials.submit_btn',['submit_btn_text'=>'Add'], array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+
+        <?php echo Form::close(); ?>
+
+
+    <?php /*<?php echo $__env->make('errors.list', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?> */ ?>
+
+
+<?php $__env->stopSection(); ?>
+
+<?php echo $__env->make('Admin.'.$current_website->name.'.app', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>

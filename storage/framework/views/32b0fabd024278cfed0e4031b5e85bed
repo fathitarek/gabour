@@ -1,0 +1,54 @@
+<div class="row heroX">
+        <div class="col-md-10 col-md-offset-1">
+          <div id="carousel1" class="carousel slide" data-ride="carousel">
+            <ol class="carousel-indicators">
+              <li data-target="#carousel1" data-slide-to="0" class="active"></li>
+              <li data-target="#carousel1" data-slide-to="1"></li>
+              <li data-target="#carousel1" data-slide-to="2"></li>
+            </ol>
+            <?php if(count($page['slider']['special_listing_1_data'][0]->sliderItems)): ?>
+            <?php
+		$slider_index=0;
+		?>
+            <div class="carousel-inner" role="listbox">
+                 <?php foreach($page['slider']['special_listing_1_data'][0]->sliderItems as $index =>$slider_item): ?>
+                 <?php if($slider_item->published==1): ?>
+                 
+                <?php if($index==0): ?>
+              <div class="item active"><img src="/<?php echo e($current_website->name); ?>/images/<?php echo e($slider_item->img); ?>" alt="<?php echo e($slider_item->title); ?>" class="center-block">
+                <div class="carousel-caption">
+                  <p><?php echo e($slider_item->title); ?></p>
+                  <h3><?php echo e($slider_item->caption); ?></h3>
+                  <a href="<?php echo e($slider_item->url); ?>">
+                    <p class="btnX"><?php echo e($slider_item->url_title); ?><span class="glyphicon glyphicon-chevron-right"></span></p>
+                  </a> 
+                
+               </div>
+              </div><?php else: ?>
+             <div class="item"><img src="/<?php echo e($current_website->name); ?>/images/<?php echo e($slider_item->img); ?>" alt="<?php echo e($slider_item->title); ?>" class="center-block">
+                <div class="carousel-caption">
+                  <p><?php echo e($slider_item->title); ?></p>
+                  <h3><?php echo e($slider_item->caption); ?></h3>
+                  <a href="<?php echo e($slider_item->url); ?>">
+                    <p class="btnX"><?php echo e($slider_item->url_title); ?><span class="glyphicon glyphicon-chevron-right"></span></p>
+                  </a> </div>
+              </div>
+              <?php
+			$slider_index++;
+		?>
+              <?php endif; ?>
+              <?php endif; ?>
+<!--              <div class="item"><img src="images/hero3.jpg" alt="Third slide image" class="center-block">
+                <div class="carousel-caption">
+                  <p>Third slide Caption</p>
+                  <h3>Third slide Heading</h3>
+                  <a href="#">
+                    <p class="btnX">Find out more <span class="glyphicon glyphicon-chevron-right"></span></p>
+                  </a> </div>
+              </div>-->
+           <?php endforeach; ?>
+            </div>
+               <?php endif; ?>  
+          </div>
+        </div>
+      </div>

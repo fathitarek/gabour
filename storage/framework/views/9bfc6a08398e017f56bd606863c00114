@@ -1,0 +1,15 @@
+</div>
+<?php if(count($page['genuine_accessories_leaflet_download']['special_listing_1_data'])): ?>
+<?php foreach($page['genuine_accessories_leaflet_download']['special_listing_1_data'] as $index =>$genuine_accessories_leaflet_download): ?>
+
+<div class="pdf section pdf-alternativestyle"><span class="PDF clearfix alternativestyle" data-sightly-unwrap=""> <span class="pdf-contents">
+  <div class="pdf_image"> <img src="/<?php echo e($current_website->name); ?>/images/<?php echo e($genuine_accessories_leaflet_download->image_en); ?>"></div>
+  <dl style="width: auto; overflow: hidden;">
+    <dt>
+      <div class="pdf-boldedtext"> <?php echo e($genuine_accessories_leaflet_download->title_en); ?> </div>
+    </dt>
+    <dd> <a target="_blank" class="pdflink" href="/<?php echo e($current_website->name); ?>/images/<?php echo e($genuine_accessories_leaflet_download->pdf_en); ?>"><img src="PartsAccessories_files/dl-icon-pdf.png"> <span>PDF</span></a></dd>
+  </dl>
+</span></span></div>
+<?php endforeach; ?>
+<?php endif; ?>

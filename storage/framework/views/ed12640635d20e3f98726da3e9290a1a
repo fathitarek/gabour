@@ -1,0 +1,85 @@
+<?php $__env->startSection('content'); ?>
+
+<div class="bread-crumb"><p><a ><?php echo e($current_website->display_name_en); ?>  Pages</a> / <span>Add New</span></p></div>
+    <hr/>
+
+        <?php echo Form::open(['action'=>'PageController@index','files' => true]); ?>
+
+            <?php echo $__env->make('Admin.form_parcials.universal_text_field',['name'=>'name','label'=>'English Name:'], array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+            <?php if($errors->has('name')): ?>
+            <div class="error">
+              <i class="fa fa-times-circle"></i>
+              <?php echo e($errors->first('name')); ?></div>
+              <?php endif; ?>
+
+            <?php echo $__env->make('Admin.form_parcials.universal_text_field',['name'=>'title','label'=>'Page Title:'], array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+              <?php if($errors->has('title')): ?>
+              <div class="error">
+                <i class="fa fa-times-circle"></i>
+                <?php echo e($errors->first('title')); ?>
+
+              </div>
+              <?php endif; ?>@include('Admin.form_parcials.universal_text_field',['name'=>'title','label'=>'Page Title:'])
+              <?php if($errors->has('title')): ?>
+              <div class="error">
+                <i class="fa fa-times-circle"></i>
+                <?php echo e($errors->first('title')); ?>
+
+              </div>
+              <?php endif; ?>
+                <div class="form-group">
+                  <?php echo Form::label('template_id','Page Template:'); ?>
+
+                  <?php echo Form::select('template_id',[null=>'Please Select Template']+$templates,null,['class'=> 'form-control','onChange'=>'fetchTemplateSlots()']); ?>
+
+              </div>
+              <div id="slots_container"></div>
+
+              <?php echo $__env->make('Admin.form_parcials.universal_text_field',['name'=>'keywords','label'=>'Keywords:'], array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+                <?php if($errors->has('keywords')): ?>
+                <div class="error">
+                  <i class="fa fa-times-circle"></i>
+                  <?php echo e($errors->first('keywords')); ?>
+
+                </div>
+                <?php endif; ?>
+                <?php echo $__env->make('Admin.form_parcials.universal_text_field',['name'=>'description','label'=>'Description:'], array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+                <?php if($errors->has('description')): ?>
+                <div class="error">
+                  <i class="fa fa-times-circle"></i>
+                  <?php echo e($errors->first('description')); ?>
+
+                </div>
+                <?php endif; ?>
+                <?php /*<?php echo $__env->make('Admin.form_parcials.universal_select_field',['name'=>'template_id','label'=>'Template:','default_option'=>'Please Select Template','list_items'=>$templates], array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>*/ ?>
+                <?php /*<?php if($errors->has('template_id')): ?>*/ ?>
+                <?php /*<div class="error">*/ ?>
+                    <?php /*<i class="fa fa-times-circle"></i>*/ ?>
+                    <?php /*<?php echo e($errors->first('template_id')); ?>*/ ?>
+                <?php /*</div>*/ ?>
+                <?php /*<?php endif; ?>*/ ?>
+
+              <?php echo Form::hidden('website_id',$current_website->id,['id'=>'website_id']); ?>
+
+
+
+            <?php echo $__env->make('Admin.form_parcials.published', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+            <?php echo $__env->make('Admin.form_parcials.submit_btn',['submit_btn_text'=>'Add'], array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+
+        <?php echo Form::close(); ?>
+
+             <div class="form-group">
+                  <?php echo Form::select('component_list_template',[null=>'Please Select Component'],null,['class'=> 'form-control col-sm-6','style'=>'','id'=>'component_list_template']); ?>
+
+              </div>
+    <?php /*<?php echo $__env->make('errors.list', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?> */ ?>
+
+        <script>
+            function pageOnload()
+           {
+                getComponents();
+           }
+        </script>
+<?php $__env->stopSection(); ?>
+
+<?php echo $__env->make('Admin.'.$current_website->name.'.app', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>

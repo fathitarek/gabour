@@ -1,0 +1,50 @@
+<?php $__env->startSection('content'); ?>
+<div class="bread-crumb"><p><a href="<?php echo e(action('ProductController@index')); ?>">Product</a> / <span>Add New</span></p></div>
+<hr/>
+
+<?php echo Form::model($record,['method' =>'PATCH', 'action'=>['ProductController@update',$record->id],'files' => true]); ?>
+
+              <?php echo $__env->make('Admin.form_parcials.universal_text_field',['name'=>'title','label'=>'English  Name:'], array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+              <?php echo $__env->make('Admin.form_parcials.universal_text_field',['name'=>'title_ar','label'=>'Arabic  Name:'], array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+              <?php echo $__env->make('Admin.form_parcials.universal_text_field',['name'=>'model','label'=>'Model:'], array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+              <?php echo $__env->make('Admin.form_parcials.universal_text_field',['name'=>'note','label'=>'Note:'], array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+              <?php echo $__env->make('Admin.form_parcials.universal_text_field',['name'=>'link','label'=>'Link:'], array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+              <?php echo $__env->make('Admin.form_parcials.upload_field',['name'=>'pdf','label'=>'Pdf:'], array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+                <?php echo $__env->make('Admin.form_parcials.upload_field',['name'=>'image','label'=>'Image:'], array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+                <br>
+                    <div><?php echo $record->image ? '<img   src="/'.$current_website->name.'/images/product/'.$record->image.'" height="40"/>':''; ?></div>
+
+          <?php if($errors->has('image')): ?>
+          <div class="error">
+            <i class="fa fa-times-circle"></i>
+            <?php echo e($errors->first('image')); ?>
+
+          </div>
+          <?php endif; ?>
+              <label> Categories :</label>
+          <select name="category_id" required="required">
+              <option value="" > Please Select Category</option>
+
+        <?php foreach($categories as $category): ?>
+        <?php if($category->id == $record->category_id){?>
+        <option value="<?php echo e($category->id); ?>" selected> <?php echo e($category->name); ?></option>
+        <?php }else{?>
+        <option value="<?php echo e($category->id); ?>" ><?php echo e($category->name); ?></option>
+
+          <br>
+        <?php } ?>
+          <?php endforeach; ?>
+          </select>
+<?php echo Form::hidden('website_id',$current_website->id,['id'=>'website_id']); ?>
+
+<?php echo $__env->make('Admin.form_parcials.published', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+<?php echo $__env->make('Admin.form_parcials.submit_btn',['submit_btn_text'=>'Update'], array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+<?php echo Form::close(); ?>
+
+
+<?php /*<?php echo $__env->make('errors.list', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?> */ ?>
+
+
+<?php $__env->stopSection(); ?>
+
+<?php echo $__env->make('Admin.'.$current_website->name.'.app', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>

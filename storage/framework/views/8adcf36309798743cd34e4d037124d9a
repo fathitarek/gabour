@@ -1,0 +1,49 @@
+<div class="row footer">
+    <div class="col-md-10 col-md-offset-1">
+        <div class="row footerMega">
+            <?php foreach($page['footer_ar']['special_listing_1_data'][0]->menuItems as $index =>$menu_item): ?>
+            <?php if($menu_item->menu_item_id==0): ?>
+            <?php if(count($menu_item->menuItems)): ?>
+            <div class="col-md-3">
+                <h5><?php echo e($menu_item->display_name); ?></h5>
+                <?php foreach($menu_item->menuItems as $sub_index =>$sub_menu_item): ?>
+<?php if($sub_menu_item->published==1): ?>
+                <?php if($sub_menu_item->display_name =='Facebook'): ?>
+                <a href="<?php echo e($sub_menu_item->url); ?>"><i class="fa  fa-facebook-square"></i> <?php echo e($sub_menu_item->display_name); ?> <span class="glyphicon glyphicon-menu-left"></span></a>
+                <?php elseif($sub_menu_item->display_name=='Twitter'): ?>
+                <a href="<?php echo e($sub_menu_item->url); ?>"><i class="fa fa-twitter"></i> <?php echo e($sub_menu_item->display_name); ?> <span class="glyphicon glyphicon-menu-left"></span></a>
+                <?php elseif($sub_menu_item->display_name=='Google+'): ?>
+                <a href="<?php echo e($sub_menu_item->url); ?>"><i class="fa fa-google-plus"></i> <?php echo e($sub_menu_item->display_name); ?> <span class="glyphicon glyphicon-menu-left"></span></a>
+                <?php elseif($sub_menu_item->display_name=='Youtube'): ?>
+                <a href="<?php echo e($sub_menu_item->url); ?>"><i class="fa fa-youtube-play"></i>  <?php echo e($sub_menu_item->display_name); ?><span class="glyphicon glyphicon-menu-left"></span></a>
+                <?php elseif($sub_menu_item->display_name=='LinkedIn'): ?>
+                <a href="<?php echo e($sub_menu_item->url); ?>"><i class="fa fa-linkedin"></i> <?php echo e($sub_menu_item->display_name); ?> <span class="glyphicon glyphicon-menu-left"></span></a>
+            <?php elseif($sub_menu_item->display_name=='Pinterest'): ?>
+                <a href="<?php echo e($sub_menu_item->url); ?>"><i class="fa fa-pinterest"></i> <?php echo e($sub_menu_item->display_name); ?> <span class="glyphicon glyphicon-menu-left"></span></a>
+           <?php elseif($sub_menu_item->display_name=='Flickr'): ?>
+                <a href="<?php echo e($sub_menu_item->url); ?>"><i class="fa fa-flickr"></i> <?php echo e($sub_menu_item->display_name); ?> <span class="glyphicon glyphicon-menu-left"></span></a>
+           
+                <?php else: ?>
+            <a href="<?php echo e($sub_menu_item->url); ?>"><?php echo e($sub_menu_item->display_name); ?> <span class="glyphicon glyphicon-menu-left"></span></a>
+            <?php endif; ?>
+             <?php endif; ?>
+            <?php endforeach; ?>
+            
+        </div>
+            <?php endif; ?> 
+            <?php endif; ?>
+            <?php endforeach; ?> 
+        </div>
+
+
+        
+    </div>
+<div class="col-md-10 col-md-offset-1 footerBlack">
+            <a href="#">www.volvogroup.com </a>
+            |
+            <a href="/volvo_buses/contact_us_ar"> Contact Us</a>
+         </div>
+        <div class="col-md-10 col-md-offset-1 text-center volvoCopyright">
+            <img src="images/logoVolvo.png" alt="volvo">   Copyright AB Volvo 2017
+        </div>
+      </div>

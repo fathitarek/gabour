@@ -1,0 +1,55 @@
+<style>
+table, td, th {
+    border: 1px solid black;
+}
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+th {
+    height: 50px;
+    text-align: center !important;
+}
+td {
+    text-align: center !important;
+}
+form {
+  margin-bottom: 5px;
+  margin-top: 5px;
+}
+</style>
+<?php $__env->startSection('content'); ?>
+    <h1><?php echo e($current_website->display_name_en); ?> Settings</h1>
+
+
+    <article>
+        
+        <table>
+         <tr>
+           <th>ID</th>
+          <th>Text EN</th>
+          
+          <th>Edit</th>
+         
+         </tr>
+        <?php if(count($records)): ?>
+            <?php foreach($records as $record): ?>
+              <tr>
+               <td><?php echo e($record->id); ?></td>
+               <td><?php echo e($record->text_en); ?></td>
+               <td>
+                    <a href="/Admin/<?php echo e($current_website->name); ?>/setting/edit/<?php echo e($record->id); ?>" class="btn btn-primary from-control">Edit</a>
+               </td>
+               
+              </tr>
+            <?php endforeach; ?>
+       <?php endif; ?>
+    </table>
+    <?php echo $records->render(); ?>
+
+    </article>
+
+
+<?php $__env->stopSection(); ?>
+
+<?php echo $__env->make('Admin.'.$current_website->name.'.app', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>

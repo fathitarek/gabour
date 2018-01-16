@@ -1,0 +1,30 @@
+<div class="row headTitleX">
+    <div class="col-md-10 col-md-offset-1">
+        <h4>{{$page['our_offering']['component_data']['big_title']}} </h4>
+    </div>
+</div>
+
+
+<div class="row volvo3setions">
+    <div class="col-md-10 col-md-offset-1">
+        <div class="row">
+            <div class="col-md-4"><img src="images/volvo101.jpg" class="img-responsive" alt="Placeholder image">
+                <h5>MAXIMIZE YOUR PROFIT AND UPTIME TODAY </h5>
+                <p>We understand that the needs of your business vary. That’s why there are four different Customer Support Agreements helping you stay profitable.</p>
+                <a href="#">All agreements<span class="glyphicon glyphicon-menu-right
+                                                "></span></a> </div>
+            <div class="col-md-4"><img src="images/volvo102.jpg" class="img-responsive" alt="Placeholder image">
+                <h5>THE GENUINE WAY TO MINIMIZE DOWNTIME </h5>
+                <p>Guarantee performance by keeping your machine a Volvo. We know that every part is vital and help you maximize uptime in the long run through Genuine Volvo Parts.</p>
+                <a href="#">Genuine Volvo Parts<span class="glyphicon glyphicon-menu-right
+                                                         "></span></a></div>
+                                                         
+<!--                                                         -->
+            <div class="col-md-4"><img src="/{{$current_website->name}}/uploads/{{$page['our_offering']['component_data']['file_1']}}" class="img-responsive" alt="Placeholder image">
+                <h5>{{$page['our_offering']['component_data']['title1']}} </h5>
+                <p> {{$page['our_offering']['component_data']['desc1']}}</p>
+                <a href="{{$page['our_offering']['component_data']['link1']}}">{{$page['our_offering']['component_data']['title_btn1']}}<span class="glyphicon glyphicon-menu-right
+                                            "></span></a></div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,21 @@
+ <div class="row imageText" id="vo-f">
+        <div class="col-md-10 col-md-offset-1">
+          <h3><?php echo e($page['know_more_download']['component_data']['title1']); ?></h3>
+          <p><?php echo e($page['know_more_download']['component_data']['title2']); ?></p>
+           <?php if(isset($page['know_more_download']['component_data']['file2'])): ?>
+          <a href="/<?php echo e($current_website->name); ?>/uploads/<?php echo e($page['know_more_download']['component_data']['file2']); ?>">
+
+
+            <p class="btnXBlue"> <?php echo e($page['know_more_download']['component_data']['title_btn']); ?> <span class="glyphicon glyphicon-chevron-right"></span></p>
+
+            <?php endif; ?>
+          </a>
+        </div>
+      </div>
+
+
+    <style>
+                 #vo_f > div {
+	background-image: url("/<?php echo e($current_website->name); ?>/uploads/<?php echo e($page['know_more_download']['component_data']['file1']); ?>");
+}
+</style>

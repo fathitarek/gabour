@@ -1,0 +1,50 @@
+<div class="row headTitleX">
+    <div class="col-md-10 col-md-offset-1">
+        <h4>{{$page['rapid']['component_data']['big_title']}} </h4>
+    </div>
+</div>
+
+
+<div class="row volvo3setions">
+    <div class="col-md-10 col-md-offset-1">
+        <div class="row">
+                 <div class="col-md-4"><img src="/{{$current_website->name}}/uploads/{{$page['rapid']['component_data']['file_1']}}" class="img-responsive" alt="Placeholder image">
+                <h5>{{$page['rapid']['component_data']['title1']}} </h5>
+                <p> {{$page['rapid']['component_data']['desc1']}}</p>
+                
+            </div>
+           
+            <div class="col-md-4"><img src="/{{$current_website->name}}/uploads/{{$page['rapid']['component_data']['file_2']}}" class="img-responsive" alt="Placeholder image">
+                <h5>{{$page['rapid']['component_data']['title2']}} </h5>
+                <p> {{$page['rapid']['component_data']['desc2']}}</p>
+                
+            </div>
+            <div class="col-md-4"><img src="/{{$current_website->name}}/uploads/{{$page['rapid']['component_data']['file_3']}}" class="img-responsive" alt="Placeholder image">
+                <h5>{{$page['rapid']['component_data']['title3']}} </h5>
+                <p> {{$page['rapid']['component_data']['desc3']}}</p>
+                
+            </div>
+             <div class="clearfix"> </div>
+           <div class="col-md-4"><img src="/{{$current_website->name}}/uploads/{{$page['rapid']['component_data']['file_4']}}" class="img-responsive" alt="Placeholder image">
+                <h5>{{$page['rapid']['component_data']['title4']}} </h5>
+                <p> {{$page['rapid']['component_data']['desc4']}}</p>
+                
+            </div>
+            <div class="col-md-4"><img src="/{{$current_website->name}}/uploads/{{$page['rapid']['component_data']['file_5']}}" class="img-responsive" alt="Placeholder image">
+                <h5>{{$page['rapid']['component_data']['title5']}} </h5>
+                <p> {{$page['rapid']['component_data']['desc5']}}</p>
+                
+            </div>
+            
+            <div class="col-md-4"><img src="/{{$current_website->name}}/uploads/{{$page['rapid']['component_data']['file_6']}}" class="img-responsive" alt="Placeholder image">
+                <h5>{{$page['rapid']['component_data']['title6']}} </h5>
+                <p> {{$page['rapid']['component_data']['desc6']}}</p>
+                
+            </div>
+              <div class="clearfix"> </div>
+                                                         
+<!--                                                         -->
+       
+        </div>
+    </div>
+</div>

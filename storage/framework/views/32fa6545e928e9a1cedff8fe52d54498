@@ -1,0 +1,73 @@
+<style>
+table, td, th {
+    border: 1px solid black;
+}
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+th {
+    height: 50px;
+    text-align: center !important;
+}
+td {
+    text-align: center !important;
+}
+form {
+  margin-bottom: 5px;
+  margin-top: 5px;
+}
+.item_img {
+  width: auto;
+  height: 150px;
+  padding: 15px 0;
+}
+</style>
+<?php $__env->startSection('content'); ?>
+    <h1>Slider Items</h1>
+
+    <article>
+      <a class="btn btn-primary" href="/Admin/<?php echo e($current_website->name); ?>/sliders">Image Sliders</a>
+      <a class="btn btn-primary" href="/Admin/<?php echo e($current_website->name); ?>/slider_items/create">ADD New Slider Item</a>
+      <br/>
+      <br/>
+        <table>
+
+         <tr>
+           <th>ID</th>
+          <th>Name</th>
+          <th>Title</th>
+          <th>Image</th>
+          <th>Related Slider</th>
+          <th>Edit</th>
+          <th>Delete</th>
+         </tr>
+        <?php if(count($sliders)): ?>
+            <?php foreach($sliders as $records): ?>
+              <?php foreach($records->sliderItems as $record): ?>
+              <tr>
+               <td><?php echo e($record->id); ?></td>
+               <td><?php echo e($record->name); ?></td>
+               <td><?php echo e($record->title); ?></td>
+               <td><img class="item_img" src="/<?php echo e($current_website->name); ?>/images/<?php echo e($record->img); ?>"/></td>
+               <td><?php echo e($record->slider->name); ?></td>
+
+               <td>
+                  <a href="<?php echo e(url('Admin/'.$current_website->name.'/slider_items/edit/'.$record->id)); ?>" class="btn btn-primary from-control">
+                      Edit
+                  </a>
+               </td>
+               <td>
+                  <?php echo $__env->make('Admin.form_parcials.universal_delete_btn',['action'=>'SliderItemController@destroy'], array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+               </td>
+              </tr>
+              <?php endforeach; ?>
+            <?php endforeach; ?>
+       <?php endif; ?>
+    </table>
+    </article>
+
+
+<?php $__env->stopSection(); ?>
+
+<?php echo $__env->make('Admin.'.$current_website->name.'.app', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>

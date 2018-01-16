@@ -1,0 +1,19 @@
+<div class="header section"><div>
+
+
+
+        <h3 class="head_style_a"><?php echo e($page['parts_head_and_text']['component_data']['title']); ?></h3>
+
+
+    </div>
+</div>
+<div class="text parbase section">
+
+    <link rel="stylesheet" href="./PartsAccessories_files/accessibility.css" type="text/css">
+
+
+    <p><?php echo e($page['parts_head_and_text']['component_data']['description']); ?></p>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+
+</div>

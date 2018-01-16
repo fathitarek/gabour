@@ -1,0 +1,41 @@
+ <div class="acs-commons-column-wrapper">
+        
+            <div class="acs-commons-resp-colctrl-col acs-commons-resp-colctrl-col-30 showborderbetweencolumns-">
+                  <div class="par1 parsys"><div class="image parbase cq-analyzable section"><div id="cq-image-jsp-/content/fuso/en/service/service/inspection/jcr:content/par/column_control_813944689/par1/column_control/par1/image"><img title="guidebook_booklet" alt="guidebook_booklet" class="cq-dd-image align-null" data-opennewwindow="" src="PartsAccessories_files/1491376867634.png"></div>
+    
+    
+<script type="text/javascript">
+    (function() {
+        var imageDiv = document.getElementById("cq-image-jsp-/content/fuso/en/service/service/inspection/jcr:content/par/column_control_813944689/par1/column_control/par1/image");
+        var imageEvars = '{ imageLink: "", imageAsset: "PartsAccessories_files//guidebook_booklet.png", imageTitle: "guidebook_booklet" }';
+        var tagNodes = imageDiv.getElementsByTagName('A');
+        for (var i = 0; i < tagNodes.length; i++) {
+            var link = tagNodes.item(i); 
+            link.setAttribute('onclick', 'CQ_Analytics.record({event: "imageClick", values: ' + imageEvars + ', collect: false, options: { obj: this }, componentPath: "fuso/components/image"})');
+        }
+        
+    })();
+</script>
+
+
+        
+        </div>
+
+</div>
+
+            </div>
+        
+            <div class="acs-commons-resp-colctrl-col acs-commons-resp-colctrl-col-70 showborderbetweencolumns-">
+                  <div class="par2 parsys"><div class="text parbase section">
+
+
+
+    <p><?php echo e($page['service3_guidline']['component_data']['description']); ?></p>
+<p>&nbsp;</p>
+<p><a href="<?php echo e($page['service3_guidline']['component_data']['link']); ?>" target="_blank"><span class="pdf_download"><?php echo e($page['service3_guidline']['component_data']['titleLink']); ?></span></a></p>
+
+</div>
+
+</div>
+
+            </div>

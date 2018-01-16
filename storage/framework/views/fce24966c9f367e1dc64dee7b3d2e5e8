@@ -1,0 +1,61 @@
+<style>
+table, td, th {
+    border: 1px solid black;
+}
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+th {
+    height: 50px;
+    text-align: center !important;
+}
+td {
+    text-align: center !important;
+}
+form {
+  margin-bottom: 5px;
+  margin-top: 5px;
+}
+</style>
+<?php $__env->startSection('content'); ?>
+    <h1>locations Category</h1>
+
+    <article>
+        <ul>
+             <li><a href="<?php echo e(action('LocationCategoryController@index')); ?>">Location Category</a></li>
+             <li><a href="<?php echo e(action('LocationCategoryController@create')); ?>">ADD New Location Category</a></li>
+             <li><a href="<?php echo e(action('LocationCategoryController@export')); ?>">Export Location Category</a></li>
+                     <?php echo $__env->make('Admin.form_parcials.upload_excel',['controller'=>'LocationCategoryController'], array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+
+        </ul>
+        <table>
+         <tr>
+           <th>ID</th>
+          <th>Name En</th>
+          <th>Name Ar</th>
+          <th>Edit</th>
+          <th>Delete</th>
+         </tr>
+        <?php if(count($records)): ?>
+            <?php foreach($records as $record): ?>
+              <tr>
+               <td><?php echo e($record->id); ?></td>
+               <td><?php echo e($record->name_en); ?></td>
+               <td><?php echo e($record->name_ar); ?></td>
+               <td>
+                  <a href="<?php echo e(action('LocationCategoryController@edit',[$record->id])); ?>" class="btn btn-primary from-control">Edit</a>
+               </td>
+               <td>
+                  <?php echo $__env->make('Admin.form_parcials.universal_delete_btn',['action'=>'LocationCategoryController@destroy'], array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+               </td>
+              </tr>
+            <?php endforeach; ?>
+       <?php endif; ?>
+    </table>
+    </article>
+
+
+<?php $__env->stopSection(); ?>
+
+<?php echo $__env->make('../../app', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>

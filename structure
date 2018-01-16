@@ -1,0 +1,29 @@
+slider
+header menu
+settings
+footer menu
+categories
+products
+services- tabs
+search
+locations - filter
+
+Tables:
+1- Slider:
+ id , name, title, desc, link, img, link title
+
+2-
+
+
+CityController
+LocationsCategoryController
+LocationItemController
+
+
+CityRequest
+City
+
+
+SliderController
+
+id, name, website_id, display_in

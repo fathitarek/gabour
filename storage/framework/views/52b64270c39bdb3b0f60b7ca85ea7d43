@@ -1,0 +1,66 @@
+<?php $__env->startSection('content'); ?>
+<div class="bread-crumb"><p><a href="<?php echo e(action('ProductController@index')); ?>">Product</a> / <span>Add New</span></p></div>
+    <hr/>
+
+        <?php echo Form::open(['action'=>'ProductController@index','files' => true]); ?>
+
+            <?php echo $__env->make('Admin.form_parcials.universal_text_field',['name'=>'name','label'=>'name:'], array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+            <?php echo $__env->make('Admin.form_parcials.universal_text_field',['name'=>'title','label'=>'Title:'], array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+            <?php echo $__env->make('Admin.form_parcials.universal_text_field',['name'=>'title_ar','label'=>'Arabic Title:'], array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+            <?php echo $__env->make('Admin.form_parcials.universal_text_field',['name'=>'title2','label'=>'Title2:'], array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+            <?php echo $__env->make('Admin.form_parcials.universal_text_field',['name'=>'display_name','label'=>'Display Name:'], array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+            <?php echo $__env->make('Admin.form_parcials.universal_text_field',['name'=>'model','label'=>'Model:'], array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+            <?php echo $__env->make('Admin.form_parcials.universal_text_field',['name'=>'note','label'=>'Note:'], array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+            <?php echo $__env->make('Admin.form_parcials.universal_text_field',['name'=>'link','label'=>'Link:'], array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+            <?php echo $__env->make('Admin.form_parcials.upload_field',['name'=>'image','label'=>'Image:'], array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+            <?php echo $__env->make('Admin.form_parcials.upload_field',['name'=>'big_image','label'=>'Big Image:'], array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+            <?php echo $__env->make('Admin.form_parcials.universal_text_field',['name'=>'text_title_en','label'=>'English Text Title:'], array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+            <?php echo $__env->make('Admin.form_parcials.universal_text_field',['name'=>'text_title_ar','label'=>'Arabic Text Title:'], array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+            <?php echo $__env->make('Admin.form_parcials.universal_textarea_field',['name'=>'text_en','label'=>'English Text:'], array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+            <?php echo $__env->make('Admin.form_parcials.universal_textarea_field',['name'=>'text_ar','label'=>'Arabic Text:'], array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+            <?php echo $__env->make('Admin.form_parcials.upload_field',['name'=>'pdf','label'=>'PDF:'], array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+            <?php echo $__env->make('Admin.form_parcials.universal_text_field',['name'=>'youtube_id','label'=>'Youtube Video ID:'], array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+            <?php echo $__env->make('Admin.form_parcials.universal_text_field',['name'=>'youtube_title_en','label'=>'Youtube Video English Title:'], array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+            <?php echo $__env->make('Admin.form_parcials.universal_text_field',['name'=>'youtube_title_ar','label'=>'Youtube Video Arabic Title:'], array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+            <?php echo $__env->make('Admin.form_parcials.universal_textarea_field',['name'=>'description_en','label'=>'English Description:'], array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+            <?php echo $__env->make('Admin.form_parcials.universal_textarea_field',['name'=>'description_ar','label'=>'Arabic Description:'], array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+            <?php echo $__env->make('Admin.form_parcials.universal_textarea_field',['name'=>'short_description_en','label'=>'English Short Description:'], array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+            <?php echo $__env->make('Admin.form_parcials.universal_textarea_field',['name'=>'short_description_ar','label'=>'Arabic Short Description:'], array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+            <?php echo $__env->make('Admin.form_parcials.universal_textarea_field',['name'=>'product_specs','label'=>'Product Specs:'], array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+
+
+
+          <br>
+          <label> Categories :</label>
+          <select name="category_id" required="required">
+             <option value=""> Please Select Category</option>
+            <?php foreach($categories as $category): ?>
+
+                <option value="<?php echo e($category->id); ?>"> <?php echo e($category->name); ?></option>
+                    <br>
+            <?php endforeach; ?>
+          </select>
+          <br>
+            <label> Gallery :</label>
+            <select name="slider_id" required="required">
+               <option value="0"> Please Select Gallery</option>
+              <?php foreach($sliders as $slider): ?>
+
+                  <option value="<?php echo e($slider->id); ?>"> <?php echo e($slider->name); ?></option>
+                      <br>
+              <?php endforeach; ?>
+            </select>
+            <?php echo Form::hidden('website_id',$current_website->id,['id'=>'website_id']); ?>
+
+            <?php echo $__env->make('Admin.form_parcials.published', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+            <?php echo $__env->make('Admin.form_parcials.submit_btn',['submit_btn_text'=>'Add'], array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+
+        <?php echo Form::close(); ?>
+
+
+    <?php /*<?php echo $__env->make('errors.list', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?> */ ?>
+
+
+<?php $__env->stopSection(); ?>
+
+<?php echo $__env->make('Admin.'.$current_website->name.'.app', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>

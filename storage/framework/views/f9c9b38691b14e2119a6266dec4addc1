@@ -1,0 +1,6 @@
+	<div class="par parsys"><div class="imageheader section"><div>
+    <div id="HEADER_IMAGE" style="background-image:url(/<?php echo e($current_website->name); ?>/uploads/<?php echo e($page['service_text_img']['component_data']['file']); ?>)">
+        <h2 class="lightcolorscheme"><?php echo e($page['service_text_img']['component_data']['title']); ?></h2>
+    </div>
+</div>
+                

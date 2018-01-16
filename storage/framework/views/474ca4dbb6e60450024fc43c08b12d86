@@ -1,0 +1,31 @@
+<?php $__env->startSection('content'); ?>
+<div class="bread-crumb"><p><a > <?php echo e($current_website->display_name_en); ?> Location Item</a> / <span>Edit</span></p></div>
+    <hr/>
+
+      <?php echo Form::model($record,['method' =>'PATCH', 'action'=>['LocationItemController@update',$record->id],'files' => true]); ?>
+
+<?php echo $__env->make('Admin.form_parcials.universal_text_field',['name'=>'name_en','label'=>'English Display Name:'], array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+<?php echo $__env->make('Admin.form_parcials.universal_text_field',['name'=>'name_ar','label'=>'Arabic Display Name:'], array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+<?php echo $__env->make('Admin.form_parcials.universal_text_field',['name'=>'lat','label'=>'latitude:'], array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+<?php echo $__env->make('Admin.form_parcials.universal_text_field',['name'=>'long','label'=>'longitude:'], array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+<?php echo $__env->make('Admin.form_parcials.universal_text_field',['name'=>'address_en','label'=>'address_en:'], array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+<?php echo $__env->make('Admin.form_parcials.universal_text_field',['name'=>'address_ar','label'=>'address_ar:'], array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+<?php echo $__env->make('Admin.form_parcials.universal_text_field',['name'=>'fax','label'=>'fax:'], array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+<?php echo $__env->make('Admin.form_parcials.universal_text_field',['name'=>'phone','label'=>'phone:'], array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+<?php echo $__env->make('Admin.form_parcials.universal_text_field',['name'=>'email','label'=>'email:'], array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+<?php echo $__env->make('Admin.form_parcials.universal_text_field',['name'=>'phone','label'=>'phone:'], array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+<?php echo $__env->make('Admin.form_parcials.universal_select_field',['name'=>'location_category_id','label'=>'location  Category:','default_option'=>'Please Select Category','list_items'=>$location_category], array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+<?php echo $__env->make('Admin.form_parcials.universal_select_field',['name'=>'city_id','label'=>'City:','default_option'=>'Please Select City','list_items'=>$city], array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+
+<?php echo $__env->make('Admin.form_parcials.published', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+            <?php echo $__env->make('Admin.form_parcials.submit_btn',['submit_btn_text'=>'Update'], array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+
+        <?php echo Form::close(); ?>
+
+
+    <?php /*<?php echo $__env->make('errors.list', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?> */ ?>
+
+
+<?php $__env->stopSection(); ?>
+
+<?php echo $__env->make('Admin.'.$current_website->name.'.app', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>

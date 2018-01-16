@@ -1,0 +1,77 @@
+<div class="showborderaroundrow-">
+
+    
+    
+        <div class="acs-commons-column-wrapper">
+        
+            <div class="acs-commons-resp-colctrl-col acs-commons-resp-colctrl-col-25 showborderbetweencolumns-">
+                  <div class="par1 parsys"><div class="image parbase cq-analyzable section"><div id="cq-image-jsp-/content/fuso/en/service/partsandaccessories/fuso_value_parts/jcr:content/par/column_control/par1/image"><img title="" alt="file" class="cq-dd-image align-left" data-opennewwindow="" src="/{{$current_website->name}}/uploads/{{$page['value_parts_tab2_text_2image']['component_data']['file1']}}" /></div>
+    
+    
+<script type="text/javascript">
+    (function() {
+        var imageDiv = document.getElementById("cq-image-jsp-/content/fuso/en/service/partsandaccessories/fuso_value_parts/jcr:content/par/column_control/par1/image");
+        var imageEvars = '{ imageLink: "", imageAsset: "", imageTitle: "" }';
+        var tagNodes = imageDiv.getElementsByTagName('A');
+        for (var i = 0; i < tagNodes.length; i++) {
+            var link = tagNodes.item(i); 
+            link.setAttribute('onclick', 'CQ_Analytics.record({event: "imageClick", values: ' + imageEvars + ', collect: false, options: { obj: this }, componentPath: "fuso/components/image"})');
+        }
+        
+    })();
+</script>
+
+
+        
+        </div>
+
+</div>
+
+            </div>
+        
+            <div class="acs-commons-resp-colctrl-col acs-commons-resp-colctrl-col-50 showborderbetweencolumns-">
+                  <div class="par2 parsys"><div class="text parbase section">
+
+
+
+    <p>&nbsp;</p>
+<p>&nbsp;</p>
+<p> {{$page['value_parts_tab2_text_2image']['component_data']['description']}}</p>
+<p>&nbsp;</p>
+
+</div>
+
+</div>
+
+            </div>
+        
+            <div class="acs-commons-resp-colctrl-col acs-commons-resp-colctrl-col-25 showborderbetweencolumns-">
+                  <div class="par3 parsys"><div class="image parbase cq-analyzable section"><div id="cq-image-jsp-/content/fuso/en/service/partsandaccessories/fuso_value_parts/jcr:content/par/column_control/par3/image"><img title="" alt="file" class="cq-dd-image align-left" data-opennewwindow="" src="/{{$current_website->name}}/uploads/{{$page['value_parts_tab2_text_2image']['component_data']['file2']}}" /></div>
+    
+    
+<script type="text/javascript">
+    (function() {
+        var imageDiv = document.getElementById("cq-image-jsp-/content/fuso/en/service/partsandaccessories/fuso_value_parts/jcr:content/par/column_control/par3/image");
+        var imageEvars = '{ imageLink: "", imageAsset: "", imageTitle: "" }';
+        var tagNodes = imageDiv.getElementsByTagName('A');
+        for (var i = 0; i < tagNodes.length; i++) {
+            var link = tagNodes.item(i); 
+            link.setAttribute('onclick', 'CQ_Analytics.record({event: "imageClick", values: ' + imageEvars + ', collect: false, options: { obj: this }, componentPath: "fuso/components/image"})');
+        }
+        
+    })();
+</script>
+
+
+        
+        </div>
+
+</div>
+
+            </div>
+        
+        </div>
+        <br style="clear: both" />
+    
+
+</div></div>

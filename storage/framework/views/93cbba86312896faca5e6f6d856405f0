@@ -1,0 +1,34 @@
+<?php $__env->startSection('content'); ?>
+<style>
+    .website_link
+    {
+        margin: 0px;
+        border-right: #CCC thin solid;
+        padding: 24px;
+    }
+</style>
+    <h1>Admin Panel</h1>
+
+    <article>
+        <?php /*<ul>*/ ?>
+
+            <?php /*<li><a href="<?php echo e(action('WebsiteController@index')); ?>">Websites</a></li>*/ ?>
+            <?php /*<li><a href="<?php echo e(action('FusoPagesController@index')); ?>">Fuso Pages</a></li>*/ ?>
+            <?php /*<li><a href="<?php echo e(action('SliderController@index')); ?>">Image Sliders</a></li>*/ ?>
+            <?php /*<li><a href="<?php echo e(action('CityController@index')); ?>">City</a></li>*/ ?>
+            <?php /*<li><a href="<?php echo e(action('LocationCategoryController@index')); ?>">Location Category</a></li>*/ ?>
+            <?php /*<li><a href="<?php echo e(action('LocationItemController@index')); ?>">Location Item</a></li>*/ ?>
+
+        <?php /*</ul>*/ ?>
+
+         <?php if(count($websites)): ?>
+                    <?php foreach($websites as $website): ?>
+                    <a href="/Admin/<?php echo e($website->view_folder); ?>" class="website_link"><img  src="/images/<?php echo e($website->logo_en); ?>" alt=""/></a>
+                    <?php endforeach; ?>
+               <?php endif; ?>
+    </article>
+
+
+<?php $__env->stopSection(); ?>
+
+<?php echo $__env->make('../app', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>

@@ -1,0 +1,125 @@
+<?php $__env->startSection('content'); ?>
+<div class="bread-crumb"><p><a > <?php echo e($current_website->display_name_en); ?> Location Item</a> / <span>Add New</span></p></div>
+<hr/>
+
+<?php echo Form::open(['action'=>'LocationItemController@index','files' => true]); ?>
+
+<?php echo $__env->make('Admin.form_parcials.universal_text_field',['name'=>'name_en','label'=>'English Display Name:'], array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+<?php if($errors->has('name_en')): ?>
+<div class="error">
+    <i class="fa fa-times-circle"></i>
+    <?php echo e($errors->first('name_en')); ?></div>
+<?php endif; ?>
+
+<?php echo $__env->make('Admin.form_parcials.universal_text_field',['name'=>'name_ar','label'=>'Arabic Display Name:'], array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+<?php if($errors->has('name_ar')): ?>
+<div class="error">
+    <i class="fa fa-times-circle"></i>
+    <?php echo e($errors->first('name_ar')); ?>
+
+</div>
+<?php endif; ?>
+
+<?php echo $__env->make('Admin.form_parcials.universal_text_field',['name'=>'lat','label'=>'latitude:'], array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+<?php if($errors->has('lat')): ?>
+<div class="error">
+    <i class="fa fa-times-circle"></i>
+    <?php echo e($errors->first('lat')); ?>
+
+</div>
+<?php endif; ?>
+
+<?php echo $__env->make('Admin.form_parcials.universal_text_field',['name'=>'long','label'=>'longitude:'], array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+<?php if($errors->has('long')): ?>
+<div class="error">
+    <i class="fa fa-times-circle"></i>
+    <?php echo e($errors->first('long')); ?>
+
+</div>
+<?php endif; ?>
+
+<?php echo $__env->make('Admin.form_parcials.universal_text_field',['name'=>'address_en','label'=>'address_en:'], array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+<?php if($errors->has('address_en')): ?>
+<div class="error">
+    <i class="fa fa-times-circle"></i>
+    <?php echo e($errors->first('address_en')); ?>
+
+</div>
+<?php endif; ?>
+
+<?php echo $__env->make('Admin.form_parcials.universal_text_field',['name'=>'address_ar','label'=>'address_ar:'], array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+<?php if($errors->has('address_ar')): ?>
+<div class="error">
+    <i class="fa fa-times-circle"></i>
+    <?php echo e($errors->first('address_ar')); ?>
+
+</div>
+<?php endif; ?>
+
+<?php echo $__env->make('Admin.form_parcials.universal_text_field',['name'=>'fax','label'=>'fax:'], array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+<?php if($errors->has('fax')): ?>
+<div class="error">
+    <i class="fa fa-times-circle"></i>
+    <?php echo e($errors->first('fax')); ?>
+
+</div>
+<?php endif; ?>
+<?php echo $__env->make('Admin.form_parcials.universal_text_field',['name'=>'phone','label'=>'phone:'], array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+<?php if($errors->has('phone')): ?>
+<div class="error">
+    <i class="fa fa-times-circle"></i>
+    <?php echo e($errors->first('phone')); ?>
+
+</div>
+<?php endif; ?>
+<?php echo $__env->make('Admin.form_parcials.universal_text_field',['name'=>'email','label'=>'email:'], array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+<?php if($errors->has('email')): ?>
+<div class="error">
+    <i class="fa fa-times-circle"></i>
+    <?php echo e($errors->first('email')); ?>
+
+</div>
+<?php endif; ?>
+
+
+<?php echo $__env->make('Admin.form_parcials.universal_text_field',['name'=>'phone','label'=>'phone:'], array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+<?php if($errors->has('phone')): ?>
+<div class="error">
+    <i class="fa fa-times-circle"></i>
+    <?php echo e($errors->first('phone')); ?>
+
+</div>
+<?php endif; ?>
+
+
+<?php echo $__env->make('Admin.form_parcials.universal_select_field',['name'=>'location_category_id','label'=>'location  Category:','default_option'=>'Please Select Category','list_items'=>$location_category], array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+<?php if($errors->has('location_category_id')): ?>
+<div class="error">
+    <i class="fa fa-times-circle"></i>
+    <?php echo e($errors->first('location_category_id')); ?>
+
+</div>
+<?php endif; ?>
+              <?php echo Form::hidden('website_id',$current_website->id,['id'=>'website_id']); ?>
+
+
+ <?php echo $__env->make('Admin.form_parcials.universal_select_field',['name'=>'city_id','label'=>'City:','default_option'=>'Please Select City','list_items'=>$city], array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+<?php if($errors->has('city_id')): ?>
+<div class="error">
+    <i class="fa fa-times-circle"></i>
+    <?php echo e($errors->first('city_id')); ?>
+
+</div>
+<?php endif; ?>
+<?php echo $__env->make('Admin.form_parcials.published', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+<?php echo $__env->make('Admin.form_parcials.submit_btn',['submit_btn_text'=>'Add'], array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+
+<?php echo Form::close(); ?>
+
+
+<?php /*<?php echo $__env->make('errors.list', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?> */ ?>
+
+
+<?php $__env->stopSection(); ?>
+
+<?php echo $__env->make('Admin.'.$current_website->name.'.app', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>

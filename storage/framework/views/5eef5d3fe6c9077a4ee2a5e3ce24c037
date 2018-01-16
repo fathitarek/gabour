@@ -1,0 +1,71 @@
+<?php $__env->startSection('content'); ?>
+<div class="bread-crumb"><p><a><?php echo e($current_website->display_name_en); ?>   Setsting</a> / <span>Edit</span></p></div>
+<hr/>
+
+<?php echo Form::model($record,['method' =>'PATCH', 'action'=>['SettingController@update',$record->id],'files' => true]); ?>
+
+             
+             <?php echo $__env->make('Admin.form_parcials.universal_text_field',['name'=>'text_en','label'=>'English Text:'], array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+             <?php if($errors->has('text_en')): ?>
+             <div class="error">
+               <i class="fa fa-times-circle"></i>
+               <?php echo e($errors->first('text_en')); ?></div>
+               <?php endif; ?>
+
+             <?php echo $__env->make('Admin.form_parcials.universal_text_field',['name'=>'text_ar','label'=>'Arabic Text:'], array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+               <?php if($errors->has('text_ar')): ?>
+               <div class="error">
+                 <i class="fa fa-times-circle"></i>
+                 <?php echo e($errors->first('text_ar')); ?>
+
+               </div>
+               <?php endif; ?>
+                <?php echo $__env->make('Admin.form_parcials.universal_text_field',['name'=>'google_analytics','label'=>'Google Analytics:'], array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+                 <?php if($errors->has('google_analytics')): ?>
+                 <div class="error">
+                   <i class="fa fa-times-circle"></i>
+                   <?php echo e($errors->first('google_analytics')); ?>
+
+                 </div>
+                 <?php endif; ?>
+
+                
+                 <?php echo $__env->make('Admin.form_parcials.upload_field',['name'=>'img_en','label'=>'Image English:'], array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+                 <?php if($record->img_en): ?>
+         <img src="/<?php echo e($current_website->name); ?>/images/<?php echo e($record->img_en); ?>" width="350"/>
+         <?php endif; ?>
+                   <?php if($errors->has('img_en')): ?>
+                   <div class="error">
+                     <i class="fa fa-times-circle"></i>
+                     <?php echo e($errors->first('img_en')); ?>
+
+                   </div>
+                   <?php endif; ?>
+
+                   <?php echo $__env->make('Admin.form_parcials.upload_field',['name'=>'img_ar','label'=>'Image Arabic:'], array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+                    <?php if($record->img_ar): ?>
+         <img src="/<?php echo e($current_website->name); ?>/images/<?php echo e($record->img_ar); ?>" width="350"/>
+         <?php endif; ?>
+                 <?php if($errors->has('img_ar')): ?>
+                 <div class="error">
+                   <i class="fa fa-times-circle"></i>
+                   <?php echo e($errors->first('img_ar')); ?>
+
+                 </div>
+                 <?php endif; ?>
+
+               <?php echo Form::hidden('website_id',$current_website->id,['id'=>'website_id']); ?>
+
+
+
+             <?php echo $__env->make('Admin.form_parcials.published', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+    <?php echo $__env->make('Admin.form_parcials.submit_btn',['submit_btn_text'=>'Update'], array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+<?php echo Form::close(); ?>
+
+
+<?php /*<?php echo $__env->make('errors.list', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?> */ ?>
+
+
+<?php $__env->stopSection(); ?>
+
+<?php echo $__env->make('Admin.'.$current_website->name.'.app', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>

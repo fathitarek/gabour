@@ -1,0 +1,119 @@
+<div class="row" id="nav1">
+    <div class="col-md-offset-1 col-md-10">
+        <a href="<?php echo e($page['arabic_main_menu']['component_data']['link1']); ?>"><?php echo e($page['arabic_main_menu']['component_data']['title1']); ?></a> 
+        <a href="<?php echo e($page['arabic_main_menu']['component_data']['link2']); ?>"><?php echo e($page['arabic_main_menu']['component_data']['title2']); ?></a> 
+        <a href="<?php echo e($page['arabic_main_menu']['component_data']['link3']); ?>"><?php echo e($page['arabic_main_menu']['component_data']['title3']); ?></a> 
+        <span> <a href="<?php echo e($page['arabic_main_menu']['component_data']['link_ar']); ?>">Ar </a> / <a href="<?php echo e($page['arabic_main_menu']['component_data']['link_en']); ?>"> En</a> </span> </div>
+</div>
+<div class="row" id="logo">
+    <div class="col-md-10 col-md-offset-1"><a href="<?php echo e($page['arabic_main_menu']['component_data']['link_cv']); ?>"><img src="/<?php echo e($current_website->name); ?>/uploads/<?php echo e($page['arabic_main_menu']['component_data']['file_1']); ?>" alt=""/></a>
+        <a href="/volvo_trucks/home" > <img src="/<?php echo e($current_website->name); ?>/uploads/<?php echo e($page['arabic_main_menu']['component_data']['file_2']); ?>" alt="" class="volvoLogo"/> </a>
+    </div>
+</div>
+
+<div class="row" id="mainNav">
+        <div class="col-md-10 col-md-offset-1">
+          <nav class="navbar navbar-default yamm">
+            <div class="container-fluid">
+              <!-- Brand and toggle get grouped for better mobile display -->
+              <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#defaultNavbar2" aria-expanded="false"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button>
+              </div>
+              <!-- Collect the nav links, forms, and other content for toggling -->
+     
+
+<div class="collapse navbar-collapse" id="defaultNavbar2">
+                <ul class="nav navbar-nav">
+<li class="dropdown yamm-fw"><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><?php echo e($page['arabic_main_menu']['special_listing_1_data'][0]->display_name); ?></a>
+    <ul class="dropdown-menu">
+        <li>
+            <div class="row noPaddingX">
+                <div class="col-md-9 rightBorderX">
+                    <h4><?php echo e($page['arabic_main_menu']['component_data']['title_trucks']); ?></h4>
+                    <p><?php echo e($page['arabic_main_menu']['component_data']['desc_trucks']); ?></p>
+                    <div class="row">
+                        <div class="col-md-4">
+                          
+                        <?php foreach($page['arabic_main_menu']['special_listing_1_data'][0]->menuItems as $index =>$menu_item): ?>
+                          <?php if($menu_item->published==1): ?>
+                            <a href="<?php echo e($menu_item->url); ?>">
+                                <div>
+                                    <img src="/<?php echo e($current_website->name); ?>/images/menu_items/<?php echo e($menu_item->image_on); ?>" alt="Placeholder image">
+                                    <span><?php echo e($menu_item->display_name); ?> </span><span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                                </div>
+                            </a>
+                           
+                        <?php if(($index+1)%3==0): ?>
+                            </div>
+                        <div class="col-md-4">
+                            <?php endif; ?>
+                             <?php endif; ?>
+                        <?php endforeach; ?> 
+                    </div>
+                    </div>
+                </div>
+            </div>
+        </li>
+    </ul>
+</li>
+
+<li class="dropdown yamm-fw"><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><?php echo e($page['arabic_main_menu']['special_listing_2_data'][0]->display_name); ?></a>
+    <ul class="dropdown-menu">
+        
+        
+        
+        <li>
+            <div class="row noPaddingX">
+                <div class="col-md-9 rightBorderX">
+                    <h4><?php echo e($page['arabic_main_menu']['component_data']['title_services']); ?></h4>
+                    <p><?php echo e($page['arabic_main_menu']['component_data']['desc_services']); ?></p>
+                     <div class="row noPaddingX">
+                <?php foreach($page['arabic_main_menu']['special_listing_2_data'][0]->menuItems as $index =>$menu_item): ?>
+                 <?php if($menu_item->published==1): ?>
+                <div class="rightBorderX col-md-3">       
+                    <a href="<?php echo e($menu_item->url); ?>">
+                        <h4><?php echo e($menu_item->display_name); ?><span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></h4>
+                    </a>
+                    <p><?php echo e($menu_item->description); ?></p>
+                </div>
+                  <?php endif; ?>
+                <?php endforeach; ?>
+            </div>
+                </div>
+            </div>
+        </li>
+    </ul>
+</li>
+
+ <li class="dropdown yamm-fw"><a  href="<?php echo e($page['arabic_main_menu']['special_listing_3_data'][0]->url); ?>"  role="button" aria-haspopup="true" aria-expanded="false"><?php echo e($page['arabic_main_menu']['special_listing_3_data'][0]->display_name); ?></a></li>
+ <li class="dropdown yamm-fw"><a id="con" href="<?php echo e($page['arabic_main_menu']['special_listing_4_data'][0]->url); ?>"  role="button" aria-haspopup="true" aria-expanded="false"><?php echo e($page['arabic_main_menu']['special_listing_4_data'][0]->display_name); ?></a></li>
+
+<li class="dropdown yamm-fw"><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><?php echo e($page['arabic_main_menu']['special_listing_5_data'][0]->display_name); ?></a>
+    <ul class="dropdown-menu">
+        <li>
+            <div class="row noPaddingX">
+                <?php foreach($page['arabic_main_menu']['special_listing_5_data'][0]->menuItems as $index =>$menu_item): ?>
+                 <?php if($menu_item->published==1): ?>
+                <div class="rightBorderX col-md-3">       
+                    <a href="<?php echo e($menu_item->url); ?>">
+                        <h4><?php echo e($menu_item->display_name); ?><span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></h4>
+                    </a>
+                    <p><?php echo e($menu_item->description); ?></p>
+                </div>
+                  <?php endif; ?>
+                <?php endforeach; ?>
+            </div>
+        </li>
+    </ul>
+</li>
+   </ul>
+<!--       <ul class="nav navbar-nav navbar-right">
+                  <li><a href="#" id="productSelector">Product Selector</a></li>
+                </ul>-->
+              </div>
+              <!-- /.navbar-collapse -->
+            </div>
+            <!-- /.container-fluid -->
+          </nav>
+        </div>
+      </div>

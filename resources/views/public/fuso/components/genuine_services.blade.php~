@@ -1,0 +1,29 @@
+<div class="serviceinfobox section"><div>
+    
+    
+        <div id="GE_SERVICE_DATA">
+            <h4 class="pc_display">MITSUBISHI FUSO GENUINE SERVICE</h4>
+			<h4 class="mb_display"><img src="PartsAccessories_files/genuine_data_h4.png" alt="Genuine Services"></h4>
+			<dl id="GE_DATA_A">
+				<dt>Quality Service &amp; Support</dt>
+				<dd>Reliable consultation and the quality of the service network determine how well and how long your truck performs. Trust our trained technicians to ensure high quality.</dd>
+			</dl>
+			<dl id="GE_DATA_B">
+				<dt>Genuine Parts Availability</dt>
+				<dd>The availability of the required genuine parts determines the downtime of your vehicle. Turn to your Mitsubishi Fuso dealer for quick supply of the genuine parts needed to keep your truck running.</dd>
+			</dl>
+			<dl id="GE_DATA_C">
+				<dt>Top-Class Technology</dt>
+				<dd>Mitsubishi Fuso continues to develop innovate new technology for your driving comfort. Our knowledgeable technicians ensure the technology stays up to date.</dd>
+			</dl>
+		</div>
+    
+    #GE_SERVICE_DATA {
+    background: #8f9299 url(genuine_data_bg.png) no-repeat scroll right center;
+    border: 1px solid #fff;
+    border-radius: 10px;
+    height: 400px;
+    margin-bottom: 30px;
+    margin-right: -5px;
+    position: relative;
+}

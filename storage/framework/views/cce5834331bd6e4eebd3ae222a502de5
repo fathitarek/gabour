@@ -1,0 +1,56 @@
+<nav class="navbar navbar-default navbar-fixed-top">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <a href="tel: 19216" class="navbar-brand hidden-sm hidden-md hidden-lg" id="hotlineMobile"> <img src="/<?php echo e($current_website->name); ?>/assets/hotline.png" alt="" width="100" height="35" /></a>
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#topFixedNavbar1" aria-expanded="false"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button>
+            <a class="navbar-brand logoX" href="/"> <img src="/<?php echo e($current_website->name); ?>/assets/logo.png" alt="" width="118" height="54" /></a>
+        </div>
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="topFixedNavbar1">
+            <ul class="nav navbar-nav">
+
+            <?php foreach($page['main_menu']['special_listing_1_data'][0]->menuItems as $index =>$menu_item): ?>
+                <?php if($menu_item->menu_item_id==0): ?>
+                    <?php if(count($menu_item->menuItems)): ?>
+                         <li class="dropdown"> <a href="<?php echo e($menu_item->url); ?>"  class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><?php echo e($menu_item->display_name); ?>&nbsp;<span class="glyphicon glyphicon-chevron-down pull-right"></span></a>
+                            <ul class="dropdown-menu row">
+                                <?php foreach($menu_item->menuItems as $sub_index =>$sub_menu_item): ?>
+                                             <?php if($sub_menu_item->published==1): ?>
+
+                                <li><a href="<?php echo e($sub_menu_item->url); ?>" ><?php echo e($sub_menu_item->display_name); ?></a></li>
+                                                <?php endif; ?>
+
+                                <?php endforeach; ?>
+                            </ul>
+                        </li>
+                    <?php else: ?>
+                        <li><a href="<?php echo e($menu_item->url); ?>" id=""><?php echo e($menu_item->display_name); ?></a></li>
+                    <?php endif; ?>
+                <?php endif; ?>
+            <?php endforeach; ?>
+
+            </ul>
+            <ul class="nav navbar-nav navbar-right" id="hotlineMenu">
+                <li id="languageX"> <a id="arabic" href="/ghabbour_commercial_vehicles/home_ar">AR </a>/<a id="english" href="/ghabbour_commercial_vehicles/home" class="activeX"> EN</a> </li>
+                <li class="hidden-xs">
+                    <a href="tel: 19216" id="hotlineX"> <img src="/<?php echo e($current_website->name); ?>/assets/hotline.png" width="100" height="35" alt="" /></a>
+                </li>
+            </ul>
+            <?php /*<form class="navbar-form navbar-right" id="menuSearch" role="search">*/ ?>
+                <?php /*<div class="input-group">*/ ?>
+                    <?php /*<input type="text" class="form-control transparent-input" placeholder="Search...">*/ ?>
+                    <?php /*<span class="input-group-btn">*/ ?>
+            <?php /*<button class="btn searchIcon" type="submit"> <img src="/<?php echo e($current_website->name); ?>/assets/searchIcon.png" alt=""/> </button>*/ ?>
+          <?php /*</span> </div>*/ ?>
+                <?php /*<!-- /input-group -->*/ ?>
+            <?php /*</form>*/ ?>
+        </div>
+        <!-- /.navbar-collapse -->
+        <!-- /.container-fluid -->
+    </nav>
+    <script>
+        document.getElementById("<?php echo e($page->name); ?>").className="activeX";
+    </script>
+
+    <?php /*<?php echo e($page['main_menu']['special_listing_1_data'][0]->menuItems); ?>*/ ?>
+   

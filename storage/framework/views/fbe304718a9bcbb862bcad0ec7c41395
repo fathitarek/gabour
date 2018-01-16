@@ -1,0 +1,39 @@
+<div class="row news">
+        <div class="col-md-10 col-md-offset-1">
+          <div class="row newsRow">
+            <div class="col-md-3" id="newsImg1"></div>
+            <div class="col-md-9"> <span> <span class="category-color"></span> News </span> <br>
+              <span><?php echo e($page['latest_news']['component_data']['date1']); ?></span>
+              <h5><?php echo e($page['latest_news']['component_data']['title1']); ?> </h5>
+              <p><?php echo e($page['latest_news']['component_data']['desc1']); ?> </p>
+            </div>
+          </div>
+          <div class="row newsRow">
+            <div class="col-md-3" id="newsImg2"></div>
+            <div class="col-md-9"><span> <span class="category-color-blue"></span> Press release </span> <br>
+              <span><?php echo e($page['latest_news']['component_data']['date2']); ?></span>
+              <h5><?php echo e($page['latest_news']['component_data']['title2']); ?> </h5>
+              <p><?php echo e($page['latest_news']['component_data']['desc2']); ?></p>
+            </div>
+          </div>
+          <div class="row newsRow">
+            <div class="col-md-3" id="newsImg3"></div>
+            <div class="col-md-9"><span> <span class="category-color"></span> News </span> <br>
+              <span><?php echo e($page['latest_news']['component_data']['date3']); ?></span>
+              <h5><?php echo e($page['latest_news']['component_data']['title3']); ?> </h5>
+              <p><?php echo e($page['latest_news']['component_data']['desc3']); ?></p>
+            </div>
+          </div>
+          <div class="row newsRow">
+            <div class="col-md-3" id="newsImg4"></div>
+            <div class="col-md-9"><span> <span class="category-color-blue"></span> Press release </span> <br>
+              <span><?php echo e($page['latest_news']['component_data']['date4']); ?></span>
+              <h5><?php echo e($page['latest_news']['component_data']['title4']); ?> </h5>
+              <p><?php echo e($page['latest_news']['component_data']['desc4']); ?></p>
+            </div>
+          </div>
+          <div class="text-center"> <a href="#">
+            <p class="btnX btnBorder">View all news <span class="glyphicon glyphicon-chevron-right"></span></p>
+          </a> </div>
+        </div>
+      </div>

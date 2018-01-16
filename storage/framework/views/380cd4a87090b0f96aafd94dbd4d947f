@@ -1,0 +1,14 @@
+ <div class="row imageText" id="m">
+        <div class="col-md-10 col-md-offset-1">
+          <h3><?php echo e($page['know_more_truck']['component_data']['title1']); ?></h3>
+          <p><?php echo e($page['know_more_truck']['component_data']['title2']); ?></p>
+          <a href="<?php echo e($page['know_more_truck']['component_data']['link']); ?>">
+            <p class="btnXBlue"> <?php echo e($page['know_more_truck']['component_data']['title_btn']); ?> <span class="glyphicon glyphicon-chevron-right"></span></p>
+          </a></div>
+      </div>
+    </div>
+    <style>
+        #m > div {
+	background-image: url("/<?php echo e($current_website->name); ?>/uploads/<?php echo e($page['know_more_truck']['component_data']['file1']); ?>");
+}
+</style>

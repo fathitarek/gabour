@@ -1,0 +1,20 @@
+<div class="tabs section"><div>
+    <ul id="EXEC_TAB">
+        <li><a class="active" href="<?php echo e($page['page_tabs']['component_data']['link1']); ?>">
+          <?php echo e($page['page_tabs']['component_data']['title1']); ?></a></li>
+
+        <li><a href="<?php echo e($page['page_tabs']['component_data']['link2']); ?>">
+          <?php echo e($page['page_tabs']['component_data']['title2']); ?></a></li>
+
+        <li><a href="<?php echo e($page['page_tabs']['component_data']['link3']); ?>">
+          <?php echo e($page['page_tabs']['component_data']['title3']); ?></a></li>
+
+        <li><a href="<?php echo e($page['page_tabs']['component_data']['link4']); ?>">
+          <?php echo e($page['page_tabs']['component_data']['title4']); ?></a></li>
+
+        <li><a href="<?php echo e($page['page_tabs']['component_data']['link5']); ?>">
+          <?php echo e($page['page_tabs']['component_data']['title5']); ?></a></li>
+    </ul>
+    <br style="clear:both">
+</div>
+</div>

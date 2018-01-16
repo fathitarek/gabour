@@ -1,0 +1,131 @@
+<?php $__env->startSection('content'); ?>
+<div class="bread-crumb"><p><a href="<?php echo e(action('WebsiteController@index')); ?>">Websites</a> / <span>Add New</span></p></div>
+    <hr/>
+
+        <?php echo Form::open(['action'=>'WebsiteController@index','files' => true]); ?>
+
+            <?php echo $__env->make('Admin.form_parcials.universal_text_field',['name'=>'display_name_en','label'=>'English Display Name:'], array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+            <?php if($errors->has('display_name_en')): ?>
+            <div class="error">
+              <i class="fa fa-times-circle"></i>
+              <?php echo e($errors->first('display_name_en')); ?></div>
+              <?php endif; ?>
+
+            <?php echo $__env->make('Admin.form_parcials.universal_text_field',['name'=>'display_name_ar','label'=>'Arabic Display Name:'], array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+              <?php if($errors->has('display_name_ar')): ?>
+              <div class="error">
+                <i class="fa fa-times-circle"></i>
+                <?php echo e($errors->first('display_name_ar')); ?>
+
+              </div>
+              <?php endif; ?>
+
+            <?php echo $__env->make('Admin.form_parcials.universal_text_field',['name'=>'view_folder','label'=>'View Folder:'], array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+              <?php if($errors->has('view_folder')): ?>
+              <div class="error">
+                <i class="fa fa-times-circle"></i>
+                <?php echo e($errors->first('view_folder')); ?>
+
+              </div>
+              <?php endif; ?>
+
+            <?php echo $__env->make('Admin.form_parcials.universal_textarea_field',['name'=>'html_includes','label'=>'HTML Includes:'], array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+            <?php if($errors->has('html_includes')): ?>
+            <div class="error">
+              <i class="fa fa-times-circle"></i>
+              <?php echo e($errors->first('html_includes')); ?>
+
+            </div>
+            <?php endif; ?>
+
+            <?php echo $__env->make('Admin.form_parcials.universal_text_field',['name'=>'title_en','label'=>'English Title:'], array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+            <?php if($errors->has('title_en')): ?>
+            <div class="error">
+              <i class="fa fa-times-circle"></i>
+              <?php echo e($errors->first('title_en')); ?>
+
+            </div>
+            <?php endif; ?>
+
+            <?php echo $__env->make('Admin.form_parcials.universal_text_field',['name'=>'title_ar','label'=>'Arabic Title:'], array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+            <?php if($errors->has('title_ar')): ?>
+            <div class="error">
+              <i class="fa fa-times-circle"></i>
+              <?php echo e($errors->first('title_ar')); ?>
+
+            </div>
+            <?php endif; ?>
+
+            <?php echo $__env->make('Admin.form_parcials.universal_text_field',['name'=>'meta_en','label'=>'English Meta Key:'], array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+             <?php if($errors->has('meta_en')): ?>
+             <div class="error">
+               <i class="fa fa-times-circle"></i>
+               <?php echo e($errors->first('meta_en')); ?>
+
+             </div>
+             <?php endif; ?>
+
+            <?php echo $__env->make('Admin.form_parcials.universal_textarea_field',['name'=>'description_en','label'=>'English Meta Description:'], array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+            <?php if($errors->has('description_en')): ?>
+            <div class="error">
+              <i class="fa fa-times-circle"></i>
+              <?php echo e($errors->first('description_en')); ?>
+
+            </div>
+            <?php endif; ?>
+
+            <?php echo $__env->make('Admin.form_parcials.universal_text_field',['name'=>'meta_ar','label'=>'Arabic Meta Key:'], array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+            <?php if($errors->has('meta_ar')): ?>
+            <div class="error">
+              <i class="fa fa-times-circle"></i>
+              <?php echo e($errors->first('meta_ar')); ?>
+
+            </div>
+            <?php endif; ?>
+
+            <?php echo $__env->make('Admin.form_parcials.universal_textarea_field',['name'=>'description_ar','label'=>'Arabic Meta Description:'], array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+            <?php if($errors->has('description_ar')): ?>
+            <div class="error">
+              <i class="fa fa-times-circle"></i>
+              <?php echo e($errors->first('description_ar')); ?>
+
+            </div>
+            <?php endif; ?>
+
+            <?php echo $__env->make('Admin.form_parcials.upload_field',['name'=>'logo_en','label'=>'English Logo:'], array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+            <?php if($errors->has('logo_en')): ?>
+            <div class="error">
+              <i class="fa fa-times-circle"></i>
+              <?php echo e($errors->first('logo_en')); ?>
+
+            </div>
+            <?php endif; ?>
+            <?php echo $__env->make('Admin.form_parcials.upload_field',['name'=>'logo_ar','label'=>'Arabic Logo:'], array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+            <?php if($errors->has('logo_ar')): ?>
+            <div class="error">
+              <i class="fa fa-times-circle"></i>
+              <?php echo e($errors->first('logo_ar')); ?>
+
+            </div>
+            <?php endif; ?>
+
+            <?php echo $__env->make('Admin.form_parcials.url',['name'=>'facebook','label'=>'Facebook:'], array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+            <?php echo $__env->make('Admin.form_parcials.url',['name'=>'twitter','label'=>'Twitter:'], array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+            <?php echo $__env->make('Admin.form_parcials.url',['name'=>'instagram','label'=>'Instagram:'], array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+            <?php echo $__env->make('Admin.form_parcials.url',['name'=>'youtube','label'=>'Youtube:'], array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+            <?php echo $__env->make('Admin.form_parcials.url',['name'=>'linkedin','label'=>'LinkedIn:'], array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+            <?php echo $__env->make('Admin.form_parcials.url',['name'=>'google_plus','label'=>'Google+ Url:'], array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+            <?php echo $__env->make('Admin.form_parcials.url',['name'=>'pinterest','label'=>'Pinterest Url:'], array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+
+            <?php echo $__env->make('Admin.form_parcials.published', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+            <?php echo $__env->make('Admin.form_parcials.submit_btn',['submit_btn_text'=>'Add'], array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+
+        <?php echo Form::close(); ?>
+
+
+    <?php /*<?php echo $__env->make('errors.list', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?> */ ?>
+
+
+<?php $__env->stopSection(); ?>
+
+<?php echo $__env->make('../../app', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>

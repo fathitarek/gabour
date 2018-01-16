@@ -1,0 +1,53 @@
+
+
+<div class="acs-commons-resp-colctrl-row section">
+    <div class="showborderaroundrow-">
+        <div class="acs-commons-column-wrapper">
+            <div class="acs-commons-resp-colctrl-col acs-commons-resp-colctrl-col-100 showborderbetweencolumns-">
+                <div class="par1 parsys">
+
+                    <?php if(count($page['heavy_duty_buses']['special_listing_1_data'])): ?>
+                            <?php foreach($page['heavy_duty_buses']['special_listing_1_data'][0]->categories as $index => $category): ?>
+                                <?php if($category->published==1): ?>
+                                    <div class="header section"><div>
+                                            <h3 class="head_style_a"><?php echo e($category->display_name_ar); ?></h3>
+                                        </div>
+                                    </div>
+                                    <div class="divider section"><div>
+                                            <br style="clear:both">
+                                            <hr>
+                                        </div>
+                                    </div>
+
+                                    <?php if(count($category->products)): ?>
+                                        <?php foreach($category->products as $index1 => $product): ?>
+                                            <?php if($product->published==1): ?>
+                                                <div class="listpageitem section">
+                                                    <span style="display: inline-block;">
+                                                        <div class="p-img"><img src="/<?php echo e($current_website->name); ?>/images/product/<?php echo e($product->image); ?>" alt="<?php echo e($product->title_ar); ?>"></div>
+                                                        <div class="p-nm"><?php echo e($product->title_ar); ?></div>
+
+                                                        <span class="sml fred"><?php echo e($product->model); ?></span>
+                                                        <span class="sml"><?php echo e($product->note); ?></span>
+                                                            <?php if($product->pdf!=''): ?>
+                                                                    <a href="/<?php echo e($current_website->name); ?>/pdf/products/<?php echo e($product->pdf); ?>" target="_blank" class="catalog_dl" data-analnk="pdf-ilnk">
+                                                                        <img src="PartsAccessories_files/dl-icon_new.png">
+                                                                    </a>
+                                                            <?php endif; ?>
+                                                    </span>
+                                                </div>
+                                            <?php endif; ?>
+                                        <?php endforeach; ?>
+                                    <?php endif; ?>
+                                    <div class="text parbase section">
+                                        <p>&nbsp;</p>
+                                        <p>&nbsp;</p>
+                                    </div>
+                                <?php endif; ?>
+                            <?php endforeach; ?>
+                        <?php endif; ?>
+                </div>
+            </div>
+        </div>
+        <br style="clear: both">
+    </div></div>

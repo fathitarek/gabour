@@ -1,0 +1,7 @@
+<div class="header section"><div>
+
+    <h2><?php echo e($page['head_title']['component_data']['title']); ?></h2>
+    <img src="/fuso/assets/PartsAccessories_files/cn-logo.png" class="fuso-header-logo">
+
+</div>
+</div>

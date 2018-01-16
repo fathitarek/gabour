@@ -1,0 +1,47 @@
+<div class="row heroImgX3">
+  <div class="col-md-10 col-md-offset-1">
+    <h3>Premium thinking</h3>
+<p>The key to profitability is total cost of ownership. With the right truck, the right services and the right support network, you drive profitability.  
+<br>
+<br>
+We design and engineer every truck and every service to reduce your fuel costs, improve uptime and increase your productivity. Our unmatched customer support comes as standard – from the first mile, to the last.</p>
+<img src="images/volvo207.jpg" class="img-responsive" alt="Placeholder image"></div>
+</div>
+<div class="row headTitleX">
+      <div class="col-md-10 col-md-offset-1">
+        <h4>Distinguished by design </h4>
+      </div>
+      </div>
+<div class="row headTitleX">
+  <div class="col-md-10 col-md-offset-1">
+    <div class="tabX" role="tabpanel">
+      <ul class="nav nav-tabs" role="tablist">
+        <li role="presentation" class="active"><a href="#home1" data-toggle="tab" role="tab" aria-controls="tab1">Exterior</a></li>
+        <li role="presentation"><a href="#paneTwo1" data-toggle="tab" role="tab" aria-controls="tab2">Interior</a></li>
+      </ul>
+      <div id="tabContent1" class="tab-content">
+        <div role="tabpanel" class="tab-pane fade in active" id="home1"><img src="images/exterior1.jpg" class="img-responsive" alt="Placeholder image">
+        </div>
+        <div role="tabpanel" class="tab-pane fade" id="paneTwo1"><img src="images/interior1.jpg" class="img-responsive" alt="Placeholder image">        </div>
+        <div role="tabpanel" class="tab-pane fade" id="tabDropDownOne1">
+          <p>Dropdown content#1</p>
+        </div>
+        <div role="tabpanel" class="tab-pane fade" id="tabDropDownTwo1">
+          <p>Dropdown content#2 </p>
+        </div>
+      </div>
+    </div>
+</div>
+</div>
+<div class="row headTitleX">
+  <div class="col-md-10 col-md-offset-1">
+    <p>Space. Clutter-free surfaces. And corner-to-corner quality. The interior of the Volvo FH cab feels light, airy and distinctly Swedish. It also offers an extra cubic metre of space, loads more room for your stuff and unparalleled levels of comfort and refinement. Get the full story on our new design - See more at: http://www.volvotrucks.com/en-eg/trucks/volvo-fh-series.html#sthash.UWWpTPse.dpuf </p>
+  </div>
+</div>
+<div class="row news">
+  <div class="col-md-10 col-md-offset-1">
+    <div class="text-center"> <a href="#">
+      <p class="btnX btnBorder">Get the full story on our new design <span class="glyphicon glyphicon-chevron-right"></span></p>
+    </a></div>
+  </div>
+</div>

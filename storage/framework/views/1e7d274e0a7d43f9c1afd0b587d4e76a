@@ -1,0 +1,80 @@
+<?php $__env->startSection('content'); ?>
+<div class="bread-crumb"><p><a ><?php echo e($current_website->display_name_en); ?>  Similar Sections</a> / <span>Add New Value Parts Leaflet Download </span></p></div>
+    <hr/>
+
+        <?php echo Form::open(['action'=>'Similar_sectionsController@index','files' => true]); ?>
+
+            <!--    Title English       -->
+            <?php echo $__env->make('Admin.form_parcials.universal_text_field',['name'=>'title_en','label'=>'English Display Title:'], array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+            <?php if($errors->has('title_en')): ?>
+                <div class="error">
+                 <i class="fa fa-times-circle"></i>
+                 <?php echo e($errors->first('title_en')); ?>
+
+                </div>
+             <?php endif; ?>
+            <!--    Title Arabic       -->
+            <?php echo $__env->make('Admin.form_parcials.universal_text_field',['name'=>'title_ar','label'=>'Arabic Display Title:'], array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+              <?php if($errors->has('title_ar')): ?>
+                    <div class="error">
+                    <i class="fa fa-times-circle"></i>
+                    <?php echo e($errors->first('title_ar')); ?>
+
+                    </div>
+              <?php endif; ?>
+              
+               <!--    Image English       -->
+         
+           <?php echo $__env->make('Admin.form_parcials.upload_field',['name'=>'image_en','label'=>'Image English:'], array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+                <?php if($errors->has('image_en')): ?>
+                    <div class="error">
+                      <i class="fa fa-times-circle"></i>
+                      <?php echo e($errors->first('image_en')); ?>
+
+                    </div>
+                <?php endif; ?>
+           <!--    Image Arabic       -->
+          <?php echo $__env->make('Admin.form_parcials.upload_field',['name'=>'image_ar','label'=>'Image Arabic:'], array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+            <?php if($errors->has('image_ar')): ?>
+                <div class="error">
+                    <i class="fa fa-times-circle"></i>
+                    <?php echo e($errors->first('image_ar')); ?>
+
+                </div>
+            <?php endif; ?>
+           
+          <!--    pdf English       -->
+          <?php echo $__env->make('Admin.form_parcials.upload_field',['name'=>'pdf_en','label'=>'pdf English:'], array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+          <?php if($errors->has('pdf_en')): ?>
+          <div class="error">
+            <i class="fa fa-times-circle"></i>
+            <?php echo e($errors->first('pdf_en')); ?>
+
+          </div>
+          <?php endif; ?>
+          <!--    pdf Arabic       -->
+           <?php echo $__env->make('Admin.form_parcials.upload_field',['name'=>'pdf_ar','label'=>'pdf Arabic:'], array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+          <?php if($errors->has('pdf_ar')): ?>
+          <div class="error">
+            <i class="fa fa-times-circle"></i>
+            <?php echo e($errors->first('pdf_ar')); ?>
+
+          </div>
+          <?php endif; ?>
+              <?php echo Form::hidden('website_id',$current_website->id,['id'=>'website_id']); ?>
+
+
+        <?php echo Form::hidden('category','value_parts_leaflet_download',['id'=>'category']); ?>
+
+            <?php echo $__env->make('Admin.form_parcials.published', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+            <?php echo $__env->make('Admin.form_parcials.submit_btn',['submit_btn_text'=>'Add'], array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+
+        <?php echo Form::close(); ?>
+
+
+    <?php /*<?php echo $__env->make('errors.list', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?> */ ?>
+
+
+<?php $__env->stopSection(); ?>
+
+<?php echo $__env->make('Admin.'.$current_website->name.'.app', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>

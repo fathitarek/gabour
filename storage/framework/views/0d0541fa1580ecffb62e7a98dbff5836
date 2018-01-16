@@ -1,0 +1,16 @@
+<div class="row headTitleX">
+    <div class="col-md-10 col-md-offset-1">
+        <h2><?php echo e($page['p_right_image_third']['component_data']['title1']); ?> </h2>
+    </div>
+</div>
+<div class="row volvo1setion2">
+    <div class="col-md-10 col-md-offset-1">
+        <div class="row">
+            <div class="col-md-6">
+                <h5><?php echo e($page['p_right_image_third']['component_data']['title2']); ?></h5>
+                <p><?php echo e($page['p_right_image_third']['component_data']['description']); ?></p>
+            </div>
+            <div class="col-md-6"><img src="/<?php echo e($current_website->name); ?>/uploads/<?php echo e($page['p_right_image_third']['component_data']['file_1']); ?>" class="img-responsive" alt="Placeholder image">  </div>
+        </div>
+    </div>
+</div>

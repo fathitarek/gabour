@@ -1,0 +1,73 @@
+<style>
+    table, td, th {
+        border: 1px solid black;
+    }
+    table {
+        border-collapse: collapse;
+        width: 100%;
+    }
+    th {
+        height: 50px;
+        text-align: center !important;
+    }
+    td {
+        text-align: center !important;
+    }
+    form {
+        margin-bottom: 5px;
+        margin-top: 5px;
+    }
+    .form-group{
+        margin-bottom: 15px;
+    }
+</style>
+<?php $__env->startSection('content'); ?>
+<h1><?php echo e($current_website->display_name_en); ?> Location Item</h1>
+
+<article>
+    <a href="/Admin/gabbour_commercial_vehicles/locationsItem/create" class="btn btn-primary">ADD New Location Item</a>
+       <a href="<?php echo e(action('LocationItemController@export')); ?>" class="btn btn-primary">Export Location Item</a>
+       <?php echo $__env->make('Admin.form_parcials.upload_excel',['url'=>'/Admin/gabbour_commercial_vehicles/locationsItem/import'], array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+
+
+
+    <table>
+        <tr>
+            <th>ID</th>
+            <th>Name En</th>
+            <th>Latitude</th>
+            <th>Longtiute</th>
+            <th>Location Category</th>
+            <th> Website</th>
+            <th>City</th>
+            <th>Edit</th>
+            <th>Delete</th>
+        </tr>
+        <?php if(count($records)): ?>
+        <?php foreach($records as $record): ?>
+        <tr>
+            <td><?php echo e($record->id); ?></td>
+            <td><?php echo e($record->name_en); ?></td>
+            <td><?php echo e($record->lat); ?></td>
+            <td><?php echo e($record->long); ?></td>
+            <td><?php echo e($record->LocationCategory->name_en); ?></td>
+            <td><?php echo e($record->website->title_en); ?></td>
+             <td><?php echo e($record->city->name_en); ?></td>
+            <td>
+                <a href="/Admin/<?php echo e($current_website->name); ?>/locationsItem/edit/<?php echo e($record->id); ?>" class="btn btn-primary from-control">Edit</a>
+            </td>
+            <td>
+                <?php echo $__env->make('Admin.form_parcials.universal_delete_btn',['action'=>'LocationItemController@destroy'], array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+            </td>
+        </tr>
+        <?php endforeach; ?>
+        <?php endif; ?>
+    </table>
+    <?php echo $records->render(); ?>
+
+</article>
+
+
+<?php $__env->stopSection(); ?>
+
+<?php echo $__env->make('../../app', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>

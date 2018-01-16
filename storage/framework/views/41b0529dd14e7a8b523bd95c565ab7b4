@@ -1,0 +1,121 @@
+<html>
+    <head>
+        <link href='//fonts.googleapis.com/css?family=Lato:100' rel='stylesheet' type='text/css'>
+        <script src="http://maps.googleapis.com/maps/api/js?key=AIzaSyAvIsz3M59Jyze3pfpZSXcOmFzH7KQ79Ys"></script>
+
+        <style>
+            body {
+                margin: 0;
+                padding: 0;
+                width: 100%;
+                height: 100%;
+                color: #B0BEC5;
+                display: table;
+                font-weight: 100;
+                font-family: 'Lato';
+            }
+
+            .container {
+                text-align: center;
+                display: table-cell;
+                vertical-align: middle;
+            }
+
+            .content {
+                text-align: center;
+                display: inline-block;
+            }
+
+            .title {
+                font-size: 96px;
+                margin-bottom: 40px;
+            }
+
+            .quote {
+                font-size: 24px;
+            }
+        </style>
+        <script>
+
+            function initialize() {
+                var locations = [];
+
+                <?php if(count($locations)): ?>
+
+                <?php foreach($locations as $index => $location): ?>
+                        <?php if((trim($location['long']) != '') && (trim($location['lat'] != ''))): ?>
+                        var location = ['<?php echo e($location['name_en']); ?>', '<?php echo e(trim($location['long'])); ?>', '<?php echo e(trim($location['lat'])); ?>'];
+                // console.log(location)
+                locations.push(location);
+                <?php endif; ?>
+
+                        <?php endforeach; ?>
+                        <?php endif; ?>
+
+                        var map = new google.maps.Map(document.getElementById('googleMap'), {
+                        zoom: 6,
+                                center: new google.maps.LatLng(28.766622, 29.232078),
+//                               center: {lat: -34.397, lng: 150.644},
+                                mapTypeId: google.maps.MapTypeId.ROADMAP
+                        }
+                        );
+
+                var infowindow = new google.maps.InfoWindow();
+
+                var marker, i;
+
+                for (i = 0; i < locations.length; i++) {
+                    marker = new google.maps.Marker({
+                        position: new google.maps.LatLng(locations[i][1], locations[i][2]),
+                        map: map
+                    });
+
+                    google.maps.event.addListener(marker, 'click', (function (marker, i) {
+                        return function () {
+                            infowindow.setContent(locations[i][0]);
+                            infowindow.open(map, marker);
+                        }
+                    })(marker, i));
+                }
+
+            }
+            google.maps.event.addDomListener(window, 'load', initialize);
+        </script>
+
+    </head>
+    <body>
+        <div class="container">
+            <div class="content">
+                <div class="form-group">
+                    <!--                    <form method="post" action="VolvoPagesController@locations">-->
+                    <?php echo Form::open(['action'=>'VolvoPagesController@locations','method' => 'GET']); ?>
+
+
+                    <select  name='city_id'>
+                        <?php foreach ($cities as $city) { ?>
+                            <option  value="<?php echo $city->id; ?>"><?php echo $city->name_en; ?></option>
+                        <?php } ?>
+                    </select>
+
+                    <select name='location_category_id'>
+                        <?php foreach ($locationCategories as $locationCategory) { ?>
+                            <option    value="<?php echo $locationCategory->id; ?>"><?php echo $locationCategory->name_en; ?></option>
+                        <?php } ?></select>
+                    <input type="hidden" name="website_id" value='<?php echo $website->id; ?>'>
+
+                    <?php echo $__env->make('Admin.form_parcials.submit_btn',['submit_btn_text'=>'search'], array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+                    <?php echo Form::close(); ?>
+
+                </div>
+            </div>
+
+            <div id="googleMap" style="height:500px"></div>
+
+        </div>
+        <script type="text/javascript">
+            /* $(function(){
+             $('#accordion').accordion({ heightStyle: "content"  });
+             })*/
+        </script>
+    </body>
+</html>

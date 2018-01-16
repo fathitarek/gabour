@@ -1,0 +1,8 @@
+<div class="row headTitleX ">
+<blockquote>
+    
+<p ><i class="fa fa-quote-left"></i>  <?php echo e($page['qoute']['component_data']['title']); ?> <i class="fa fa-quote-right"></i></p>
+<p class="blockquote-author"><?php echo e($page['qoute']['component_data']['author']); ?></p>
+<p class="blockquote-descritpion"><?php echo e($page['qoute']['component_data']['desc']); ?></p>
+</blockquote>
+</div>

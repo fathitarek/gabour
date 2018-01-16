@@ -1,0 +1,11 @@
+<div class="form-group">
+    <?php echo Form::label($parameters['name'],$parameters['label']); ?>
+
+    <?php if(isset($parameters['value'])&&($parameters['value']!='')): ?>
+        <?php echo Form::text($parameters['name'],$parameters['value'],['class'=> 'form-control']); ?>
+
+    <?php else: ?>
+        <?php echo Form::text($parameters['name'],null,['class'=> 'form-control']); ?>
+
+    <?php endif; ?>
+</div>

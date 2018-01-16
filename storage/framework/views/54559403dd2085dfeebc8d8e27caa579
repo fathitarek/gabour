@@ -1,0 +1,6 @@
+<div class="row text-center" id="brands">
+  <div class="col-sm-12 col-md-10 col-md-offset-1">
+    <span><?php echo e($page['contact_title_desc']['component_data']['title']); ?></span>
+    <p><?php echo e($page['contact_title_desc']['component_data']['desc']); ?></p>
+  </div>
+</div>

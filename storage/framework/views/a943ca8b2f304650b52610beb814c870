@@ -1,0 +1,67 @@
+<div class="form-group">
+
+    <?php if(isset($parameters['value'])&&($parameters['value']!='')): ?>
+      <?php
+            $file_types['image']=['png','jpeg','jpg','gif'];
+            $file_types['pdf']=['pdf'];
+            $file_type = explode('.',$parameters['value'])[1];
+            $type='';
+
+            if(($file_type=='png')||($file_type=='jpeg')||($file_type=='jpg')||($file_type=='gif')){
+                $type='image';
+                $folder='/'.$current_website->name.'/uploads';
+            }
+            if($file_type=='pdf'){
+                $type='pdf';
+                $folder='/'.$current_website->name.'/uploads';
+            }
+        ?>
+            <?php if($type=='image'): ?>
+                <img src="<?php echo e($folder.'/'.$parameters['value']); ?>" />
+
+            <?php elseif($type=='pdf'): ?>
+                <a href="<?php echo e($folder.'/'.$parameters['value']); ?>">Download</a>
+            <?php endif; ?>
+
+
+    <input type="button" onclick="addUploadField('<?php echo e($parameters['name']); ?>')" value="Upload another"/>
+    <input type="button" onclick="restoreOldFile('<?php echo e($parameters['name']); ?>')" value="keep old file"/>
+    <?php echo Form::label($parameters['name'],$parameters['label']); ?>
+
+
+    <?php /*<?php echo Form::file($parameters['name']); ?>*/ ?>
+    <div id="newUpload_<?php echo e($parameters['name']); ?>"><input type="hidden" name="<?php echo e($parameters['name']); ?>" id="<?php echo e($parameters['name']); ?>" value="<?php echo e($parameters['value']); ?>"></div>
+    <input type="hidden" id="hidden_<?php echo e($parameters['name']); ?>" value="<?php echo e($parameters['value']); ?>"/>
+
+</div>
+<script>
+    function addUploadField(name){
+        var x = document.createElement("INPUT");
+//        console.log("X"+x);
+            x.setAttribute("type", "file");
+            x.setAttribute("name", name);
+            x.setAttribute("id", name);
+            x.setAttribute("required", "required");
+            var cont = document.getElementById("newUpload_"+name);
+            cont.removeChild(cont.childNodes[0]);
+            document.getElementById("newUpload_"+name).appendChild(x);
+    }
+    function restoreOldFile(name){
+            var x = document.createElement("INPUT");
+                x.setAttribute("type", "text");
+                x.setAttribute("name", name);
+                x.setAttribute("id", name);
+                x.setAttribute("value", document.getElementById("hidden_"+name).value);
+                var cont = document.getElementById("newUpload_"+name);
+                cont.removeChild(cont.childNodes[0]);
+                document.getElementById("newUpload_"+name).appendChild(x);
+        }
+
+</script>
+
+    <?php else: ?>
+    <?php echo Form::label($parameters['name'],$parameters['label']); ?>
+
+    <?php echo Form::file($parameters['name']); ?>
+
+    <?php endif; ?>

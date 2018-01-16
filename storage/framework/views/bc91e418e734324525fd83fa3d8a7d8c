@@ -1,0 +1,5 @@
+ <div class="row heroImgX2">
+        <div class="col-md-10 col-md-offset-1">
+        
+        <img src="/<?php echo e($current_website->name); ?>/uploads/<?php echo e($page['image1']['component_data']['file_1']); ?>" class="img-responsive" alt="Placeholder image"> </div>
+      </div>

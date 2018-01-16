@@ -1,0 +1,15 @@
+<div class="row imageText" id="volvo2">
+        <div class="col-md-10 col-md-offset-1">
+          <h4><?php echo e($page['find_a_good_deal']['component_data']['title1']); ?></h4>
+          <h3><?php echo e($page['find_a_good_deal']['component_data']['title2']); ?></h3>
+          <p><?php echo e($page['find_a_good_deal']['component_data']['title3']); ?> </p>
+          <a href="<?php echo e($page['find_a_good_deal']['component_data']['link']); ?>">
+            <p class="btnX"><?php echo e($page['find_a_good_deal']['component_data']['title_btn']); ?> </p>
+          </a> </div>
+      
+</div>
+<style>
+#volvo2 > div {
+	background-image: url("/<?php echo e($current_website->name); ?>/uploads/<?php echo e($page['find_a_good_deal']['component_data']['file1']); ?>");
+}
+</style>

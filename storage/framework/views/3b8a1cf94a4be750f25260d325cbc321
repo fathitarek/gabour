@@ -1,0 +1,75 @@
+<style>
+table, td, th {
+    border: 1px solid black;
+}
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+th {
+    height: 50px;
+    text-align: center !important;
+}
+td {
+    text-align: center !important;
+}
+form {
+  margin-bottom: 5px;
+  margin-top: 5px;
+}
+.item_img {
+  width: auto;
+  height: 150px;
+  padding: 15px 0;
+}
+</style>
+<?php $__env->startSection('content'); ?>
+    <h1>Slider Items</h1>
+
+    <article>
+        <ul>
+             <li><a href="<?php echo e(action('SliderItemController@index')); ?>">Image Sliders</a></li>
+             <li><a href="<?php echo e(action('SliderItemController@create')); ?>">ADD New Slider Items</a></li>
+        </ul>
+        <table>
+
+         <tr>
+           <th>ID</th>
+          <th>Name</th>
+          <th>Title</th>
+          <th>Caption</th>
+          <th>Url</th>
+          <th>Url Title</th>
+          <th>Image</th>
+          <th>Related Slider</th>
+          <th>Edit</th>
+          <th>Delete</th>
+         </tr>
+        <?php if(count($slider_items)): ?>
+            <?php foreach($slider_items as $record): ?>
+              <tr>
+               <td><?php echo e($record->id); ?></td>
+               <td><?php echo e($record->name); ?></td>
+               <td><?php echo e($record->title); ?></td>
+               <td><?php echo e($record->caption); ?></td>
+               <td><?php echo e($record->url); ?></td>
+               <td><?php echo e($record->url_title); ?></td>
+               <td><img class="item_img" src="/images/<?php echo e($record->img); ?>"/></td>
+               <td><?php echo e($record->slider->name); ?></td>
+
+               <td>
+                  <a href="<?php echo e(action('SliderItemController@edit',[$record->id])); ?>" class="btn btn-primary from-control">Edit</a>
+               </td>
+               <td>
+                  <?php echo $__env->make('Admin.form_parcials.universal_delete_btn',['action'=>'SliderItemController@destroy'], array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+               </td>
+              </tr>
+            <?php endforeach; ?>
+       <?php endif; ?>
+    </table>
+    </article>
+
+
+<?php $__env->stopSection(); ?>
+
+<?php echo $__env->make('../../app', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>

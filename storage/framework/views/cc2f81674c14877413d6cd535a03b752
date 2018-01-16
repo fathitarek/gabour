@@ -1,0 +1,3 @@
+<div class="row mobileSecond">
+        <img src="/<?php echo e($current_website->name); ?>/uploads/<?php echo e($page['featured_image']['component_data']['file']); ?>" class="img-responsive" alt="Placeholder image">
+</div>
